@@ -1,0 +1,37 @@
+##Data Import Section
+
+read_file -type sourcelist source_files.f
+read_file -type sgdc system.sgdc
+
+##Common Options Section
+
+set_option projectwdir .
+set_option language_mode mixed
+set_option designread_enable_synthesis yes
+set_option designread_disable_flatten no
+set_option active_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+##Goal Setup Section
+
+current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+current_goal lint/lint_rtl -alltop
+read_file -type awl /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+
+
+current_goal lint/lint_turbo_rtl -alltop
+read_file -type awl /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+set_goal_option default_waiver_file /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+
+
+current_goal cdc/clock_reset_integrity -alltop
+read_file -type awl /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+set_goal_option default_waiver_file /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+
+
+current_goal cdc/cdc_verify_struct -alltop
+read_file -type awl /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+set_goal_option default_waiver_file /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+

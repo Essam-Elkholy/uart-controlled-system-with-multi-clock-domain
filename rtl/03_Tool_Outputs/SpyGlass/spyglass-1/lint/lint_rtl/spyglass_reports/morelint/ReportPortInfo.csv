@@ -1,0 +1,8 @@
+Module Name,Module Type,Port Name,Direction,Width,Index,Comment Source,Comment 
+SYS_TOP,Top_Level,REF_CLK,INPUT,1,-,-,-
+SYS_TOP,Top_Level,UART_CLK,INPUT,1,-,-,-
+SYS_TOP,Top_Level,RST,INPUT,1,-,module port,active-low asynchronous reset
+SYS_TOP,Top_Level,RX_IN,INPUT,1,-,-,-
+SYS_TOP,Top_Level,TX_OUT,OUTPUT,1,-,-,-
+SYS_TOP,Top_Level,PAR_ERR,OUTPUT,1,-,-,-
+SYS_TOP,Top_Level,STP_ERR,OUTPUT,1,-,-,-

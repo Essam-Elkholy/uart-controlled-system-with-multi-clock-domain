@@ -1,0 +1,8 @@
+
+clock@@name@@SYS_TOP.REF_CLK@@domain@@REF_CLK_DOMAIN@@period@@20@@
+clock@@name@@SYS_TOP.UART_CLK@@domain@@UART_CLK_DOMAIN@@period@@271.267@@
+clock@@domain@@RX_ASYNC_DOMAIN@@period@@271.267@@tag@@RX_ASYNC_VCLK@@
+clock@@domain@@RST_ASYNC_DOMAIN@@period@@1000@@tag@@RST_ASYNC_VCLK@@
+reset@@name@@SYS_TOP.RST@@value@@0@@async@@
+quasi_static@@SYS_TOP.U_REGFILE.U_STORAGE.Reg_File[159:152]@@
+quasi_static@@SYS_TOP.U_REGFILE.U_STORAGE.Reg_File[151:144]@@

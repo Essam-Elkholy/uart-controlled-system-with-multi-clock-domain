@@ -1,0 +1,199 @@
+4 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+1
+5 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+2
+6 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+3
+7 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+4
+8 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+5
+9 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+6
+10 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+7
+11 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+8
+12 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+9
+13 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+10
+14 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+11
+15 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+12
+16 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+13
+17 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+14
+18 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+15
+19 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+16
+20 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+17
+21 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+18
+22 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+19
+23 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+20
+24 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+21
+25 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+22
+26 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+23
+27 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+24
+28 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+25
+29 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+26
+30 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+27
+31 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+28
+32 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+29
+33 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+30
+34 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+31
+35 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+32
+36 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+33
+37 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+34
+38 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+35
+39 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+36
+40 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+37
+41 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+38
+42 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+39
+43 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+40
+44 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+41
+45 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+42
+46 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+43
+47 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+44
+48 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+45
+49 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+46
+50 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+47
+51 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+48
+52 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+49
+53 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+50
+54 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+51
+55 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+52
+56 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+53
+57 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+54
+58 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH"
+1
+59 "Av_initstate01" 1
+"Open_Sp_Sheet"
+["./spyglass-1/lint/lint_functional_rtl/spyglass_reports/auto-verify/Uninitialized_Sequential_Elements.csv@@cross-probecol:1","./spyglass-1/lint/lint_functional_rtl/spyglass_reports/auto-verify/Initialized_Sequential_Elements.csv@@cross-probecol:1"]
+-1 "Av_Info_Case_Analysis" 4
+"TEMPLATE"
+["lint/lint_functional_rtl"]
+"RULE_ORDER"
+[1]
+"RULEGROUP"
+["auto-verify/Info"]
+"SPG_RULETAG_SCH_INFO_RULE"
+"Show Info Case Analysis Data"
+-1 "Av_initstate01" 3
+"TEMPLATE"
+["lint/lint_functional_rtl"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["auto-verify/Info"]
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "SGDC_abstract_port03" 2
+"RULEGROUP"
+["SGDC Checks"]
+"BUILTIN"
+"1"

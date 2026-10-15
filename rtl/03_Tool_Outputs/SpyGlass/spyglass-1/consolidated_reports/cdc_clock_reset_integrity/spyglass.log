@@ -1,0 +1,1327 @@
+SpyGlass run started at 02:39:38 am on Oct 04 2026 
+
+SpyGlass Predictive Analyzer(R) - Version SpyGlass_vL-2016.06
+Last compiled on May 20 2016
+
+All Rights Reserved. Use, disclosure or duplication
+without prior written permission of Synopsys Inc. is prohibited.
+Technical support: email spyglass_support@synopsys.com.
+
+
+Running SpyGlass 64-bit Executable: /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/obj/check.Linux4
+
+RULE-CHECKING IN MIXED MODE
+Loading Policy: spyglass (Version: SpyGlass_vL-2016.06) from path: /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/policies/spyglass
+Loading Shared library libspyglassrules-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/lib/libspyglassrules-Linux4.spyso 
+Loading Shared library libsdcInitRules-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/lib/libsdcInitRules-Linux4.spyso 
+Loading Shared library librmerules-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/lib/librmerules-Linux4.spyso 
+Loading perl file for 'clock-reset' policy from path: /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/policies/clock/clock-reset-policy.pl
+Version of Policy 'clock-reset': SpyGlass_vL-2016.06
+Loading Shared library libclock-reset-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/policies/clock/libclock-reset-Linux4.spyso 
+Loading Shared library libPwrRules-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/policies/lowpower/libPwrRules-Linux4.spyso 
+Loading perl file for 'timing' policy from path: /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/policies/timing/timing-policy.pl
+Version of Policy 'timing': SpyGlass_vL-2016.06
+Loading Shared library libCoreRules-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/lib/libCoreRules-Linux4.spyso 
+Loading Shared library libtiming-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/policies/timing/libtiming-Linux4.spyso 
+
+------------------------------------------------------
+      Table of Successfully Overloaded Rules
+  RuleName            Language          PolicyName
+   FieldName    Original Value/Overloaded Value
+------------------------------------------------------
+  Clock_glitch02      Verilog+VHDL      clock-reset
+   SEVERITY:    NULL/Warning
+
+  Clock_glitch03      Verilog+VHDL      clock-reset
+   SEVERITY:    NULL/Warning
+
+  Clock_glitch04      Verilog+VHDL      clock-reset
+   SEVERITY:    NULL/Warning
+------------------------------------------------------
+
+##build_id : SpyGlass_vL-2016.06
+##system   : Linux IC_EDA 3.10.0-1160.6.1.el7.x86_64 #1 SMP Tue Nov 17 13:59:11 UTC 2020 x86_64
+##cwd      : /mnt/hgfs/Shared_Folder/RTL_System_Project
+##lang     : Verilog+VHDL
+##args     : -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -lib WORK ./spyglass-1/WORK \
+             -nl \
+             -policy='clock-reset,timing' \
+             -mixed \
+             -batch \
+             -rules='Clock_info05b,Clock_check01,Clock_check04,Reset_check01,Reset_check02,Reset_check03,Reset_check04,Reset_check06,Reset_check07,ClockEnableRace,Clock_Reset_info01,Clock_glitch02,Clock_glitch03,Clock_glitch04,Clock_Reset_check02,Clock_Reset_check01,Clock_Reset_check03,Clock_converge01,Ar_converge01,Info_Case_Analysis' \
+             -wdir './spyglass-1/cdc/clock_reset_integrity' \
+             -sgdc 'system.sgdc' \
+             -dbdir './spyglass-1/.SG_SaveRestoreDB' \
+             -templatedir '/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' \
+             --goal_info 'cdc/clock_reset_integrity@' \
+             --template_info 'cdc/clock_reset_integrity' \
+             -overloadrules 'Clock_glitch02+severity=Warning,Clock_glitch03+severity=Warning,Clock_glitch04+severity=Warning' \
+             -projectwdir './spyglass-1' \
+             -enable_save_restore \
+             -enable_save_restore_builtin 'true' \
+             -handle_combo_arc=yes \
+             -64bit  \
+             ALU/RTL/ALU_ARITHMETIC.v \
+             ALU/RTL/ALU_COMPARE.v \
+             ALU/RTL/ALU_LOGIC.v \
+             ALU/RTL/ALU_OUTPUT_REG.v \
+             ALU/RTL/ALU_RESULT_MUX.v \
+             ALU/RTL/ALU_SHIFT.v \
+             ALU/RTL/ALU.v \
+             ASYNC_FIFO/RTL/ASYNC_FIFO.v \
+             ASYNC_FIFO/RTL/FIFO_MEM.v \
+             ASYNC_FIFO/RTL/FIFO_RD.v \
+             ASYNC_FIFO/RTL/FIFO_WR.v \
+             CLK_GATE/RTL/CLK_GATE.v \
+             Clock_Divider/RTL/CLK_DIV_COUNTER.v \
+             Clock_Divider/RTL/CLK_DIV_HALF_COUNT.v \
+             Clock_Divider/RTL/CLK_DIV_OUTPUT_MUX.v \
+             Clock_Divider/RTL/CLK_DIV.v \
+             Clock_Divider/RTL/CLKDIV_MUX.v \
+             Common/RTL/DF_SYNC.v \
+             Common/RTL/RISING_EDGE_DETECTOR.v \
+             DATA_SYNC/RTL/BUS_CAPTURE.v \
+             DATA_SYNC/RTL/DATA_SYNC.v \
+             PULSE_GEN/RTL/PULSE_GEN.v \
+             RegFile/RTL/REGFILE_READ.v \
+             RegFile/RTL/REGFILE_STORAGE.v \
+             RegFile/RTL/RegFile.v \
+             RST_SYNC/RTL/RST_SYNC.v \
+             SYS_CTRL/RTL/SYS_CTRL.v \
+             UART/UART_RX/RTL/RX_CONFIG_REG.v \
+             UART/UART_RX/RTL/RX_DATA_SAMPLING.v \
+             UART/UART_RX/RTL/RX_DESERIALIZER.v \
+             UART/UART_RX/RTL/RX_EDGE_BIT_COUNTER.v \
+             UART/UART_RX/RTL/RX_FSM.v \
+             UART/UART_RX/RTL/RX_INPUT_SYNC.v \
+             UART/UART_RX/RTL/RX_OUTPUT_REG.v \
+             UART/UART_RX/RTL/RX_PARITY_CHECK.v \
+             UART/UART_RX/RTL/RX_START_CHECK.v \
+             UART/UART_RX/RTL/RX_STOP_CHECK.v \
+             UART/UART_RX/RTL/UART_RX.v \
+             UART/UART_TOP/RTL/UART_TOP.v \
+             UART/UART_TX/RTL/TX_DATA_REG.v \
+             UART/UART_TX/RTL/TX_FSM.v \
+             UART/UART_TX/RTL/TX_MUX.v \
+             UART/UART_TX/RTL/TX_PARITY_CALC.v \
+             UART/UART_TX/RTL/TX_SERIALIZER.v \
+             UART/UART_TX/RTL/UART_TX.v \
+             SYS_TOP/RTL/SYS_TOP.v
+
+##verbosity level   : 2
+##exact cmdline arg : -batch -project spyglass-1.prj -goal cdc/clock_reset_integrity -64bit
+##spyglass_run.csh begins :
+;	cd /mnt/hgfs/Shared_Folder/RTL_System_Project
+;	setenv SPYGLASS_LD_PRELOAD /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/lib/libsgjemalloc-Linux4.so
+;	setenv SPYGLASS_DW_PATH /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/dw_support
+;	/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/bin/spyglass  -batch -project spyglass-1.prj -goal cdc/clock_reset_integrity -64bit
+##spyglass_run.csh ends
+##files    : ALU/RTL/ALU_ARITHMETIC.v \
+             ALU/RTL/ALU_COMPARE.v \
+             ALU/RTL/ALU_LOGIC.v \
+             ALU/RTL/ALU_OUTPUT_REG.v \
+             ALU/RTL/ALU_RESULT_MUX.v \
+             ALU/RTL/ALU_SHIFT.v \
+             ALU/RTL/ALU.v \
+             ASYNC_FIFO/RTL/ASYNC_FIFO.v \
+             ASYNC_FIFO/RTL/FIFO_MEM.v \
+             ASYNC_FIFO/RTL/FIFO_RD.v \
+             ASYNC_FIFO/RTL/FIFO_WR.v \
+             CLK_GATE/RTL/CLK_GATE.v \
+             Clock_Divider/RTL/CLK_DIV_COUNTER.v \
+             Clock_Divider/RTL/CLK_DIV_HALF_COUNT.v \
+             Clock_Divider/RTL/CLK_DIV_OUTPUT_MUX.v \
+             Clock_Divider/RTL/CLK_DIV.v \
+             Clock_Divider/RTL/CLKDIV_MUX.v \
+             Common/RTL/DF_SYNC.v \
+             Common/RTL/RISING_EDGE_DETECTOR.v \
+             DATA_SYNC/RTL/BUS_CAPTURE.v \
+             DATA_SYNC/RTL/DATA_SYNC.v \
+             PULSE_GEN/RTL/PULSE_GEN.v \
+             RegFile/RTL/REGFILE_READ.v \
+             RegFile/RTL/REGFILE_STORAGE.v \
+             RegFile/RTL/RegFile.v \
+             RST_SYNC/RTL/RST_SYNC.v \
+             SYS_CTRL/RTL/SYS_CTRL.v \
+             UART/UART_RX/RTL/RX_CONFIG_REG.v \
+             UART/UART_RX/RTL/RX_DATA_SAMPLING.v \
+             UART/UART_RX/RTL/RX_DESERIALIZER.v \
+             UART/UART_RX/RTL/RX_EDGE_BIT_COUNTER.v \
+             UART/UART_RX/RTL/RX_FSM.v \
+             UART/UART_RX/RTL/RX_INPUT_SYNC.v \
+             UART/UART_RX/RTL/RX_OUTPUT_REG.v \
+             UART/UART_RX/RTL/RX_PARITY_CHECK.v \
+             UART/UART_RX/RTL/RX_START_CHECK.v \
+             UART/UART_RX/RTL/RX_STOP_CHECK.v \
+             UART/UART_RX/RTL/UART_RX.v \
+             UART/UART_TOP/RTL/UART_TOP.v \
+             UART/UART_TX/RTL/TX_DATA_REG.v \
+             UART/UART_TX/RTL/TX_FSM.v \
+             UART/UART_TX/RTL/TX_MUX.v \
+             UART/UART_TX/RTL/TX_PARITY_CALC.v \
+             UART/UART_TX/RTL/TX_SERIALIZER.v \
+             UART/UART_TX/RTL/UART_TX.v \
+             SYS_TOP/RTL/SYS_TOP.v
+
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/sgdcdumpfile' in "a" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/pinofblackboxfile' in "w" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/ckfalsepathfile' in "w" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/clock_sig.csv' in "w" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/datasheet_resets' in "w" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/datasheet_clocks' in "w" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/reset_sig.csv' in "w" mode ...
+ Reading sgdc file "system.sgdc" ...
+Performing unification checks on SGDC... done
+
+INFO [76]    Using `./spyglass-1/WORK/64' as the Work Directory for 64bit precompiled dump.
+Checking Rule Param_clockreset07 (Rule 1 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Clock_setup01 (Rule 2 of total 368)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/clock_reset_info_file' in "w" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/crossfile' in "w" mode ...
+ .... done (Time = 0.01s, Memory = 45.8K)
+Checking Rule Param_clockreset06 (Rule 3 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_meta_monitor_attributes01 (Rule 4 of total 368) .... done (Time = 0.00s, Memory = 24.2K)
+Checking Rule LP_POWERDATA_CHECK (Rule 5 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule LP_POWERDATA_READ (Rule 6 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck01 (Rule 7 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck02 (Rule 8 of total 368) .... done (Time = 0.02s, Memory = -23.3K)
+Checking Rule PrecompileLibCheck03 (Rule 9 of total 368) .... done (Time = 0.01s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck04 (Rule 10 of total 368) .... done (Time = 0.01s, Memory = -7.3K)
+Checking Rule ElabSummary (Rule 11 of total 368)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/SpyGlass/elab_summary.rpt' in "w" mode ...
+ .... done (Time = 0.06s, Memory = -0.2K)
+Checking Rule SGDC_assume_path01 (Rule 12 of total 368) .... done (Time = 0.00s, Memory = 1.0K)
+Checking Rule SGDC_sdcschema02 (Rule 13 of total 368) .... done (Time = 0.01s, Memory = 17.0K)
+Checking Rule SGDC_clock05 (Rule 14 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_clock09 (Rule 15 of total 368) .... done (Time = 0.00s, Memory = -0.6K)
+Checking Rule SGDC_force_ta05 (Rule 16 of total 368) .... done (Time = 0.00s, Memory = 0.2K)
+Checking Rule SGDC_require_path03 (Rule 17 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_require_value03 (Rule 18 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_voltagedomain05 (Rule 19 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_voltagedomain06 (Rule 20 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_voltagedomain07 (Rule 21 of total 368) .... done (Time = 0.00s, Memory = 15.8K)
+Checking Rule SGDC_powerdomainoutputs02 (Rule 22 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_supply01 (Rule 23 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive01 (Rule 24 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive02 (Rule 25 of total 368) .... done (Time = 0.00s, Memory = -0.4K)
+Checking Rule SGDC_waive03 (Rule 26 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_waive04 (Rule 27 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive05 (Rule 28 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive06 (Rule 29 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive07 (Rule 30 of total 368) .... done (Time = 0.00s, Memory = -4.0K)
+Checking Rule SGDC_waive08 (Rule 31 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive09 (Rule 32 of total 368) .... done (Time = 0.01s, Memory = 0.0K)
+Checking Rule SGDC_waive10 (Rule 33 of total 368) .... done (Time = 0.00s, Memory = 0.5K)
+Checking Rule SGDC_waive11 (Rule 34 of total 368) .... done (Time = 0.00s, Memory = 1.8K)
+Checking Rule SGDC_waive12 (Rule 35 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive13 (Rule 36 of total 368) .... done (Time = 0.00s, Memory = 1.2K)
+Checking Rule SGDC_waive21 (Rule 37 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive22 (Rule 38 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive30 (Rule 39 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive32 (Rule 40 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive33 (Rule 41 of total 368) .... done (Time = 0.00s, Memory = -1.2K)
+Checking Rule SGDC_waive36 (Rule 42 of total 368) .... done (Time = 0.00s, Memory = -3.0K)
+Checking Rule SGDC_waive38 (Rule 43 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule SGDC_fifo01 (Rule 44 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_libgroup01 (Rule 45 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_libgroup02 (Rule 46 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_libgroup04 (Rule 47 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_power_data01 (Rule 48 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_ungroup01 (Rule 49 of total 368) .... done (Time = 0.00s, Memory = 32.5K)
+Checking Rule SGDC_abstract_port06 (Rule 50 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port14 (Rule 51 of total 368) .... done (Time = 0.01s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port15 (Rule 52 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port18 (Rule 53 of total 368) .... done (Time = 0.00s, Memory = -0.8K)
+Checking Rule sdc_init_rule (Rule 54 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule CMD_ignorelibs01 (Rule 55 of total 368) .... done (Time = 0.00s, Memory = -4.0K)
+Checking Rule ReportRuleNotRun (Rule 56 of total 368) .... done (Time = 0.01s, Memory = -1.6K)
+Checking Rule SGDC_generated_clock03 (Rule 57 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_generated_clock04 (Rule 58 of total 368) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_generated_clock05 (Rule 59 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_quasi_static_style02 (Rule 60 of total 368) .... done (Time = 0.00s, Memory = 0.5K)
+Checking Rule SGDC_syncresetstyle01 (Rule 61 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_network_allowed_cells01 (Rule 62 of total 368) .... done (Time = 0.00s, Memory = 36.7K)
+Checking Rule SGDC_numflops01 (Rule 63 of total 368) .... done (Time = 0.00s, Memory = -3.3K)
+Checking Rule SGDC_numflops07 (Rule 64 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_numflops08 (Rule 65 of total 368) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_numflops09 (Rule 66 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_clocksense04 (Rule 67 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_check_clock_relation05a (Rule 68 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_check_clock_relation05b (Rule 69 of total 368) .... done (Time = 0.00s, Memory = 32.3K)
+Checking Rule SGDC_sync_cell08a (Rule 70 of total 368) .... done (Time = 0.00s, Memory = -0.5K)
+Checking Rule SGDC_sync_cell09a (Rule 71 of total 368) .... done (Time = 0.00s, Memory = -1.2K)
+Checking Rule SGDC_qualifier06 (Rule 72 of total 368) .... done (Time = 0.00s, Memory = 13.9K)
+Checking Rule SGDC_cdc_waive03 (Rule 73 of total 368) .... done (Time = 0.00s, Memory = 0.7K)
+Checking Rule SGDC_qualifier09 (Rule 74 of total 368) .... done (Time = 0.00s, Memory = 65.3K)
+Checking Rule SGDC_qualifier15 (Rule 75 of total 368) .... done (Time = 0.00s, Memory = 1.9K)
+Checking Rule SGDC_allow_combo_logic01 (Rule 76 of total 368) .... done (Time = 0.00s, Memory = 0.8K)
+Checking Rule SGDC_reset_filter_path01 (Rule 77 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_cdc_false_path05 (Rule 78 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Param_clockreset05 (Rule 79 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ac_sanity01 (Rule 80 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ac_sanity06 (Rule 81 of total 368) .... done (Time = 0.00s, Memory = -1.1K)
+Checking Rule Ac_license01 (Rule 82 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset_synchronizer07 (Rule 83 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+ Reading waiver file "./spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/waiver/pragma2Waiver.swl" ...
+ Reading included SGDC file "./spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/waiver/pragma2Waiver_varfile.swl" ....
+Checking Rule ReportStopSummary (Rule 84 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportIgnoreSummary (Rule 85 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM started: 10 sec, 1005123 KB, 2935976 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM started: 10 sec, 1005123 KB, 2935976 KB
+
+INFO [235]    Restoring design database from directory './spyglass-1/.SG_SaveRestoreDB/autogenerated__default_snapshot' ...
+              done
+
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM completed: 10 sec, 1042285 KB, 2972840 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM completed: 0 sec, 37162 KB, 36864 KB
+     (Memory Used = 37113.4K(incr), 1042253.6K(tot), Cpu Time = 0.14s(incr))
+Checking Rule InferBlackBox (Rule 86 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Modules = 49
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances = 1532
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Nets = 2985
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Terminals = 8291
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances per Module (max and avg) = 294, 31
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data started: 10 sec, 1045204 KB, 2973096 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data started: 0 sec, 2919 KB, 256 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data completed: 10 sec, 1045388 KB, 2973096 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data completed: 0 sec, 184 KB, 0 KB
+     (Memory Used = 136.1K(incr), 1045372.1K(tot), Cpu Time = 0.10s(incr))
+Checking Rule SGDC_waive37 (Rule 87 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive24 (Rule 88 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive25 (Rule 89 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive31 (Rule 90 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive35 (Rule 91 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule DetectTopDesignUnits (Rule 92 of total 368) Detected 1 top level design units: 
+     SYS_TOP
+ .... done (Time = 0.01s, Memory = -16.0K)
+Checking Rule GenerateConfMap (Rule 93 of total 368) .... done (Time = 0.00s, Memory = -6.1K)
+Checking Rule Pragma_setupa for module BUS_CAPTURE (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module BUS_CAPTURE (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RISING_EDGE_DETECTOR (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RISING_EDGE_DETECTOR (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module DF_SYNC (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module DF_SYNC (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module DATA_SYNC (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module DATA_SYNC (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module FIFO_MEM (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module FIFO_MEM (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module FIFO_RD (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module FIFO_RD (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module FIFO_WR (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module FIFO_WR (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module DF_SYNC (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module DF_SYNC (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module ASYNC_FIFO (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module ASYNC_FIFO (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module DF_SYNC (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module DF_SYNC (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module PULSE_GEN (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module PULSE_GEN (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RX_OUTPUT_REG (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RX_OUTPUT_REG (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RX_STOP_CHECK (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RX_STOP_CHECK (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RX_PARITY_CHECK (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RX_PARITY_CHECK (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RX_START_CHECK (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RX_START_CHECK (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RX_DESERIALIZER (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RX_DESERIALIZER (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RX_DATA_SAMPLING (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RX_DATA_SAMPLING (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RX_EDGE_BIT_COUNTER (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RX_EDGE_BIT_COUNTER (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RX_FSM (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RX_FSM (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RX_CONFIG_REG (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RX_CONFIG_REG (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module DF_SYNC (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module DF_SYNC (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RX_INPUT_SYNC (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RX_INPUT_SYNC (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module UART_RX (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module UART_RX (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module TX_MUX (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module TX_MUX (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module TX_PARITY_CALC (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module TX_PARITY_CALC (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module TX_SERIALIZER (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module TX_SERIALIZER (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module TX_FSM (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module TX_FSM (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module TX_DATA_REG (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module TX_DATA_REG (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module UART_TX (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module UART_TX (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module UART_TOP (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module UART_TOP (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module CLK_DIV_OUTPUT_MUX (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module CLK_DIV_OUTPUT_MUX (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module CLK_DIV_COUNTER (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module CLK_DIV_COUNTER (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module CLK_DIV_HALF_COUNT (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module CLK_DIV_HALF_COUNT (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module CLK_DIV (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module CLK_DIV (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module CLKDIV_MUX (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module CLKDIV_MUX (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module ALU_OUTPUT_REG (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module ALU_OUTPUT_REG (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module ALU_RESULT_MUX (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module ALU_RESULT_MUX (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module ALU_SHIFT (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module ALU_SHIFT (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module ALU_COMPARE (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module ALU_COMPARE (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module ALU_LOGIC (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module ALU_LOGIC (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module ALU_ARITHMETIC (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module ALU_ARITHMETIC (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module ALU (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module ALU (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module CLK_GATE (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module CLK_GATE (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module REGFILE_READ (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module REGFILE_READ (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module REGFILE_STORAGE (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module REGFILE_STORAGE (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RegFile (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RegFile (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module SYS_CTRL (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module SYS_CTRL (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module RST_SYNC (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module RST_SYNC (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupa for module SYS_TOP (Rule 94 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check01 for module SYS_TOP (Rule 95 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Performing semantic checks on SGDC contents
+..... SGDC semantic checks completed. (Time = 0.01s, Memory = 79.8K)
+Checking Rule SGDC_testmode03 (Rule 96 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Pragma_setupb (Rule 97 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _vhMeta01 (Rule 98 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _meta_delay01 (Rule 99 of total 368) .... done (Time = 0.00s, Memory = -0.4K)
+Checking Rule LogNMuxPrereq (Rule 100 of total 368) .... done (Time = 0.00s, Memory = -0.3K)
+Checking Rule CheckCelldefine (Rule 101 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule checkSGDC_01 (Rule 102 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule checkSGDC_03 (Rule 103 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule checkSGDC_08 (Rule 104 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_memorywritepin04 (Rule 105 of total 368) .... done (Time = 0.00s, Memory = -13.5K)
+Checking Rule SGDC_reset02 (Rule 106 of total 368) .... done (Time = 0.00s, Memory = 15.0K)
+Checking Rule SGDC_reset03 (Rule 107 of total 368) .... done (Time = 0.00s, Memory = 0.4K)
+Checking Rule SGDC_waive23 (Rule 108 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive26 (Rule 109 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive27 (Rule 110 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive29 (Rule 111 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule SGDC_libgroup03 (Rule 112 of total 368) .... done (Time = 0.00s, Memory = 6.1K)
+Checking Rule SGDC_ungroup02 (Rule 113 of total 368) .... done (Time = 0.00s, Memory = -1.1K)
+Checking Rule _abstractPortSGDC (Rule 114 of total 368) .... done (Time = 0.02s, Memory = 15.6K)
+Checking Rule SGDC_abstract_port03 (Rule 115 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port04 (Rule 116 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port05 (Rule 117 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port07 (Rule 118 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port08 (Rule 119 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule SGDC_abstract_port10 (Rule 120 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_abstract_port11 (Rule 121 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port12 (Rule 122 of total 368) .... done (Time = 0.00s, Memory = 0.9K)
+Checking Rule SGDC_abstract_port13 (Rule 123 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _cdc_save_license01 (Rule 124 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule syncRstReq (Rule 125 of total 368) .... done (Time = 0.00s, Memory = 27.7K)
+Checking Rule syncRstReq (Rule 126 of total 368) .... done (Time = 0.02s, Memory = 0.0K)
+Checking Rule _syncResetStyleRTL (Rule 127 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _deltaDelay (Rule 128 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _deltaDelay (Rule 129 of total 368) .... done (Time = 0.00s, Memory = -2.2K)
+Checking Rule _deltaDelayNom (Rule 130 of total 368) .... done (Time = 0.00s, Memory = -4.0K)
+Checking Rule Ac_multitop01 (Rule 131 of total 368) .... done (Time = 0.00s, Memory = -0.4K)
+Checking Rule AcOvlRtl (Rule 132 of total 368) .... done (Time = 0.00s, Memory = -2.9K)
+Checking Rule AcOvlRtl (Rule 133 of total 368) .... done (Time = 0.01s, Memory = 0.0K)
+Checking Rule Ac_svasetup01 (Rule 134 of total 368) .... done (Time = 0.00s, Memory = 36.1K)
+Checking Rule ReportUngroup (Rule 135 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_allow_combo_logic02 (Rule 136 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _portRetenClocknReset (Rule 137 of total 368) .... done (Time = 0.00s, Memory = 4.7K)
+Checking Rule _portReten (Rule 138 of total 368) .... done (Time = 0.01s, Memory = 4.5K)
+Checking Rule SGDC_meta_design_hier01 (Rule 139 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule LP_POWERDATA_INFO (Rule 140 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port21 (Rule 141 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_input02 (Rule 142 of total 368) .... done (Time = 0.00s, Memory = -0.0K)
+Checking Rule SGDC_input03 (Rule 143 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule SGDC_output02 (Rule 144 of total 368) .... done (Time = 0.00s, Memory = -1.3K)
+Checking Rule SGDC_output04 (Rule 145 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_numflops03a (Rule 146 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_numflops03b (Rule 147 of total 368) .... done (Time = 0.00s, Memory = -1.8K)
+Checking Rule SGDC_numflops12 (Rule 148 of total 368) .... done (Time = 0.00s, Memory = -1.9K)
+Checking Rule SGDC_sync_cell02b (Rule 149 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule SGDC_sync_cell11 (Rule 150 of total 368) .... done (Time = 0.00s, Memory = 3.4K)
+Checking Rule SGDC_qualifier02c (Rule 151 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_qualifier03c (Rule 152 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule LPwrRulesSetup (Rule 153 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: VS rule checking finished...: 11 sec, 1045563 KB, 2973096 KB
+##SGDEBUG [BENCHMARK_INCR]: VS rule checking finished...: 1 sec, 175 KB, 0 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening started: 11 sec, 1046984 KB, 2974376 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening started: 0 sec, 1421 KB, 1280 KB
+ Flattening SYS_TOP (.lib instances separately flattened) ....
+     (Memory Used = 1739.6K(incr), 1048737.8K(tot), Cpu Time = 0.14s(incr))
+ Flattening completed
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Instances = 1557
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Nets = 1823
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Terms = 7121
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Paths = 58
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Ports = 7
+##SGDEBUG [BENCHMARK_DATA]: Number of Black-Box Instances = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of Lib Instances = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of ILM Instances = 0
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening finished: 11 sec, 1048729 KB, 2975656 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening finished: 0 sec, 1745 KB, 1280 KB
+Checking Rule SGDC_quasi_static_style01 (Rule 154 of total 368) .... done (Time = 0.00s, Memory = -0.0K)
+Checking Rule SignalTypeSetup (Rule 155 of total 368) .... done (Time = 0.00s, Memory = 7.9K)
+Checking Rule _allowInst (Rule 156 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _ipblock (Rule 157 of total 368) .... done (Time = 0.00s, Memory = 34.5K)
+Checking Rule _rstSyncCellInst (Rule 158 of total 368) .... done (Time = 0.00s, Memory = 1.0K)
+Checking Rule _syncCellDelayedQualifier (Rule 159 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _repeaterCellInst (Rule 160 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _abstract_port (Rule 161 of total 368) .... done (Time = 0.00s, Memory = 33.3K)
+Checking Rule Clock_setup02 (Rule 162 of total 368) .... done (Time = 0.02s, Memory = 1031.7K)
+Checking Rule Clockmatrix01 (Rule 163 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Clock_prop (Rule 164 of total 368) .... done (Time = 0.01s, Memory = 657.7K)
+Checking Rule Reset_prop (Rule 165 of total 368) .... done (Time = 0.00s, Memory = 88.9K)
+Checking Rule SGDC_generated_clock06 (Rule 166 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule Propagate_Clocks (Rule 167 of total 368)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/cdc_report_info_file' in "a" mode ...
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/cdc_report_info_file' closed.
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/cdcwaivefile' in "a" mode ...
+ .... done (Time = 0.09s, Memory = 216.0K)
+Checking Rule _syncreset_prop (Rule 168 of total 368) .... done (Time = 0.00s, Memory = 17.4K)
+Checking Rule _syncc (Rule 169 of total 368) .... done (Time = 0.00s, Memory = 0.9K)
+Checking Rule _syncb (Rule 170 of total 368) .... done (Time = 0.00s, Memory = 1.6K)
+Checking Rule _resetPathCross (Rule 171 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule FalsePathSetup (Rule 172 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _fifo01 (Rule 173 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _syncfifo (Rule 174 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _syncUDfifo (Rule 175 of total 368) .... done (Time = 0.00s, Memory = -0.3K)
+Checking Rule _syncdw (Rule 176 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule _syncd (Rule 177 of total 368) .... done (Time = 0.00s, Memory = 0.4K)
+Checking Rule _syncg (Rule 178 of total 368) .... done (Time = 0.01s, Memory = -15.1K)
+Checking Rule _sync_clock (Rule 179 of total 368) .... done (Time = 0.00s, Memory = 40.6K)
+Checking Rule _sync_gp (Rule 180 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _sync_and (Rule 181 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _synci (Rule 182 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _sync_qualifier (Rule 183 of total 368) .... done (Time = 0.00s, Memory = -0.0K)
+Checking Rule SGDC_fifo11 (Rule 184 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_fifo12 (Rule 185 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_fifo13 (Rule 186 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_fifo14 (Rule 187 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Gen_diff01 (Rule 188 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _debugData (Rule 189 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule Ac_Sync_Init (Rule 190 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule _propagate_cdcAttrib (Rule 191 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ar_Cross_Init (Rule 192 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_cdc_define_transition01 (Rule 193 of total 368) .... done (Time = 0.00s, Memory = 1.1K)
+Checking Rule UPF_lowpower08PR (Rule 194 of total 368) .... done (Time = 0.00s, Memory = 1.3K)
+Checking Rule UPF_lowpower08 (Rule 195 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Setup_check01 (Rule 196 of total 368) .... done (Time = 0.00s, Memory = 0.7K)
+Checking Rule Setup_check02 (Rule 197 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Info_Case_Analysis (Rule 198 of total 368) .... done (Time = 0.04s, Memory = -8.3K)
+Checking Rule SGDC_set_case_analysis_LC (Rule 199 of total 368) .... done (Time = 0.00s, Memory = 0.6K)
+Checking Rule SGDC_signal_in_domain02 (Rule 200 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_signal_in_domain04 (Rule 201 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_numflops03c (Rule 202 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_numflops04 (Rule 203 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_numflops05 (Rule 204 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_numflops06 (Rule 205 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_numflops11 (Rule 206 of total 368) .... done (Time = 0.00s, Memory = -0.4K)
+Checking Rule SGDC_numflops13 (Rule 207 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_numflops14 (Rule 208 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_clocksense02 (Rule 209 of total 368) .... done (Time = 0.00s, Memory = -2.5K)
+Checking Rule SGDC_clocksense03 (Rule 210 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_sgclkgroup01 (Rule 211 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_sgclkgroup02 (Rule 212 of total 368) .... done (Time = 0.00s, Memory = -0.4K)
+Checking Rule SGDC_sgclkgroup03 (Rule 213 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_check_clock_relation01a (Rule 214 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_check_clock_relation01b (Rule 215 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_check_clock_relation01c (Rule 216 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_check_clock_relation02a (Rule 217 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_check_clock_relation02b (Rule 218 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_check_clock_relation02c (Rule 219 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_check_clock_relation03b (Rule 220 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_check_clock_relation04b (Rule 221 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule CheckClockRelationSetup (Rule 222 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_gray_signals01 (Rule 223 of total 368) .... done (Time = 0.00s, Memory = -3.0K)
+Checking Rule SGDC_gray_signals02 (Rule 224 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule SGDC_gray_signals03 (Rule 225 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule SGDC_qualifier02a (Rule 226 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_qualifier03a (Rule 227 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_qualifier04 (Rule 228 of total 368) .... done (Time = 0.00s, Memory = -2.5K)
+Checking Rule SGDC_qualifier05 (Rule 229 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_qualifier08 (Rule 230 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule QualifierSetup (Rule 231 of total 368) .... done (Time = 0.00s, Memory = -32.0K)
+Checking Rule ResetSynchronizerSetup (Rule 232 of total 368) .... done (Time = 0.00s, Memory = -8.0K)
+Checking Rule SGDC_validation_filter_path03 (Rule 233 of total 368) .... done (Time = 0.01s, Memory = 0.0K)
+Checking Rule SGDC_qualifier10 (Rule 234 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_qualifier11 (Rule 235 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_qualifier12 (Rule 236 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_qualifier13 (Rule 237 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_qualifier14 (Rule 238 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_qualifier16 (Rule 239 of total 368) .... done (Time = 0.00s, Memory = -0.5K)
+Checking Rule SGDC_qualifier18 (Rule 240 of total 368) .... done (Time = 0.00s, Memory = -1.2K)
+Checking Rule SGDC_qualifier19a (Rule 241 of total 368) .... done (Time = 0.01s, Memory = -3.0K)
+Checking Rule SGDC_qualifier19b (Rule 242 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_qualifier19c (Rule 243 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_qualifier20b (Rule 244 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_qualifier21 (Rule 245 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_qualifier22 (Rule 246 of total 368) .... done (Time = 0.00s, Memory = 2.1K)
+Checking Rule SGDC_qualifier23 (Rule 247 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_virtualclock01 (Rule 248 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_virtualreset01 (Rule 249 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port19 (Rule 250 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port20 (Rule 251 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule RFPSetup (Rule 252 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset_filter_path02a (Rule 253 of total 368) .... done (Time = 0.00s, Memory = -2.0K)
+Checking Rule SGDC_reset_filter_path02b (Rule 254 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_reset_filter_path02c (Rule 255 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_reset_filter_path03a (Rule 256 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_reset_filter_path03b (Rule 257 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset_filter_path03c (Rule 258 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset_filter_path04b (Rule 259 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset_filter_path07a (Rule 260 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset_filter_path07b (Rule 261 of total 368) .... done (Time = 0.00s, Memory = 38.7K)
+Checking Rule SGDC_reset_filter_path07c (Rule 262 of total 368) .... done (Time = 0.00s, Memory = -5.9K)
+Checking Rule SGDC_define_reset_order03 (Rule 263 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_define_reset_order04 (Rule 264 of total 368) .... done (Time = 0.01s, Memory = 0.0K)
+Checking Rule SGDC_define_reset_order05 (Rule 265 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_cdc_false_path06 (Rule 266 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_cdc_false_path07 (Rule 267 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_cdc_false_path08 (Rule 268 of total 368) .... done (Time = 0.00s, Memory = -0.8K)
+Checking Rule CDCSet_License01 (Rule 269 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Clock_check01 (Rule 270 of total 368)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/autoclocks.sgdc' in "a" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/generated_clocks.sgdc' in "a" mode ...
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/autoclocks.sgdc' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/generated_clocks.sgdc' closed.
+ .... done (Time = 0.05s, Memory = 16.5K)
+Checking Rule Propagate_Resets (Rule 271 of total 368) .... done (Time = 0.03s, Memory = 14.1K)
+Checking Rule _reset_sync (Rule 272 of total 368) .... done (Time = 0.01s, Memory = -0.2K)
+Checking Rule Reset_check02 (Rule 273 of total 368)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/autoresets.sgdc' in "a" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/generated_resets.sgdc' in "a" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/Asynchronous_Resets.csv' in "a" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/Synchronous_Resets.csv' in "a" mode ...
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/autoresets.sgdc' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/generated_resets.sgdc' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/Asynchronous_Resets.csv' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/Synchronous_Resets.csv' closed.
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/autoresets.sgdc' in "a" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/generated_resets.sgdc' in "a" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/Asynchronous_Resets.csv' in "a" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/Synchronous_Resets.csv' in "a" mode ...
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/autoresets.sgdc' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/generated_resets.sgdc' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/Asynchronous_Resets.csv' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/Synchronous_Resets.csv' closed.
+ .... done (Time = 0.07s, Memory = -8.3K)
+Checking Rule Clock_info05b (Rule 274 of total 368) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule Clock_glitch02 (Rule 275 of total 368) .... done (Time = 0.01s, Memory = 93.5K)
+Checking Rule Clock_glitch03 (Rule 276 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Clock_glitch04 (Rule 277 of total 368) .... done (Time = 0.03s, Memory = -23.5K)
+Checking Rule Clock_Reset_info01 (Rule 278 of total 368) .... done (Time = 0.01s, Memory = 21.3K)
+Checking Rule Reset_check03 (Rule 279 of total 368) .... done (Time = 0.00s, Memory = 13.0K)
+Checking Rule Clock_Reset_check02 (Rule 280 of total 368) .... done (Time = 0.01s, Memory = 2.6K)
+Checking Rule Clock_Reset_check03 (Rule 281 of total 368) .... done (Time = 0.01s, Memory = 10.6K)
+Checking Rule Clock_check04 (Rule 282 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _clkWrapModules (Rule 283 of total 368) .... done (Time = 0.00s, Memory = 1.5K)
+Checking Rule _clock_hier_rules (Rule 284 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check06 (Rule 285 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ar_sync_init (Rule 286 of total 368)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/clock_reset_sync_rst_file' in "a" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/clock_reset_sync_rst_cell_file' in "a" mode ...
+ .... done (Time = 0.03s, Memory = 58.2K)
+Checking Rule _constrCoverage (Rule 287 of total 368) .... done (Time = 0.00s, Memory = 16.3K)
+Checking Rule Reset_check07 (Rule 288 of total 368) .... done (Time = 0.00s, Memory = -1.4K)
+Checking Rule Reset_check04 (Rule 289 of total 368) .... done (Time = 0.03s, Memory = -6.8K)
+Checking Rule Clock_Reset_check01 (Rule 290 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_clockreset02 (Rule 291 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Param_clockreset02 (Rule 292 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Param_clockreset04 (Rule 293 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Setup_clockreset01 (Rule 294 of total 368) .... done (Time = 0.00s, Memory = -0.3K)
+Checking Rule Clock_check07 (Rule 295 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Reset_check08 (Rule 296 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Clock_converge01 (Rule 297 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ar_converge01 (Rule 298 of total 368) .... done (Time = 0.02s, Memory = 42.0K)
+Checking Rule SGDC_noclockcell_start01 (Rule 299 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ac_initseq01 (Rule 300 of total 368) .... done (Time = 0.00s, Memory = -2.5K)
+Checking Rule Ac_init01 (Rule 301 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _ac_Auxi01 (Rule 302 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ac_sanity02 (Rule 303 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule _glitch_init (Rule 304 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ac_initstate01 (Rule 305 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule Ac_conv02setup01 (Rule 306 of total 368) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule Ac_abs01 (Rule 307 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ac_report01 (Rule 308 of total 368) .... done (Time = 0.00s, Memory = -2.0K)
+Checking Rule AllowComboLogicSetup (Rule 309 of total 368) .... done (Time = 0.00s, Memory = -5.5K)
+Checking Rule Ac_upfsetup02 (Rule 310 of total 368) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule Ac_upfsetup01 (Rule 311 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ac_psync_init (Rule 312 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Ac_psetup01 (Rule 313 of total 368) .... done (Time = 0.00s, Memory = 38.2K)
+Checking Rule Clock_exit01 (Rule 314 of total 368) .... done (Time = 0.00s, Memory = 2.0K)
+Checking Rule SGDC_reset_synchronizer02 (Rule 315 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset_synchronizer04 (Rule 316 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset_synchronizer06 (Rule 317 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset_synchronizer08 (Rule 318 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_reset_synchronizer10 (Rule 319 of total 368) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ClockEnableRace (Rule 320 of total 368) .... done (Time = 0.02s, Memory = -31.3K)
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/cdc_waive_info_file' in "a" mode ...
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/cdc_waive_info_file' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/cdcwaivefile' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/clock_reset_sync_rst_file' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/clock_reset_sync_rst_cell_file' closed.
+Checking Rule AnalyzeBBox (Rule 321 of total 368) .... done (Time = 0.01s, Memory = -1.5K)
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/clock_reset_info_file' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/crossfile' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/datasheet_resets' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/datasheet_clocks' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/sgdcdumpfile' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/pinofblackboxfile' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/ckfalsepathfile' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/clock_sig.csv' closed.
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/reset_sig.csv' closed.
+Checking Rule ReportCheckDataSummary (Rule 322 of total 368) .... done (Time = 0.01s, Memory = 33.4K)
+
+Applying user specified and internally generated waivers on violation database .... done (Time = 0.11s)
+
+Generating data for Console...
+##SGDEBUG [PEAK_MEMORY]: 2981032 KB for entire run at 'just before destroying nvn arrays in flattener' stage
+##SGDEBUG [VMPEAK_MEMORY]: 3276996 KB for entire run
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 14 sec, 1047128 KB, 2976896 KB
+##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 3 sec, -1601 KB, 1240 KB
+
+
+=====================================================================================
+							Rule Parameter Table
+=====================================================================================
+
+	PARAMETER-NAME                                     VALUE
+-------------------------------------------------------------------------------------
+	-allow_clock_on_output_port                        no
+	-cdc_dump_assertions                               none
+	-cdc_express                                       no
+	-cdc_reduce_pessimism                              mbit_macro,no_convergence_at_syncreset,no_convergence_at_enable
+	-check_clock_group_violations                      no
+	-checkcomblogic                                    no
+	-clock_edge                                        positive
+	-clock_reduce_pessimism                            latch_en,mux_sel_derived,check_enable_for_glitch
+	-debug_proc                                        no
+	-disable_seq_clock_prop                            no
+	-dump_sync_info                                    no
+	-enable_debug_data                                 no
+	-filter_named_clocks                               rst,reset,scan,set
+	-filter_named_resets                               clk,clock,scan
+	-force_genclk_for_txv                              no
+	-formal_setup_rules_check                          no
+	-format_report                                     no
+	-handle_combo_arc                                  yes
+	-ignore_bus_resets                                 yes
+	-ignore_hanging_flop                               no
+	-ignore_icg_cell                                   UNDEFINED
+	-ignore_latches                                    yes
+	-ignore_race_thru_latch                            no
+	-library_gen_clock_naming                          yes
+	-master_clock_limit                                1000
+	-msg_inst_mod_report                               auto
+	-netlist_clock_polarity                            yes
+	-num_quasi_seq_elem                                0
+	-populate_comboelements_for_minmax_in_fromto       no
+	-preserve_path                                     no
+	-pt                                                yes
+	-report_derived_reset                              none
+	-report_inst_for_netlist                           no
+	-report_reset_path_mux                             no
+	-report_uniform_name                               no
+	-reset_fanout_max                                  24
+	-reset_num_flops                                   2
+	-reset_placeholder_cells                           UNDEFINED
+	-reset_reduce_pessimism                            filter_unused_synchronizer,same_data_reset_flop
+	-reset_synchronize_cells                           UNDEFINED
+	-run_cells_in_cktree_rules                         no
+	-show_all_sdc_violations                           no
+	-show_sdc_progress                                 no
+	-sta_based_clock_relationship                      no
+	-suppress_sdc_violation_in_abstract                no
+	-tc_disable_caching                                no
+	-tc_stop_parsing_ignored_commands                  no
+	-thru_reset_synchronizer                           yes
+	-truncate_through                                  yes
+	-use_inferred_clocks                               no
+	-use_inferred_resets                               no
+	-write_sdc                                         no
+=====================================================================================
+
+
+
+=====================================================================================
+                               Rule Status Table
+
+ RULE-NAME                      POLICY-NAME     ENABLED VIOL-CNT RULE-TYPE   ERROR-MSG         
+=====================================================================================
+ DumpHist                       timing          No             - RTLDULIST      -               
+ LogicHist                      timing          No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ LogicDepth                     timing          No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ ShiftReg                       timing          No             - FLATDU2_WL     -               
+ MaxFanout                      timing          No             - FLATDU2_WL     -               
+ LogNMux                        timing          No             - FLATDU2_WL     -               
+ DeepMux              (VHDL   ) timing          No             - RTLDULIST      -               
+ DeepMux              (Verilog) timing          No             - RTLDULIST      -               
+ Setup_CGC                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Setup_req01                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_punsync01                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_psync01                     clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ checkUPF_existence             clock-reset     No             - VSTOPDU        -               
+ UPF_lowpower14                 clock-reset     No             - FLATDU2_PRD_WL   -               
+ UPF_lowpower14PR               clock-reset     No             - FLATDU2_PRD_WL   -               
+ UPF_lowpower10                 clock-reset     No             - VSTOPDU        -               
+ UPF_lowpower06                 clock-reset     No             - VSTOPDU        -               
+ UPF_lowpower05                 clock-reset     No             - VSTOPDU        -               
+ UPF_lowpower05PR               clock-reset     No             - VSTOPDU        -               
+ UPF_lowpower04                 clock-reset     No             - VSTOPDU        -               
+ UPF_lowpower03                 clock-reset     No             - VSTOPDU        -               
+ UPF_lowpower02                 clock-reset     No             - VSTOPDU        -               
+ UPF_lowpower01                 clock-reset     No             - VSTOPDU        -               
+ Ac_blksgdc01                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ SGDC_quasi_static_validation03 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ SGDC_quasi_static_validation02 clock-reset     No             - SETUP          -               
+ SGDC_quasi_static_validation01 clock-reset     No             - SETUP          -               
+ SGDC_define_reset_order_validation02 clock-reset     No             - SETUP          -               
+ SGDC_define_reset_order_validation01 clock-reset     No             - SETUP          -               
+ SGDC_cdc_false_path_validation01 clock-reset     No             - SETUP          -               
+ SGDC_qualifier_validation02    clock-reset     No             - SETUP          -               
+ SGDC_qualifier_validation01    clock-reset     No             - SETUP          -               
+ SGDC_abstract_port_validation04 clock-reset     No             - SETUP          -               
+ SGDC_abstract_port_validation03 clock-reset     No             - SETUP          -               
+ SGDC_abstract_port_validation02 clock-reset     No             - SETUP          -               
+ SGDC_abstract_port_validation01 clock-reset     No             - SETUP          -               
+ SGDC_output_validation02       clock-reset     No             - SETUP          -               
+ SGDC_output_validation01       clock-reset     No             - SETUP          -               
+ SGDC_num_flops_validation02    clock-reset     No             - SETUP          -               
+ SGDC_num_flops_validation01    clock-reset     No             - SETUP          -               
+ SGDC_input_validation02        clock-reset     No             - SETUP          -               
+ SGDC_input_validation01        clock-reset     No             - SETUP          -               
+ SGDC_reset_validation04        clock-reset     No             - SETUP          -               
+ SGDC_reset_validation03        clock-reset     No             - SETUP          -               
+ SGDC_reset_validation02        clock-reset     No             - SETUP          -               
+ SGDC_reset_validation01        clock-reset     No             - SETUP          -               
+ SGDC_set_case_analysis_validation03 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ SGDC_set_case_analysis_validation02 clock-reset     No             - SETUP          -               
+ SGDC_set_case_analysis_validation01 clock-reset     No             - SETUP          -               
+ SGDC_clock_domain_validation02 clock-reset     No             - SETUP          -               
+ SGDC_clock_domain_validation01 clock-reset     No             - SETUP          -               
+ SGDC_clock_validation02        clock-reset     No             - SETUP          -               
+ SGDC_clock_validation01        clock-reset     No             - SETUP          -               
+ SGDC_abstract_mapping01        clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_abstract_validation02       clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_abstract_validation01       clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ top_vs_block_val_prereq        clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_resetvalue01                clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_xclock01                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_glitch02                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_glitch01                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_clockperiod03               clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_clockperiod02               clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_clockperiod01               clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_glitch03                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_meta01                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_datahold01a                 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_fifo01                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_handshake02                 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_handshake01                 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ar_glitch02          (Verilog) clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_cdc08                       clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_cdc01c                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_cdc01b                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_cdc01a                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_conv05                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_conv04                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_conv03                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_conv01                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_conv02                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_sync03b                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_sync03a                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_sanity04                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_sanity03                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ PortTimeDelay        (VHDL   ) clock-reset     No             - RTLDULIST      -               
+ NoClockCell                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ DeltaDelay02                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ DeltaDelay01                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_delay02                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_delay01                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_repeater01                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_check10                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_check06b                 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_check06a                 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_overlap01                clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_sync03                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_sync02                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_sync01                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ar_syncrstrtl01                clock-reset     No             - SETUP          -               
+ Ar_syncrstpragma01             clock-reset     No             - SETUP          -               
+ Ar_syncrstactive01             clock-reset     No             - SETUP          -               
+ Ar_syncrstcombo01              clock-reset     No             - SETUP          -               
+ Ar_syncrstload02               clock-reset     No             - SETUP          -               
+ Ar_syncrstload01               clock-reset     No             - SETUP          -               
+ Reset_check10                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info15                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ar_syncdeassert01              clock-reset     No             - SETUP          -               
+ Ar_asyncdeassert01             clock-reset     No             - SETUP          -               
+ Ar_sync01                      clock-reset     No             - SETUP          -               
+ Ar_unsync01                    clock-reset     No             - SETUP          -               
+ Reset_sync04                   clock-reset     No             - SETUP          -               
+ Reset_check12                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ar_glitch01                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_check05                  clock-reset     No             - VSDU           -               
+ Clock_check02                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_hier03                   clock-reset     No             - SETUP          -               
+ Clock_hier02                   clock-reset     No             - SETUP          -               
+ Clock_hier01                   clock-reset     No             - SETUP          -               
+ Clock_check03                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_check05                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_glitch05                 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_glitch01                 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info17                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info07                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info06                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info05c                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info05a                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info16                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info05                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ar_syncrstTree                 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_info02                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info02                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_sync09                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_sync08a                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_sync08                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_sync06                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_sync05                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info14                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_abstract01                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_info09b                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_info09a                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ar_resetcross_matrix01         clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ar_resetcross01                clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Setup_rdc01                    clock-reset     No             - SETUP          -               
+ Ac_resetcross01                clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_check11                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_check09                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Setup_library01                clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Setup_blackbox01               clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Setup_port01                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info18                   clock-reset     No             - SETUP          -               
+ Ar_converge02                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Reset_info01                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_crossing01                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ar_cross_analysis01            clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_sync02                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_cross_analysis              clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_sync01                      clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_glitch04                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_unsync02                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_unsync01                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_coherency06                 clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info03c                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info03b                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info03a                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Setup_cdc01                    clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_sync02p                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ SGDC_cdc_false_path04          clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ar_syncrst_setupcheck01        clock-reset     No             - SETUP          -               
+ Setup_clock02                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Setup_clock01                  clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Clock_info01                   clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ Ac_topology01                  clock-reset     No             - VSTOPDU        -               
+ SGDC_qualifier03b              clock-reset     No             - RTLDULIST      -               
+ SGDC_qualifier02b              clock-reset     No             - RTLDULIST      -               
+ Setup_quasi_static01           clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ SGDC_inputoutput01             clock-reset     No             - FLATDU2_ABSTRACT_PRD_WL   -               
+ ClockEnableRace                timing          Yes            0 FLATDU2_WL     -               
+ LogNMuxPrereq                  timing          Yes            0 VSDULIST       -               
+ Ac_setOvlDataInSynthesis       clock-reset     Yes            0 ELABDU         -               
+ Ac_svasetup01                  clock-reset     Yes            0 VSDULIST       -               
+ SGDC_reset_synchronizer10      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_synchronizer08      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_synchronizer07      clock-reset     Yes            0 SETUP          -               
+ SGDC_reset_synchronizer06      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_synchronizer05      clock-reset     Yes            0 SETUP          -               
+ SGDC_reset_synchronizer04      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_synchronizer03      clock-reset     Yes            0 SETUP          -               
+ SGDC_reset_synchronizer02      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_synchronizer01      clock-reset     Yes            0 SETUP          -               
+ Clock_exit01                   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Setup_check02                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Setup_check01                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_license01                   clock-reset     Yes            0 SETUP          -               
+ Ac_psetup01                    clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_psync_init                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_upfsetup01                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_upfsetup02                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ LPwrRulesSetup                 clock-reset     Yes            0 VSTOPDU        -               
+ UPF_lowpower08                 clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ UPF_lowpower08PR               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ LP_POWERDATA_INFO              clock-reset     Yes            0 VSTOPDU        -               
+ LP_POWERDATA_READ              clock-reset     Yes            0 SETUP          -               
+ LP_POWERDATA_CHECK             clock-reset     Yes            0 SETUP          -               
+ AllowComboLogicSetup           clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_report01                    clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_abs01                       clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ AcOvlRtl             (VHDL   ) clock-reset     Yes            0 VSDULIST       -               
+ AcOvlRtl             (Verilog) clock-reset     Yes            0 VSDULIST       -               
+ _meta_delay01                  clock-reset     Yes            0 VSDULIST       -               
+ _vhMeta01            (VHDL   ) clock-reset     Yes            0 VSDULIST       -               
+ SGDC_meta_monitor_attributes01 clock-reset     Yes            0 SETUP          -               
+ SGDC_meta_design_hier01        clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_cdc_define_transition01   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_conv02setup01               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_initstate01                 clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _glitch_init                   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_sanity07                    clock-reset     Yes            0 SETUP          -               
+ Ac_sanity06                    clock-reset     Yes            0 SETUP          -               
+ Ac_sanity05          (VHDL   ) clock-reset     Yes            0 RTLDU          -               
+ Ac_sanity05          (Verilog) clock-reset     Yes            0 RTLDU          -               
+ Ac_sanity02                    clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_sanity01                    clock-reset     Yes            0 SETUP          -               
+ _ac_Auxi01                     clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_init01                      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_multitop01                  clock-reset     Yes            0 VSDULIST       -               
+ Ac_initseq01                   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_noclockcell_start01       clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ar_converge01                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clock_converge01               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _deltaDelayNom                 clock-reset     Yes            0 VSDULIST       -               
+ _deltaDelay          (Verilog) clock-reset     Yes            0 VSDULIST       -               
+ _deltaDelay          (VHDL   ) clock-reset     Yes            0 VSDULIST       -               
+ Reset_check08                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_repeater01                clock-reset     Yes            0 SETUP          -               
+ Clock_check07                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Setup_clockreset01             clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Param_clockreset06             clock-reset     Yes            0 SETUP          -               
+ Param_clockreset05             clock-reset     Yes            0 SETUP          -               
+ Param_clockreset04             clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Param_clockreset02             clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_clockreset02              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clock_Reset_check01            clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _syncResetStyleRTL             clock-reset     Yes            0 VSDULIST       -               
+ Reset_check04                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Reset_check07                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _constrCoverage                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ar_sync_init                   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Reset_check06                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _clock_hier_rules              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_clock_path_wrapper_module01 clock-reset     Yes            0 SETUP          -               
+ _clkWrapModules                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clock_check04                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clock_Reset_check03            clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clock_Reset_check02            clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Reset_check01        (Verilog) clock-reset     Yes            0 VSDU           -               
+ Reset_check03                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clock_Reset_info01             clock-reset     Yes            1 FLATDU2_PRD_WL   -               
+ Clock_glitch04                 clock-reset     Yes            2 FLATDU2_PRD_WL   -               
+ Clock_glitch03                 clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clock_glitch02                 clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clock_info05b                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Reset_check02                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _reset_sync                    clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Propagate_Resets               clock-reset     Yes            1 FLATDU2_PRD_WL   -               
+ Clock_check01                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ syncRstReq           (VHDL   ) clock-reset     Yes            0 VSDULIST       -               
+ syncRstReq           (Verilog) clock-reset     Yes            0 VSDULIST       -               
+ Ar_Cross_Init                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _propagate_cdcAttrib           clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Ac_Sync_Init                   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _debugData                     clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Gen_diff01                     clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ CDCSet_License01               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_fifo14                    clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_fifo13                    clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_fifo12                    clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_fifo11                    clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _sync_qualifier                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _synci                         clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _sync_and                      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _sync_gp                       clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _sync_clock                    clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _syncg                         clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _syncd                         clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _syncdw                        clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _syncUDfifo                    clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _syncfifo                      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _fifo01                        clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ FalsePathSetup                 clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _resetPathCross                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _syncb                         clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _syncc                         clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_cdc_false_path08          clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_cdc_false_path07          clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_cdc_false_path06          clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_cdc_false_path05          clock-reset     Yes            0 SETUP          -               
+ SGDC_virtualclock_validation01 clock-reset     Yes            0 SETUP          -               
+ _syncreset_prop                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Propagate_Clocks               clock-reset     Yes            4 FLATDU2_PRD_WL   -               
+ SGDC_generated_clock06         clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Reset_prop                     clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clock_prop                     clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clockmatrix01                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Pragma_setupb                  clock-reset     Yes            0 VSDULIST       -               
+ Pragma_setupa                  clock-reset     Yes            0 VSDU           -               
+ Clock_setup02                  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _abstract_port                 clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ Clock_setup01                  clock-reset     Yes            0 SETUP          -               
+ Param_clockreset07             clock-reset     Yes            0 SETUP          -               
+ SGDC_define_reset_order05      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_define_reset_order04      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_define_reset_order03      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_define_reset_order02      clock-reset     Yes            0 SETUP          -               
+ SGDC_reset_filter_path07c      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_filter_path07b      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_filter_path07a      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_filter_path06a      clock-reset     Yes            0 SETUP          -               
+ SGDC_reset_filter_path05a      clock-reset     Yes            0 SETUP          -               
+ SGDC_reset_filter_path04b      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_filter_path04a      clock-reset     Yes            0 SETUP          -               
+ SGDC_reset_filter_path03c      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_filter_path03b      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_filter_path03a      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_filter_path02c      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_filter_path02b      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_filter_path02a      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_reset_filter_path01       clock-reset     Yes            0 SETUP          -               
+ RFPSetup                       clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _repeaterCellInst              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _syncCellDelayedQualifier      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _rstSyncCellInst               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _ipblock                       clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _allowInst                     clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ _portReten                     clock-reset     Yes            0 VSTOPDU        -               
+ _portRetenClocknReset          clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_abstract_port20           clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_abstract_port19           clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_virtualreset01            clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_virtualclock01            clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_allow_combo_logic02       clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_allow_combo_logic01       clock-reset     Yes            0 SETUP          -               
+ SGDC_qualifier25               clock-reset     Yes            0 SETUP          -               
+ SGDC_qualifier24               clock-reset     Yes            0 SETUP          -               
+ SGDC_qualifier23               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier22               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier21               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier20b              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier20a              clock-reset     Yes            0 SETUP          -               
+ SGDC_qualifier19c              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier19b              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier19a              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier18               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier17               clock-reset     Yes            0 SETUP          -               
+ SGDC_qualifier16               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier15               clock-reset     Yes            0 SETUP          -               
+ SGDC_qualifier14               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier13               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier12               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier11               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier10               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier09               clock-reset     Yes            0 SETUP          -               
+ SGDC_validation_filter_path03  clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_validation_filter_path02  clock-reset     Yes            0 SETUP          -               
+ SGDC_validation_filter_path01  clock-reset     Yes            0 SETUP          -               
+ SGDC_cdc_waive03               clock-reset     Yes            0 SETUP          -               
+ SGDC_cdc_waive02               clock-reset     Yes            0 SETUP          -               
+ SGDC_cdc_waive01               clock-reset     Yes            0 SETUP          -               
+ SignalTypeSetup                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ ResetSynchronizerSetup         clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ QualifierSetup                 clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier08               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier06               clock-reset     Yes            0 SETUP          -               
+ SGDC_qualifier05               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier04               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier03d              clock-reset     Yes            0 SETUP          -               
+ SGDC_qualifier03c              clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_qualifier03a              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier02c              clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_qualifier02a              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_qualifier01               clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell11               clock-reset     Yes            0 VSTOPDU        -               
+ SyncCellSetup                  clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell10               clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell09b              clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell09a              clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell08b              clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell08a              clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell07               clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell06               clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell05               clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell04               clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell03b              clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell03a              clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell02d              clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell02c              clock-reset     Yes            0 SETUP          -               
+ SGDC_sync_cell02b              clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_sync_cell02a              clock-reset     Yes            0 SETUP          -               
+ SGDC_gray_signals03            clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_gray_signals02            clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_gray_signals01            clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ CheckClockRelationSetup        clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_check_clock_relation05b   clock-reset     Yes            0 SETUP          -               
+ SGDC_check_clock_relation05a   clock-reset     Yes            0 SETUP          -               
+ SGDC_check_clock_relation04b   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_check_clock_relation04a   clock-reset     Yes            0 SETUP          -               
+ SGDC_check_clock_relation03b   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_check_clock_relation03a   clock-reset     Yes            0 SETUP          -               
+ SGDC_check_clock_relation02c   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_check_clock_relation02b   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_check_clock_relation02a   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_check_clock_relation01c   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_check_clock_relation01b   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_check_clock_relation01a   clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_sgclkgroup03              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_sgclkgroup02              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_sgclkgroup01              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_clocksense04              clock-reset     Yes            0 SETUP          -               
+ SGDC_clocksense03              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_clocksense02              clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_clocksense01              clock-reset     Yes            0 SETUP          -               
+ SGDC_numflops14                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_numflops13                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_numflops12                clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_numflops11                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_numflops10                clock-reset     Yes            0 SETUP          -               
+ SGDC_numflops09                clock-reset     Yes            0 SETUP          -               
+ SGDC_numflops08                clock-reset     Yes            0 SETUP          -               
+ SGDC_numflops07                clock-reset     Yes            0 SETUP          -               
+ SGDC_numflops06                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_numflops05                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_numflops04                clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_numflops03d               clock-reset     Yes            0 SETUP          -               
+ SGDC_numflops03c               clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_numflops03b               clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_numflops03a               clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_numflops01                clock-reset     Yes            0 SETUP          -               
+ SGDC_porttimedelay01           clock-reset     Yes            0 SETUP          -               
+ SGDC_deltacheck_ignore_instance01 clock-reset     Yes            0 SETUP          -               
+ SGDC_deltacheck_ignore_module01 clock-reset     Yes            0 SETUP          -               
+ SGDC_deltacheck_stop_instance01 clock-reset     Yes            0 SETUP          -               
+ SGDC_deltacheck_stop_module01  clock-reset     Yes            0 SETUP          -               
+ SGDC_deltacheck_stop_signal01  clock-reset     Yes            0 SETUP          -               
+ SGDC_deltacheck_start02        clock-reset     Yes            0 SETUP          -               
+ SGDC_deltacheck_start01        clock-reset     Yes            0 SETUP          -               
+ SGDC_noclockcell04             clock-reset     Yes            0 SETUP          -               
+ SGDC_noclockcell03             clock-reset     Yes            0 SETUP          -               
+ SGDC_noclockcell02             clock-reset     Yes            0 SETUP          -               
+ SGDC_noclockcell01             clock-reset     Yes            0 SETUP          -               
+ SGDC_cdc_false_path03          clock-reset     Yes            0 SETUP          -               
+ SGDC_cdc_false_path02          clock-reset     Yes            0 SETUP          -               
+ SGDC_cdc_false_path01          clock-reset     Yes            0 SETUP          -               
+ SGDC_output_not_used01         clock-reset     Yes            0 SETUP          -               
+ SGDC_network_allowed_cells02   clock-reset     Yes            0 SETUP          -               
+ SGDC_network_allowed_cells01   clock-reset     Yes            0 SETUP          -               
+ SGDC_syncresetstyle01          clock-reset     Yes            0 SETUP          -               
+ SGDC_signal_in_domain04        clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_signal_in_domain03        clock-reset     Yes            0 SETUP          -               
+ SGDC_signal_in_domain02        clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_signal_in_domain01        clock-reset     Yes            0 SETUP          -               
+ SGDC_quasi_static_style02      clock-reset     Yes            0 SETUP          -               
+ SGDC_quasi_static_style01      clock-reset     Yes            0 FLATDU2_PRD_WL   -               
+ SGDC_quasi_static01            clock-reset     Yes            0 SETUP          -               
+ SGDC_generated_clock05         clock-reset     Yes            0 SETUP          -               
+ SGDC_generated_clock04         clock-reset     Yes            0 SETUP          -               
+ SGDC_generated_clock03         clock-reset     Yes            0 SETUP          -               
+ SGDC_generated_clock02         clock-reset     Yes            0 SETUP          -               
+ SGDC_generated_clock01         clock-reset     Yes            0 SETUP          -               
+ SGDC_output03                  clock-reset     Yes            0 SETUP          -               
+ SGDC_output04                  clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_output02                  clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_output01                  clock-reset     Yes            0 SETUP          -               
+ SGDC_input04                   clock-reset     Yes            0 SETUP          -               
+ SGDC_input03                   clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_input02                   clock-reset     Yes            0 VSTOPDU        -               
+ SGDC_input01                   clock-reset     Yes            0 SETUP          -               
+ _cdc_save_license01            clock-reset     Yes            0 VSDULIST       -               
+ SGDC_abstract_port03           SpyGlass        Yes            2 SETUP          -               
+ Info_Case_Analysis             SpyGlass        Yes            1 FLATDU2_PRD_WL   -               
+ ElabSummary                    SpyGlass        Yes            1 SETUP          -               
+ DetectTopDesignUnits           SpyGlass        Yes            1 SETUP          -               
+-------------------------------------------------------------------------------------
+Note: VSDU type of rules (as seen in the above table) are not run on
+      unsynthesized modules reported by 'ErrorAnalyzeBBox/InfoAnalyzeBBox' messages
+      (Please see messages starting with keyword 'UnsynthesizedDU')
+
+##status : SpyGlass Rule Checking Complete.
+
+---------------------------------------------------------------------------------------------
+Results Summary:
+---------------------------------------------------------------------------------------------
+   Goal Run           :      cdc/clock_reset_integrity
+   Command-line read  :      0 error,      0 warning,      0 information message 
+   Design Read        :      0 error,      0 warning,      3 information messages
+      Found 1 top module:
+         SYS_TOP   (file: SYS_TOP/RTL/SYS_TOP.v)
+
+   Blackbox Resolution:      0 error,      0 warning,      0 information message 
+   SGDC Checks        :      0 error,      0 warning,      2 information messages
+   Policy clock-reset :      0 error,      2 warnings,     6 information messages
+   -------------------------------------------------------------------------------------
+   Total              :      0 error,      2 warnings,    11 information messages
+
+  Total Number of Generated Messages     :        13 (0 error, 2 warnings, 11 Infos)
+  Number of Reported Messages            :        13 (0 error, 2 warnings, 11 Infos)
+
+---------------------------------------------------------------------------------------------
+
+
+
+SpyGlass Rule Checking Complete.
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'ADVCLOCKS_REPORT_FILE' in "r" mode
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'CK_MODULE_TOPOLOGY' in "r" mode
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/sgdcdumpfile' in "r" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/sgdcdumpfile' closed.
+
+Generating moresimple report from './spyglass-1/cdc/clock_reset_integrity/spyglass.vdb' to './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/moresimple.rpt' ....
+
+Generating runsummary report from './spyglass-1/cdc/clock_reset_integrity/spyglass.vdb' ....
+
+Generating no_msg_reporting_rules report from './spyglass-1/cdc/clock_reset_integrity/spyglass.vdb' to './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/no_msg_reporting_rules.rpt' ....
+
+Generating CDC-report report from './spyglass-1/cdc/clock_reset_integrity/spyglass.vdb' to './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/CDC-report.rpt' ....
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/cdc_report_info_file' in "r" mode...
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'CLOCK_SYNC_CROSS_MODULE_DATA' in "r" mode
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'CLOCK_AC_GLITCH_NETLIST_DIFF_DATA' in "r" mode
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'CLOCK_AC_SYNC_UNSYNC_CROSS_MODULE_DATA' in "r" mode
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'CDC_COCKPIT_DATA' in "r" mode
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'CDC_CROSSING_MODE_DATA' in "r" mode
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'AC_COH06_FILE' in "r" mode
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'INTERNAL_AC_CROSS_ANALYSIS' in "r" mode
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'INTERNAL_AR_CROSS_ANALYSIS01' in "r" mode
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/clock_sig.csv' in "r" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/clock_sig.csv' closed.
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/reset_sig.csv' in "r" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/reset_sig.csv' closed.
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/clocks.csv' in "w" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/clocks.csv' closed.
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/clocks.csv' in "a" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/clocks.csv' closed.
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/resets.csv' in "w" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/resets.csv' closed.
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/resets.csv' in "a" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/resets.csv' closed.
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/fileList.csv' in "w" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/fileList.csv' closed.
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/fileList.csv' in "a" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/fileList.csv' closed.
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/parameterList.csv' in "w" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/parameterList.csv' closed.
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/parameterList.csv' in "a" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/clock-reset/parameterList.csv' closed.
+##FILEDEBUG[spyOpenFile]: File Opening failed for file-label 'ADVCLOCKS_FUNCTIONAL_TIME_FILE' in "r" mode
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/ckfalsepathfile' in "r" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/ckfalsepathfile' closed.
+
+Generating CKSGDCInfo report from './spyglass-1/cdc/clock_reset_integrity/spyglass.vdb' to './spyglass-1/cdc/clock_reset_integrity/spyglass_reports/CKSGDCInfo.rpt' ....
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/sgdcdumpfile' in "r" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/sgdcdumpfile' closed.
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/cdc_waive_info_file' in "r" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/cdc/clock_reset_integrity/spyglass_spysch/clock-reset/cdc_waive_info_file' closed.
+
+Policy specific data (reports) are present in the directory './spyglass-1/cdc/clock_reset_integrity/spyglass_reports'.
+
+SpyGlass critical reports for the current run are present in directory './spyglass-1/consolidated_reports/cdc_clock_reset_integrity/'.
+
+SpyGlass Exit Code 0 (Rule-checking completed with warnings)
+SpyGlass total run-time is 0:0:19 (19 secs)
+SpyGlass run completed at 02:58:33 AM on Oct 04 2026

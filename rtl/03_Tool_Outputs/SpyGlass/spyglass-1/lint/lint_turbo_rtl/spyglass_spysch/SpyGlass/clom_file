@@ -1,0 +1,279 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
+--goal_info     lint/lint_turbo_rtl@ CmdLine -                              -
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 39
+-batch          <ON>              CmdLine -                              -
+-dbdir          ./spyglass-1/.SG_SaveRestoreDB CmdLine -                              -
+-enable_fast_traversal <ON>              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 91
+-enable_save_restore <ON>              CmdLine -                              -
+-enable_save_restore_builtin true              CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 29
+-lib            accellera_vlog=>/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/auxi/ovl/precompile/Linux4/accellera_verilog CmdFile $SPYGLASS_HOME/auxi/policy_data/auto-verify/autoload.f 2
+                accellera=>/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/auxi/ovl/precompile/Linux4/accellera_vhdl CmdFile $SPYGLASS_HOME/auxi/policy_data/auto-verify/autoload.f 3
+                WORK=>./spyglass-1/WORK CmdLine -                              -
+                accellera_vlog=>/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/auxi/ovl/precompile/Linux4/accellera_verilog CmdFile $SPYGLASS_HOME/auxi/policy_data/auto-verify/autoload.f 2
+                accellera=>/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/auxi/ovl/precompile/Linux4/accellera_vhdl CmdFile $SPYGLASS_HOME/auxi/policy_data/auto-verify/autoload.f 3
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-mixed          <ON>              CmdLine -                              -
+-nl             <ON>              CmdLine -                              -
+-overloadrules  STARC05-2.1.6.5+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 142
+                STARC05-2.3.1.2c+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 145
+                W421+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 158
+                sim_race02+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 174
+                W416+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 181
+                PragmaComments-ML+severity=Data CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 196
+                STARC05-2.10.2.3+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 207
+                STARC05-2.11.3.1+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 212
+                STARC05-2.3.1.5b+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 217
+                W289+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 252
+                W293+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 257
+                W352+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 264
+                W398+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 267
+                W422+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 270
+                W71+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 303
+                ParamWidthMismatch-ML+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 324
+                ReportPortInfo-ML+severity=Data CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 327
+                STARC05-2.1.3.1+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 330
+                STARC05-2.1.5.3+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 333
+                STARC05-2.2.3.3+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 336
+                STARC05-2.3.1.6+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 339
+                W110+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 344
+                W122+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 351
+                W123+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 354
+                W19+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 365
+                W218+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 371
+                W505+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 405
+                W66+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 410
+                InferLatch+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 413
+                RegInputOutput-ML+severity=Data CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 416
+                STARC05-2.3.4.1v+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 420
+                STARC05-2.5.1.7+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 425
+                STARC05-2.5.1.9+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 428
+                W336+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 434
+                W414+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 437
+                W450L+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 443
+                UndrivenInTerm-ML+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 446
+                BufClock+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 458
+                checkPinConnectedToSupply+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 461
+                CombLoop+msgLabel=CombLoop+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 466
+                FlopClockConstant+msgLabel=FlopClockConstant+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 474
+                LatchFeedback+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 490
+                STARC05-1.2.1.2+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 509
+                STARC05-1.3.1.3+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 512
+                STARC05-1.4.3.4+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 517
+                STARC05-2.1.4.5+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 520
+                STARC05-2.4.1.5+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 523
+                W415+msgLabel=W415+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 537
+                Av_case_default_missing+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 586
+-policy         openmore          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+                starc             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+                starc2005         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+                erc               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+                simulation        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+                lint              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+                latch             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+                spyglass          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+                morelint          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+                timing            CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+                auto-verify       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 86
+-projectwdir    ./spyglass-1      CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-rules          badimplicitSM1    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 110
+                badimplicitSM2    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 112
+                badimplicitSM4    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 114
+                BlockHeader       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 116
+                bothedges         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 118
+                STARC05-2.1.6.5   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 141
+                STARC05-2.3.1.2c  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 144
+                W421              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 157
+                W442a             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 160
+                W442b             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 162
+                W442c             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 164
+                W442f             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 166
+                sim_race02        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 173
+                W110a             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 176
+                W416              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 180
+                CheckDelayTimescale-ML CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 185
+                PragmaComments-ML CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 195
+                STARC05-2.10.2.3  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 206
+                STARC05-2.11.3.1  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 211
+                STARC05-2.3.1.5b  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 216
+                W215              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 235
+                W216              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 237
+                W289              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 251
+                W292              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 254
+                W293              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 256
+                W317              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 261
+                W352              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 263
+                W398              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 266
+                W422              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 269
+                W424              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 272
+                W426              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 276
+                W467              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 290
+                W480              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 292
+                W481a             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 294
+                W481b             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 296
+                W496a             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 298
+                W496b             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 300
+                W71               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 302
+                NoAssignX-ML      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 316
+                NoXInCase-ML      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 318
+                ParamWidthMismatch-ML CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 323
+                ReportPortInfo-ML CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 326
+                STARC05-2.1.3.1   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 329
+                STARC05-2.1.5.3   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 332
+                STARC05-2.2.3.3   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 335
+                STARC05-2.3.1.6   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 338
+                W110              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 343
+                W116              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 348
+                W122              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 350
+                W123              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 353
+                W19               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 364
+                W218              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 370
+                W240              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 373
+                W263              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 379
+                W337              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 381
+                W362              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 387
+                W486              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 396
+                W499              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 400
+                W502              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 402
+                W505              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 404
+                W66               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 409
+                InferLatch        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 412
+                RegInputOutput-ML CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 415
+                STARC05-2.3.4.1v  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 419
+                STARC05-2.5.1.7   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 424
+                STARC05-2.5.1.9   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 427
+                W336              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 433
+                W414              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 436
+                W450L             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 442
+                UndrivenInTerm-ML CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 445
+                BufClock          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 457
+                checkPinConnectedToSupply CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 460
+                CombLoop          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 465
+                FlopClockConstant CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 473
+                FlopEConst        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 478
+                FlopSRConst       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 480
+                LatchFeedback     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 489
+                STARC05-1.2.1.2   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 508
+                STARC05-1.3.1.3   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 511
+                STARC05-1.4.3.4   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 516
+                STARC05-2.1.4.5   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 519
+                STARC05-2.4.1.5   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 522
+                STARC05-2.5.1.2   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 525
+                W392              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 534
+                W415              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 536
+                STARC05-2.10.1.4a CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 544
+                STARC05-2.10.1.4b CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 546
+                W156              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 548
+                STARC05-2.3.3.1   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 550
+                W415a             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 552
+                W287b             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 554
+                W224              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 556
+                W287a             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 558
+                W528              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 560
+                mixedsenselist    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 562
+                W339a             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 564
+                STARC05-2.10.3.2a CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 566
+                Av_Info_Case_Analysis CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 571
+                Av_width_mismatch_assign CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 573
+                Av_width_mismatch_case CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 575
+                Av_width_mismatch_port CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 577
+                Av_width_mismatch_function CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 579
+                Av_signed_unsigned_mismatch CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 581
+                Av_width_mismatch_expr CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 583
+                Av_case_default_missing CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 585
+                Av_width_mismatch_expr03 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 588
+                Av_width_mismatch_expr02 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 590
+                Av_dontcare_mismatch CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 592
+-sgdc           /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/auxi/policy_data/auto-verify/verif.sgdc CmdFile $SPYGLASS_HOME/auxi/policy_data/auto-verify/autoload.f 1
+                system.sgdc       CmdLine -                              -
+-smart_rule_execution <ON>              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 93
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-template       lint/lint_turbo_rtl CmdLine -                              -
+-templatedir    /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
+-turbo          <ON>              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/lint/lint_turbo_rtl.spq 92
+-wdir           ./spyglass-1/lint/lint_turbo_rtl CmdLine -                              -
+<design_files>  ALU/RTL/ALU.v     APICall -                              -
+                ALU/RTL/ALU_ARITHMETIC.v APICall -                              -
+                ALU/RTL/ALU_COMPARE.v APICall -                              -
+                ALU/RTL/ALU_LOGIC.v APICall -                              -
+                ALU/RTL/ALU_OUTPUT_REG.v APICall -                              -
+                ALU/RTL/ALU_RESULT_MUX.v APICall -                              -
+                ALU/RTL/ALU_SHIFT.v APICall -                              -
+                ASYNC_FIFO/RTL/ASYNC_FIFO.v APICall -                              -
+                ASYNC_FIFO/RTL/FIFO_MEM.v APICall -                              -
+                ASYNC_FIFO/RTL/FIFO_RD.v APICall -                              -
+                ASYNC_FIFO/RTL/FIFO_WR.v APICall -                              -
+                CLK_GATE/RTL/CLK_GATE.v APICall -                              -
+                Clock_Divider/RTL/CLKDIV_MUX.v APICall -                              -
+                Clock_Divider/RTL/CLK_DIV.v APICall -                              -
+                Clock_Divider/RTL/CLK_DIV_COUNTER.v APICall -                              -
+                Clock_Divider/RTL/CLK_DIV_HALF_COUNT.v APICall -                              -
+                Clock_Divider/RTL/CLK_DIV_OUTPUT_MUX.v APICall -                              -
+                Common/RTL/DF_SYNC.v APICall -                              -
+                Common/RTL/RISING_EDGE_DETECTOR.v APICall -                              -
+                DATA_SYNC/RTL/BUS_CAPTURE.v APICall -                              -
+                DATA_SYNC/RTL/DATA_SYNC.v APICall -                              -
+                PULSE_GEN/RTL/PULSE_GEN.v APICall -                              -
+                RST_SYNC/RTL/RST_SYNC.v APICall -                              -
+                RegFile/RTL/REGFILE_READ.v APICall -                              -
+                RegFile/RTL/REGFILE_STORAGE.v APICall -                              -
+                RegFile/RTL/RegFile.v APICall -                              -
+                SYS_CTRL/RTL/SYS_CTRL.v APICall -                              -
+                SYS_TOP/RTL/SYS_TOP.v APICall -                              -
+                UART/UART_RX/RTL/RX_CONFIG_REG.v APICall -                              -
+                UART/UART_RX/RTL/RX_DATA_SAMPLING.v APICall -                              -
+                UART/UART_RX/RTL/RX_DESERIALIZER.v APICall -                              -
+                UART/UART_RX/RTL/RX_EDGE_BIT_COUNTER.v APICall -                              -
+                UART/UART_RX/RTL/RX_FSM.v APICall -                              -
+                UART/UART_RX/RTL/RX_INPUT_SYNC.v APICall -                              -
+                UART/UART_RX/RTL/RX_OUTPUT_REG.v APICall -                              -
+                UART/UART_RX/RTL/RX_PARITY_CHECK.v APICall -                              -
+                UART/UART_RX/RTL/RX_START_CHECK.v APICall -                              -
+                UART/UART_RX/RTL/RX_STOP_CHECK.v APICall -                              -
+                UART/UART_RX/RTL/UART_RX.v APICall -                              -
+                UART/UART_TOP/RTL/UART_TOP.v APICall -                              -
+                UART/UART_TX/RTL/TX_DATA_REG.v APICall -                              -
+                UART/UART_TX/RTL/TX_FSM.v APICall -                              -
+                UART/UART_TX/RTL/TX_MUX.v APICall -                              -
+                UART/UART_TX/RTL/TX_PARITY_CALC.v APICall -                              -
+                UART/UART_TX/RTL/TX_SERIALIZER.v APICall -                              -
+                UART/UART_TX/RTL/UART_TX.v APICall -                              -
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/spyglass
+openmore        SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/openmore
+starc           SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/starc
+starc2005       SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/starc2005
+erc             SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/erc
+simulation      SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/simulation
+lint            SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/lint
+latch           SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/latch
+morelint        SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/morelint
+timing          SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/timing
+auto-verify     SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/auto-verify
+starc2002       SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/starc2002
+Audits          SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/Audits
+area            SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/area
+miscellaneous   SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/miscellaneous
+starcad-21      SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/starcad-21
+
+

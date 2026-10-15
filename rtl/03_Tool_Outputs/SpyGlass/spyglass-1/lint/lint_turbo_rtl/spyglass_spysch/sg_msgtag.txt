@@ -1,0 +1,250 @@
+18 "STARC05-1.4.3.4" 1
+"STARC-1.4.3.4_VIOLATION_CSV_TAG"
+1
+19 "STARC05-1.4.3.4" 1
+"STARC-1.4.3.4_VIOLATION_CSV_TAG"
+2
+20 "STARC05-1.4.3.4" 3
+"SG_PARENT_CHILD_MSGTAG"
+[18,19]
+"Open_Sp_Sheet"
+["./spyglass-1/lint/lint_turbo_rtl/spyglass_reports/starc/STARC05-1.4.3.4/000/STARC05-1.4.3.4001.csv@@cross-probecol:2"]
+"Sp_Sheet_File_Name"
+["./spyglass-1/lint/lint_turbo_rtl/spyglass_reports/starc/STARC05-1.4.3.4/000/STARC05-1.4.3.4001.csv"]
+21 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+1
+22 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+2
+23 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+3
+24 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+4
+25 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+5
+26 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+6
+27 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+7
+28 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+8
+29 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+9
+30 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+10
+31 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+11
+32 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+12
+33 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+13
+34 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+14
+35 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+15
+36 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+16
+37 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+17
+38 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+18
+39 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+19
+40 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+20
+41 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+21
+42 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+22
+43 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+23
+44 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+24
+45 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+25
+46 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+26
+47 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+27
+48 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+28
+49 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+29
+50 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+30
+51 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+31
+52 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+32
+53 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+33
+54 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+34
+55 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+35
+56 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+36
+57 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+37
+58 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+38
+59 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+39
+60 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+40
+61 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+41
+62 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+42
+63 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+43
+64 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+44
+65 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+45
+66 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+46
+67 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+47
+68 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+48
+69 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+49
+70 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+50
+71 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+51
+72 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+52
+73 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+53
+74 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH01"
+54
+75 "Av_initstate01" 1
+"AV_INITSTATE01_SS_SCH"
+1
+76 "Av_initstate01" 1
+"Open_Sp_Sheet"
+["./spyglass-1/lint/lint_turbo_rtl/spyglass_reports/auto-verify/Uninitialized_Sequential_Elements.csv@@cross-probecol:1","./spyglass-1/lint/lint_turbo_rtl/spyglass_reports/auto-verify/Initialized_Sequential_Elements.csv@@cross-probecol:1"]
+-1 "Av_Info_Case_Analysis" 4
+"TEMPLATE"
+["lint/lint_turbo_rtl"]
+"RULE_ORDER"
+[98]
+"RULEGROUP"
+["auto-verify/Info"]
+"SPG_RULETAG_SCH_INFO_RULE"
+"Show Info Case Analysis Data"
+-1 "Av_initstate01" 3
+"TEMPLATE"
+["lint/lint_turbo_rtl"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["auto-verify/Info"]
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "InferLatch" 3
+"TEMPLATE"
+["lint/lint_turbo_rtl"]
+"RULE_ORDER"
+[62]
+"RULEGROUP"
+["openmore/Coding_for_Synthesis"]
+-1 "RegInputOutput-ML" 3
+"TEMPLATE"
+["lint/lint_turbo_rtl"]
+"RULE_ORDER"
+[63]
+"RULEGROUP"
+["morelint"]
+-1 "ReportIgnoredOverlappingRules" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ReportPortInfo-ML" 3
+"TEMPLATE"
+["lint/lint_turbo_rtl"]
+"RULE_ORDER"
+[42]
+"RULEGROUP"
+["morelint"]
+-1 "SGDC_abstract_port03" 2
+"RULEGROUP"
+["SGDC Checks"]
+"BUILTIN"
+"1"
+-1 "STARC05-1.4.3.4" 3
+"TEMPLATE"
+["lint/lint_turbo_rtl"]
+"RULE_ORDER"
+[80]
+"RULEGROUP"
+["starc2005/s05_Construct/s05_Construct1","starc2005/Basic_Design_Constraint_05"]
+-1 "TurboModeStatus" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"

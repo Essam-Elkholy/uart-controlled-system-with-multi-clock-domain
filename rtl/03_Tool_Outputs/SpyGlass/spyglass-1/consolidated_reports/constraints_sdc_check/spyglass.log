@@ -1,0 +1,870 @@
+SpyGlass run started at 02:39:38 am on Oct 04 2026 
+
+SpyGlass Predictive Analyzer(R) - Version SpyGlass_vL-2016.06
+Last compiled on May 20 2016
+
+All Rights Reserved. Use, disclosure or duplication
+without prior written permission of Synopsys Inc. is prohibited.
+Technical support: email spyglass_support@synopsys.com.
+
+
+Running SpyGlass 64-bit Executable: /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/obj/check.Linux4
+
+RULE-CHECKING IN MIXED MODE
+Loading Policy: spyglass (Version: SpyGlass_vL-2016.06) from path: /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/policies/spyglass
+Loading Shared library libspyglassrules-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/lib/libspyglassrules-Linux4.spyso 
+Loading Shared library libsdcInitRules-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/lib/libsdcInitRules-Linux4.spyso 
+Loading Shared library librmerules-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/lib/librmerules-Linux4.spyso 
+Loading perl file for 'constraints' policy from path: /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/policies/constraints/constraints-policy.pl
+Version of Policy 'constraints': SpyGlass_vL-2016.06
+Loading Shared library libconstraints-Linux4.spyso from /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/policies/constraints/libconstraints-Linux4.spyso 
+
+------------------------------------------------------
+      Table of Successfully Overloaded Rules
+  RuleName            Language          PolicyName
+   FieldName    Original Value/Overloaded Value
+------------------------------------------------------
+  Const_Struct05      Verilog+VHDL      constraints
+   SEVERITY:    Info/Warning
+
+  Clk_Gen01a          Verilog+VHDL      constraints
+   SEVERITY:    Warning/Error
+
+  Clk_Gen02           Verilog+VHDL      constraints
+   SEVERITY:    Warning/Info
+
+  Clk_Gen03           Verilog+VHDL      constraints
+   SEVERITY:    NULL/Error
+
+  Clk_Gen09           Verilog+VHDL      constraints
+   SEVERITY:    Warning/Error
+
+  Clk_Gen23           Verilog+VHDL      constraints
+   SEVERITY:    Warning/Error
+
+  Inp_Del01b          Verilog+VHDL      constraints
+   SEVERITY:    NULL/Error
+
+  Inp_Del03a          Verilog+VHDL      constraints
+   SEVERITY:    NULL/Error
+
+  Inp_Del08           Verilog+VHDL      constraints
+   SEVERITY:    Warning/Error
+
+  Op_Del01b           Verilog+VHDL      constraints
+   SEVERITY:    NULL/Error
+
+  Op_Del03a           Verilog+VHDL      constraints
+   SEVERITY:    NULL/Error
+
+  Op_Del08            Verilog+VHDL      constraints
+   SEVERITY:    Warning/Error
+
+  Load02a             Verilog+VHDL      constraints
+   SEVERITY:    Warning/Error
+
+  Inp_Trans01a        Verilog+VHDL      constraints
+   SEVERITY:    Warning/Error
+
+  Combo_Paths01       Verilog+VHDL      constraints
+   SEVERITY:    Warning/Error
+
+  Combo_Paths03       Verilog+VHDL      constraints
+   SEVERITY:    Warning/Error
+------------------------------------------------------
+
+##build_id : SpyGlass_vL-2016.06
+##system   : Linux IC_EDA 3.10.0-1160.6.1.el7.x86_64 #1 SMP Tue Nov 17 13:59:11 UTC 2020 x86_64
+##cwd      : /mnt/hgfs/Shared_Folder/RTL_System_Project
+##lang     : Verilog+VHDL
+##args     : -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -lib WORK ./spyglass-1/WORK \
+             -nl \
+             -policy='constraints' \
+             -mixed \
+             -batch \
+             -rules='Const_Struct04a,Const_Struct05,Clk_Gen01a,Clk_Gen01b,Clk_Gen02,Clk_Gen03,Clk_Gen05,Clk_Gen06,Clk_Gen08,Clk_Gen09,Clk_Gen22,Clk_Gen23,SDC_Methodology66,SDC_Methodology67,Clk_Lat08,Clk_Uncert01,Clk_Uncert03,Clk_Uncert06,Inp_Del01b,Inp_Del03a,Inp_Del08,Op_Del01b,Op_Del03a,Op_Del08,Load02a,Inp_Trans01a,SDC_Methodology07,Combo_Paths01,Combo_Paths02,Combo_Paths03,Show_Case_Analysis,Show_Clock_Propagation' \
+             -wdir './spyglass-1/constraints/sdc_check' \
+             -sgdc 'system.sgdc' \
+             -dbdir './spyglass-1/.SG_SaveRestoreDB' \
+             -templatedir '/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' \
+             --goal_info 'constraints/sdc_check@' \
+             --template_info 'constraints/sdc_check' \
+             -overloadrules 'Const_Struct05+severity=Warning,Clk_Gen01a+severity=Error,Clk_Gen02+severity=Info,Clk_Gen03+severity=Error,Clk_Gen09+severity=Error,Clk_Gen23+severity=Error,Inp_Del01b+severity=Error,Inp_Del03a+severity=Error,Inp_Del08+severity=Error,Op_Del01b+severity=Error,Op_Del03a+severity=Error,Op_Del08+severity=Error,Load02a+severity=Error,Inp_Trans01a+severity=Error,Combo_Paths01+severity=Error,Combo_Paths03+severity=Error' \
+             -projectwdir './spyglass-1' \
+             -enable_save_restore \
+             -enable_save_restore_builtin 'true' \
+             -ignore_io_if_fp=yes \
+             -tc_ignore_te=no \
+             -64bit  \
+             ALU/RTL/ALU_ARITHMETIC.v \
+             ALU/RTL/ALU_COMPARE.v \
+             ALU/RTL/ALU_LOGIC.v \
+             ALU/RTL/ALU_OUTPUT_REG.v \
+             ALU/RTL/ALU_RESULT_MUX.v \
+             ALU/RTL/ALU_SHIFT.v \
+             ALU/RTL/ALU.v \
+             ASYNC_FIFO/RTL/ASYNC_FIFO.v \
+             ASYNC_FIFO/RTL/FIFO_MEM.v \
+             ASYNC_FIFO/RTL/FIFO_RD.v \
+             ASYNC_FIFO/RTL/FIFO_WR.v \
+             CLK_GATE/RTL/CLK_GATE.v \
+             Clock_Divider/RTL/CLK_DIV_COUNTER.v \
+             Clock_Divider/RTL/CLK_DIV_HALF_COUNT.v \
+             Clock_Divider/RTL/CLK_DIV_OUTPUT_MUX.v \
+             Clock_Divider/RTL/CLK_DIV.v \
+             Clock_Divider/RTL/CLKDIV_MUX.v \
+             Common/RTL/DF_SYNC.v \
+             Common/RTL/RISING_EDGE_DETECTOR.v \
+             DATA_SYNC/RTL/BUS_CAPTURE.v \
+             DATA_SYNC/RTL/DATA_SYNC.v \
+             PULSE_GEN/RTL/PULSE_GEN.v \
+             RegFile/RTL/REGFILE_READ.v \
+             RegFile/RTL/REGFILE_STORAGE.v \
+             RegFile/RTL/RegFile.v \
+             RST_SYNC/RTL/RST_SYNC.v \
+             SYS_CTRL/RTL/SYS_CTRL.v \
+             UART/UART_RX/RTL/RX_CONFIG_REG.v \
+             UART/UART_RX/RTL/RX_DATA_SAMPLING.v \
+             UART/UART_RX/RTL/RX_DESERIALIZER.v \
+             UART/UART_RX/RTL/RX_EDGE_BIT_COUNTER.v \
+             UART/UART_RX/RTL/RX_FSM.v \
+             UART/UART_RX/RTL/RX_INPUT_SYNC.v \
+             UART/UART_RX/RTL/RX_OUTPUT_REG.v \
+             UART/UART_RX/RTL/RX_PARITY_CHECK.v \
+             UART/UART_RX/RTL/RX_START_CHECK.v \
+             UART/UART_RX/RTL/RX_STOP_CHECK.v \
+             UART/UART_RX/RTL/UART_RX.v \
+             UART/UART_TOP/RTL/UART_TOP.v \
+             UART/UART_TX/RTL/TX_DATA_REG.v \
+             UART/UART_TX/RTL/TX_FSM.v \
+             UART/UART_TX/RTL/TX_MUX.v \
+             UART/UART_TX/RTL/TX_PARITY_CALC.v \
+             UART/UART_TX/RTL/TX_SERIALIZER.v \
+             UART/UART_TX/RTL/UART_TX.v \
+             SYS_TOP/RTL/SYS_TOP.v
+
+##verbosity level   : 2
+##exact cmdline arg : -batch -project spyglass-1.prj -goal constraints/sdc_check -64bit
+##spyglass_run.csh begins :
+;	cd /mnt/hgfs/Shared_Folder/RTL_System_Project
+;	setenv SPYGLASS_LD_PRELOAD /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/lib/libsgjemalloc-Linux4.so
+;	setenv SPYGLASS_DW_PATH /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/dw_support
+;	/home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/bin/spyglass  -batch -project spyglass-1.prj -goal constraints/sdc_check -64bit
+##spyglass_run.csh ends
+##files    : ALU/RTL/ALU_ARITHMETIC.v \
+             ALU/RTL/ALU_COMPARE.v \
+             ALU/RTL/ALU_LOGIC.v \
+             ALU/RTL/ALU_OUTPUT_REG.v \
+             ALU/RTL/ALU_RESULT_MUX.v \
+             ALU/RTL/ALU_SHIFT.v \
+             ALU/RTL/ALU.v \
+             ASYNC_FIFO/RTL/ASYNC_FIFO.v \
+             ASYNC_FIFO/RTL/FIFO_MEM.v \
+             ASYNC_FIFO/RTL/FIFO_RD.v \
+             ASYNC_FIFO/RTL/FIFO_WR.v \
+             CLK_GATE/RTL/CLK_GATE.v \
+             Clock_Divider/RTL/CLK_DIV_COUNTER.v \
+             Clock_Divider/RTL/CLK_DIV_HALF_COUNT.v \
+             Clock_Divider/RTL/CLK_DIV_OUTPUT_MUX.v \
+             Clock_Divider/RTL/CLK_DIV.v \
+             Clock_Divider/RTL/CLKDIV_MUX.v \
+             Common/RTL/DF_SYNC.v \
+             Common/RTL/RISING_EDGE_DETECTOR.v \
+             DATA_SYNC/RTL/BUS_CAPTURE.v \
+             DATA_SYNC/RTL/DATA_SYNC.v \
+             PULSE_GEN/RTL/PULSE_GEN.v \
+             RegFile/RTL/REGFILE_READ.v \
+             RegFile/RTL/REGFILE_STORAGE.v \
+             RegFile/RTL/RegFile.v \
+             RST_SYNC/RTL/RST_SYNC.v \
+             SYS_CTRL/RTL/SYS_CTRL.v \
+             UART/UART_RX/RTL/RX_CONFIG_REG.v \
+             UART/UART_RX/RTL/RX_DATA_SAMPLING.v \
+             UART/UART_RX/RTL/RX_DESERIALIZER.v \
+             UART/UART_RX/RTL/RX_EDGE_BIT_COUNTER.v \
+             UART/UART_RX/RTL/RX_FSM.v \
+             UART/UART_RX/RTL/RX_INPUT_SYNC.v \
+             UART/UART_RX/RTL/RX_OUTPUT_REG.v \
+             UART/UART_RX/RTL/RX_PARITY_CHECK.v \
+             UART/UART_RX/RTL/RX_START_CHECK.v \
+             UART/UART_RX/RTL/RX_STOP_CHECK.v \
+             UART/UART_RX/RTL/UART_RX.v \
+             UART/UART_TOP/RTL/UART_TOP.v \
+             UART/UART_TX/RTL/TX_DATA_REG.v \
+             UART/UART_TX/RTL/TX_FSM.v \
+             UART/UART_TX/RTL/TX_MUX.v \
+             UART/UART_TX/RTL/TX_PARITY_CALC.v \
+             UART/UART_TX/RTL/TX_SERIALIZER.v \
+             UART/UART_TX/RTL/UART_TX.v \
+             SYS_TOP/RTL/SYS_TOP.v
+
+ Reading sgdc file "system.sgdc" ...
+Performing unification checks on SGDC... done
+
+INFO [76]    Using `./spyglass-1/WORK/64' as the Work Directory for 64bit precompiled dump.
+Checking Rule Const_Sanity_Rule (Rule 1 of total 168) .... done (Time = 0.00s, Memory = 87.2K)
+Checking Rule ParamSanityCheck01a (Rule 2 of total 168)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/constraints/sdc_check/spyglass_spysch/constraints/constr_info_file' in "w" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/constraints/sdc_check/spyglass_reports/constraints/TCdecompiledInfo' in "w" mode ...
+##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/constraints/sdc_check/spyglass_reports/constraints/tc_unparsed_command' in "w" mode ...
+ .... done (Time = 0.03s, Memory = -41.0K)
+Checking Rule ConsReportAuxi01 (Rule 3 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Block10_Data (Rule 4 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Delay_Auxi (Rule 5 of total 168) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule Gen33_Data (Rule 6 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule XBuf_Auxi01 (Rule 7 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Consis_Auxi (Rule 8 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck01 (Rule 9 of total 168) .... done (Time = 0.01s, Memory = -4.0K)
+Checking Rule PrecompileLibCheck02 (Rule 10 of total 168) .... done (Time = 0.00s, Memory = 25.8K)
+Checking Rule PrecompileLibCheck03 (Rule 11 of total 168) .... done (Time = 0.01s, Memory = 4.7K)
+Checking Rule PrecompileLibCheck04 (Rule 12 of total 168) .... done (Time = 0.01s, Memory = -18.7K)
+Checking Rule ElabSummary (Rule 13 of total 168)##FILEDEBUG[sgOpenFile]: Opening File './spyglass-1/constraints/sdc_check/spyglass_reports/SpyGlass/elab_summary.rpt' in "w" mode ...
+ .... done (Time = 0.05s, Memory = 6.2K)
+Checking Rule SGDC_assume_path01 (Rule 14 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_sdcschema02 (Rule 15 of total 168) .... done (Time = 0.03s, Memory = -56.2K)
+Checking Rule SGDC_clock05 (Rule 16 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_clock09 (Rule 17 of total 168) .... done (Time = 0.00s, Memory = 32.3K)
+Checking Rule SGDC_force_ta05 (Rule 18 of total 168) .... done (Time = 0.00s, Memory = 0.6K)
+Checking Rule SGDC_require_path03 (Rule 19 of total 168) .... done (Time = 0.00s, Memory = 0.8K)
+Checking Rule SGDC_require_value03 (Rule 20 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_voltagedomain05 (Rule 21 of total 168) .... done (Time = 0.00s, Memory = 0.5K)
+Checking Rule SGDC_voltagedomain06 (Rule 22 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_voltagedomain07 (Rule 23 of total 168) .... done (Time = 0.00s, Memory = 15.0K)
+Checking Rule SGDC_powerdomainoutputs02 (Rule 24 of total 168) .... done (Time = 0.00s, Memory = -1.2K)
+Checking Rule SGDC_supply01 (Rule 25 of total 168) .... done (Time = 0.00s, Memory = 15.4K)
+Checking Rule SGDC_waive01 (Rule 26 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive02 (Rule 27 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive03 (Rule 28 of total 168) .... done (Time = 0.00s, Memory = 1.8K)
+Checking Rule SGDC_waive04 (Rule 29 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive05 (Rule 30 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive06 (Rule 31 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive07 (Rule 32 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive08 (Rule 33 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive09 (Rule 34 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive10 (Rule 35 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive11 (Rule 36 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive12 (Rule 37 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive13 (Rule 38 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive21 (Rule 39 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive22 (Rule 40 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive30 (Rule 41 of total 168) .... done (Time = 0.00s, Memory = -0.0K)
+Checking Rule SGDC_waive32 (Rule 42 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive33 (Rule 43 of total 168) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_waive36 (Rule 44 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive38 (Rule 45 of total 168) .... done (Time = 0.00s, Memory = -1.0K)
+Checking Rule SGDC_fifo01 (Rule 46 of total 168) .... done (Time = 0.00s, Memory = -2.1K)
+Checking Rule SGDC_libgroup01 (Rule 47 of total 168) .... done (Time = 0.00s, Memory = -4.0K)
+Checking Rule SGDC_libgroup02 (Rule 48 of total 168) .... done (Time = 0.01s, Memory = -0.2K)
+Checking Rule SGDC_libgroup04 (Rule 49 of total 168) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_power_data01 (Rule 50 of total 168) .... done (Time = 0.00s, Memory = 18.3K)
+Checking Rule SGDC_ungroup01 (Rule 51 of total 168) .... done (Time = 0.00s, Memory = -6.5K)
+Checking Rule SGDC_abstract_port06 (Rule 52 of total 168) .... done (Time = 0.00s, Memory = 34.5K)
+Checking Rule SGDC_abstract_port14 (Rule 53 of total 168) .... done (Time = 0.00s, Memory = 3.9K)
+Checking Rule SGDC_abstract_port15 (Rule 54 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port18 (Rule 55 of total 168) .... done (Time = 0.00s, Memory = 0.1K)
+Checking Rule sdc_init_rule (Rule 56 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule CMD_ignorelibs01 (Rule 57 of total 168) .... done (Time = 0.00s, Memory = -0.5K)
+Checking Rule ReportRuleNotRun (Rule 58 of total 168) .... done (Time = 0.00s, Memory = -17.6K)
+ Reading waiver file "./spyglass-1/constraints/sdc_check/spyglass_spysch/waiver/pragma2Waiver.swl" ...
+ Reading included SGDC file "./spyglass-1/constraints/sdc_check/spyglass_spysch/waiver/pragma2Waiver_varfile.swl" ....
+Checking Rule ReportStopSummary (Rule 59 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportIgnoreSummary (Rule 60 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM started: 8 sec, 803528 KB, 2753940 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM started: 8 sec, 803528 KB, 2753940 KB
+
+INFO [235]    Restoring design database from directory './spyglass-1/.SG_SaveRestoreDB/autogenerated__default_snapshot' ...
+              done
+
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM completed: 8 sec, 840650 KB, 2790804 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM completed: 0 sec, 37122 KB, 36864 KB
+     (Memory Used = 37121.4K(incr), 840649.9K(tot), Cpu Time = 0.13s(incr))
+Checking Rule InferBlackBox (Rule 61 of total 168) .... done (Time = 0.00s, Memory = -1.2K)
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Modules = 49
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances = 1532
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Nets = 2985
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Terminals = 8291
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances per Module (max and avg) = 294, 31
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data started: 8 sec, 843529 KB, 2791060 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data started: 0 sec, 2879 KB, 256 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data completed: 8 sec, 843703 KB, 2791060 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data completed: 0 sec, 174 KB, 0 KB
+     (Memory Used = 122.5K(incr), 843703.1K(tot), Cpu Time = 0.09s(incr))
+Checking Rule SGDC_waive37 (Rule 62 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive24 (Rule 63 of total 168) .... done (Time = 0.00s, Memory = -32.0K)
+Checking Rule SGDC_waive25 (Rule 64 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive31 (Rule 65 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive35 (Rule 66 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule DetectTopDesignUnits (Rule 67 of total 168) Detected 1 top level design units: 
+     SYS_TOP
+ .... done (Time = 0.02s, Memory = -9.2K)
+Checking Rule GenerateConfMap (Rule 68 of total 168) .... done (Time = 0.01s, Memory = -3.6K)
+Checking Rule SDCPARSE for module BUS_CAPTURE (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RISING_EDGE_DETECTOR (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module DF_SYNC (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module DATA_SYNC (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module FIFO_MEM (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module FIFO_RD (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module FIFO_WR (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module DF_SYNC (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module ASYNC_FIFO (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module DF_SYNC (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module PULSE_GEN (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RX_OUTPUT_REG (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RX_STOP_CHECK (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RX_PARITY_CHECK (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RX_START_CHECK (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RX_DESERIALIZER (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RX_DATA_SAMPLING (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RX_EDGE_BIT_COUNTER (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RX_FSM (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RX_CONFIG_REG (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module DF_SYNC (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RX_INPUT_SYNC (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module UART_RX (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module TX_MUX (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module TX_PARITY_CALC (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module TX_SERIALIZER (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module TX_FSM (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module TX_DATA_REG (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module UART_TX (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module UART_TOP (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module CLK_DIV_OUTPUT_MUX (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module CLK_DIV_COUNTER (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module CLK_DIV_HALF_COUNT (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module CLK_DIV (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module CLKDIV_MUX (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module ALU_OUTPUT_REG (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module ALU_RESULT_MUX (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module ALU_SHIFT (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module ALU_COMPARE (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module ALU_LOGIC (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module ALU_ARITHMETIC (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module ALU (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module CLK_GATE (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module REGFILE_READ (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module REGFILE_STORAGE (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RegFile (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module SYS_CTRL (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module RST_SYNC (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDCPARSE for module SYS_TOP (Rule 69 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Performing semantic checks on SGDC contents
+..... SGDC semantic checks completed. (Time = 0.00s, Memory = 58.2K)
+Checking Rule SGDC_testmode03 (Rule 70 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule CheckCelldefine (Rule 71 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule checkSGDC_01 (Rule 72 of total 168) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule checkSGDC_03 (Rule 73 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule checkSGDC_08 (Rule 74 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_memorywritepin04 (Rule 75 of total 168) .... done (Time = 0.00s, Memory = 14.2K)
+Checking Rule SGDC_reset02 (Rule 76 of total 168) .... done (Time = 0.00s, Memory = 14.8K)
+Checking Rule SGDC_reset03 (Rule 77 of total 168) .... done (Time = 0.00s, Memory = -0.6K)
+Checking Rule SGDC_waive23 (Rule 78 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive26 (Rule 79 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive27 (Rule 80 of total 168) .... done (Time = 0.00s, Memory = 3.1K)
+Checking Rule SGDC_waive29 (Rule 81 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_libgroup03 (Rule 82 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_ungroup02 (Rule 83 of total 168) .... done (Time = 0.00s, Memory = -0.1K)
+Checking Rule _abstractPortSGDC (Rule 84 of total 168) .... done (Time = 0.01s, Memory = 24.4K)
+Checking Rule SGDC_abstract_port03 (Rule 85 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port04 (Rule 86 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port05 (Rule 87 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port07 (Rule 88 of total 168) .... done (Time = 0.00s, Memory = -10.0K)
+Checking Rule SGDC_abstract_port08 (Rule 89 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port10 (Rule 90 of total 168) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_abstract_port11 (Rule 91 of total 168) .... done (Time = 0.00s, Memory = 0.5K)
+Checking Rule SGDC_abstract_port12 (Rule 92 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port13 (Rule 93 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportUngroup (Rule 94 of total 168) .... done (Time = 0.00s, Memory = -0.0K)
+Checking Rule InternalRule01a (Rule 95 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ParamSanityCheck01b (Rule 96 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Delay_Split (Rule 97 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port21 (Rule 98 of total 168) .... done (Time = 0.00s, Memory = 8.0K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: VS rule checking finished...: 9 sec, 844009 KB, 2791060 KB
+##SGDEBUG [BENCHMARK_INCR]: VS rule checking finished...: 1 sec, 306 KB, 0 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Block flattening started: 9 sec, 845445 KB, 2792340 KB
+##SGDEBUG [BENCHMARK_INCR]: Block flattening started: 0 sec, 1436 KB, 1280 KB
+ Block flattening SYS_TOP ....
+     (Memory Used = 1770.1K(incr), 847215.5K(tot), Cpu Time = 0.14s(incr))
+ Block flattening completed
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Instances = 1557
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Nets = 1823
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Terms = 7121
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Paths = 58
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Ports = 7
+##SGDEBUG [BENCHMARK_DATA]: Number of Black-Box Instances = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of Lib Instances = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of ILM Instances = 0
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Block flattening finished: 9 sec, 847203 KB, 2793620 KB
+##SGDEBUG [BENCHMARK_INCR]: Block flattening finished: 0 sec, 1758 KB, 1280 KB
+Checking Rule Const_Struct05 (Rule 99 of total 168) .... done (Time = 0.01s, Memory = -0.2K)
+Checking Rule Combo_Paths02 (Rule 100 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule GenSDCData (Rule 101 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule GenSDCCrossingData (Rule 102 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Block10 (Rule 103 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule DomainAnalysis (Rule 104 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Clk_Gen01a (Rule 105 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Clk_Gen01b (Rule 106 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Clk_Gen06 (Rule 107 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Clk_Gen09 (Rule 108 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Clk_Uncert01 (Rule 109 of total 168) .... done (Time = 0.00s, Memory = -0.0K)
+Checking Rule Clk_Uncert03 (Rule 110 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Inp_Del01b (Rule 111 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Inp_Trans01a (Rule 112 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Op_Del01b (Rule 113 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Load02a (Rule 114 of total 168) .... done (Time = 0.00s, Memory = -4.0K)
+Checking Rule Combo_Paths01 (Rule 115 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Combo_Paths03 (Rule 116 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDC_Methodology66 (Rule 117 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SDC_Methodology67 (Rule 118 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Show_Case_Analysis (Rule 119 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Show_Clock_Propagation (Rule 120 of total 168) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule AnalyzeBBox (Rule 121 of total 168) .... done (Time = 0.01s, Memory = -13.9K)
+##FILEDEBUG[sgCloseFile]: File './spyglass-1/constraints/sdc_check/spyglass_spysch/constraints/constr_info_file' closed.
+Checking Rule ReportCheckDataSummary (Rule 122 of total 168) .... done (Time = 0.00s, Memory = 32.0K)
+
+Applying user specified and internally generated waivers on violation database .... done (Time = 0.11s)
+
+Generating data for Console...
+##SGDEBUG [PEAK_MEMORY]: 2798996 KB for entire run at 'just before destroying nvn arrays in flattener' stage
+##SGDEBUG [VMPEAK_MEMORY]: 3276996 KB for entire run
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 11 sec, 844710 KB, 2793852 KB
+##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 2 sec, -2493 KB, 232 KB
+
+
+=====================================================================================
+							Rule Parameter Table
+=====================================================================================
+
+	PARAMETER-NAME                                     VALUE
+-------------------------------------------------------------------------------------
+	-allow_clock_on_output_port                        no
+	-check_clock_group_violations                      no
+	-chip                                              unspecified
+	-clk_gen01_generate_report                         no
+	-clk_gen09_trav_over_sequential_arc                yes
+	-cst_iodl_waiver                                   hanging,set_max_delay,set_min_delay,create_clock,create_generated_clock,set_dont_touch_network,set_ideal_network
+	-debug_proc                                        no
+	-default_max_capacitance                           2.000000
+	-default_min_capacitance                           0.000000
+	-del03_allow_setdelay                              no
+	-force_genclk_for_txv                              no
+	-ignore_io_if_fp                                   yes
+	-library_gen_clock_naming                          yes
+	-netlist_clock_polarity                            yes
+	-populate_comboelements_for_minmax_in_fromto       no
+	-preserve_path                                     no
+	-pt                                                yes
+	-show_all_sdc_violations                           no
+	-show_sdc_progress                                 no
+	-strict                                            UNDEFINED
+	-suppress_sdc_violation_in_abstract                no
+	-tc_allow_async_pins                               no
+	-tc_allow_design_obj                               no
+	-tc_allow_mm_or_io                                 both
+	-tc_at_speed_testing_mode                          no
+	-tc_c2c_max_cycles                                 50
+	-tc_check_clock_in_combo_path                      yes
+	-tc_check_for_multiple_clock_fanin                 yes
+	-tc_clk_compat                                     no
+	-tc_combopaths03_clk_multiplier                    1
+	-tc_disable_caching                                no
+	-tc_domain_mode                                    STA
+	-tc_enable_timing_data                             no
+	-tc_express_check                                  no
+	-tc_honor_virtual_clk                              no
+	-tc_ignore_async_ports                             UNDEFINED
+	-tc_ignore_clk_outports                            no
+	-tc_ignore_if_clk_op_port                          no
+	-tc_ignore_inout_ports                             yes
+	-tc_ignore_io_if_minmax_delay                      no
+	-tc_ignore_iodelay_if_maxdelay                     no
+	-tc_ignore_latch_enable                            no
+	-tc_ignore_missing_minmax_delay                    no
+	-tc_ignore_scg                                     no
+	-tc_ignore_te                                      no
+	-tc_ignored_commands                               unspecified
+	-tc_match_virt_to_real_clk_by_name                 no
+	-tc_show_sca_on_terminals                          no
+	-tc_source_syn_clks                                yes
+	-tc_stop_parsing_ignored_commands                  no
+	-tc_virtual_clock_prefixes                         unspecified
+	-tc_virtual_clock_suffixes                         unspecified
+	-tc_waive_const_struct05                           none
+	-tcdecompile                                       no
+	-truncate_through                                  yes
+	-write_sdc                                         no
+=====================================================================================
+
+
+
+=====================================================================================
+                               Rule Status Table
+
+ RULE-NAME                      POLICY-NAME     ENABLED VIOL-CNT RULE-TYPE   ERROR-MSG         
+=====================================================================================
+ SDC_Consis_Block               constraints     No             - FLATBLOCKDU    -               
+ SDC_Consis                     constraints     No             - FLATDU2_WL     -               
+ SDC_Methodology74              constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology73              constraints     No             - VSDU           -               
+ SDC_Methodology72              constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology71              constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology70              constraints     No             - VSDU           -               
+ XBuf01                         constraints     No             - FLATBLOCKDU    -               
+ Check_Timing04                 constraints     No             - BLOCKDU_CD     -               
+ Check_Timing03                 constraints     No             - FLATBLOCKDU    -               
+ Check_Timing02                 constraints     No             - FLATBLOCKDU    -               
+ VS_Show_Case_Analysis          constraints     No             - VSDU           -               
+ Test_Rules06                   constraints     No             - FLATBLOCKDU    -               
+ Test_Rules05                   constraints     No             - FLATBLOCKDU    -               
+ Test_Rules04                   constraints     No             - BLOCKDU_CD     -               
+ Test_Rules03                   constraints     No             - FLATBLOCKDU    -               
+ Test_Rules02                   constraints     No             - FLATBLOCKDU    -               
+ Test_Rules01                   constraints     No             - BLOCKDU_CD     -               
+ Load03                         constraints     No             - VSDU           -               
+ SDC_DnStrm08                   constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology68              constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology65              constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology69              constraints     No             - VSDU           -               
+ SDC_Methodology64              constraints     No             - VSDU           -               
+ SDC_Methodology61              constraints     No             - VSDU           -               
+ SDC_Methodology60              constraints     No             - VSDU           -               
+ SDC_Methodology39              constraints     No             - VSDU           -               
+ SDC_Methodology38              constraints     No             - VSDU           -               
+ SDC_Methodology37              constraints     No             - VSDU           -               
+ SDC_Methodology36              constraints     No             - VSDU           -               
+ SDC_Methodology35              constraints     No             - VSDU           -               
+ SDC_Methodology34              constraints     No             - VSDU           -               
+ SDC_Methodology33              constraints     No             - VSDU           -               
+ SDC_Methodology32              constraints     No             - VSDU           -               
+ SDC_Methodology31              constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology30              constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology29              constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology28              constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology27              constraints     No             - VSDU           -               
+ SDC_Case_Sanity01              constraints     No             - FLATBLOCKDU    -               
+ SDC_Misc_Command01             constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology26              constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology25              constraints     No             - BLOCKDU_CD     -               
+ SDC_Misc_Power01               constraints     No             - BLOCKDU_CD     -               
+ SDC_Report04                   constraints     No             - BLOCKDU_CD     -               
+ SDC_Report03                   constraints     No             - VSDU           -               
+ SDC_Methodology24              constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology23              constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology22              constraints     No             - BLOCKDU_CD     -               
+ SDC_DnStrm07                   constraints     No             - BLOCKDU_CD     -               
+ SDC_Misc_Setup01               constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology21              constraints     No             - VSDU           -               
+ SDC_Methodology18              constraints     No             - VSDU           -               
+ SDC_Methodology16              constraints     No             - VSDU           -               
+ SDC_Methodology13              constraints     No             - VSDU           -               
+ SDC_Methodology12              constraints     No             - VSDU           -               
+ SDC_Methodology11              constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology10              constraints     No             - BLOCKDU_CD     -               
+ SDC_DnStrm06                   constraints     No             - BLOCKDU_CD     -               
+ SDC_DnStrm05                   constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology09              constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology06              constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology05a             constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology03              constraints     No             - BLOCKDU_CD     -               
+ SDC_DnStrm04a                  constraints     No             - BLOCKDU_CD     -               
+ SDC_DnStrm04                   constraints     No             - BLOCKDU_CD     -               
+ SDC_Methodology02              constraints     No             - VSDU           -               
+ SDC_Methodology01              constraints     No             - BLOCKDU_CD     -               
+ SDC_DnStrm03                   constraints     No             - VSDU           -               
+ SDC_DnStrm02                   constraints     No             - VSDU           -               
+ SDC_DnStrm01                   constraints     No             - VSDU           -               
+ SDC_Misc_WLM01                 constraints     No             - VSDU           -               
+ SDC_Report01                   constraints     No             - FLATBLOCKDU    -               
+ SDC_MergeBlocks                constraints     No             - VSTOPDU        -               
+ Derate01                       constraints     No             - FLATBLOCKDU    -               
+ SDC_ModeMerge                  constraints     No             - FLATDU2_WL     -               
+ CONS_abstract01                constraints     No             - FLATBLOCKDU    -               
+ SDC_DataSheet                  constraints     No             - FLATDU2_WL     -               
+ SDC_Coverage                   constraints     No             - FLATDU2_WL     -               
+ SDC_GenerateIncr               constraints     No             - FLATBLOCKDU    -               
+ Disable_Timing02               constraints     No             - FLATBLOCKDU    -               
+ Disable_Timing01               constraints     No             - FLATBLOCKDU    -               
+ CheckMCP                       constraints     No             - FLATBLOCKDU    -               
+ MCP09                          constraints     No             - FLATBLOCKDU    -               
+ MCP08                          constraints     No             - VSDU           -               
+ MCP05                          constraints     No             - FLATBLOCKDU    -               
+ MCP04b                         constraints     No             - VSDU           -               
+ MCP04a                         constraints     No             - FLATBLOCKDU    -               
+ MCP04                          constraints     No             - FLATBLOCKDU    -               
+ MCP03                          constraints     No             - FLATBLOCKDU    -               
+ MCP01                          constraints     No             - FLATBLOCKDU    -               
+ False_Path13                   constraints     No             - FLATBLOCKDU    -               
+ False_Path12                   constraints     No             - FLATBLOCKDU    -               
+ False_Path11                   constraints     No             - VSDU           -               
+ False_Path10                   constraints     No             - VSDU           -               
+ False_Path09                   constraints     No             - VSDU           -               
+ False_Path08                   constraints     No             - FLATBLOCKDU    -               
+ False_Path07                   constraints     No             - FLATBLOCKDU    -               
+ TE_Consis02                    constraints     No             - FLATBLOCKDU    -               
+ TE_Consis01                    constraints     No             - FLATBLOCKDU    -               
+ TE_Conflict01                  constraints     No             - FLATBLOCKDU    -               
+ False_Path04b                  constraints     No             - VSDU           -               
+ False_Path04a                  constraints     No             - FLATBLOCKDU    -               
+ False_Path04                   constraints     No             - FLATBLOCKDU    -               
+ False_Path03                   constraints     No             - FLATBLOCKDU    -               
+ False_Path01                   constraints     No             - FLATBLOCKDU    -               
+ IO_Consis07                    constraints     No             - FLATBLOCKDU    -               
+ IO_Consis02                    constraints     No             - BLOCKDU_CD     -               
+ IO_Consis01                    constraints     No             - BLOCKDU_CD     -               
+ Combo_Paths06                  constraints     No             - FLATBLOCKDU    -               
+ Combo_Paths04                  constraints     No             - FLATBLOCKDU    -               
+ Load04                         constraints     No             - FLATBLOCKDU    -               
+ Load02b                        constraints     No             - FLATBLOCKDU    -               
+ Load01                         constraints     No             - BLOCKDU_CD     -               
+ TE_Methodology02               constraints     No             - VSDU           -               
+ Op_Del15                       constraints     No             - FLATBLOCKDU    -               
+ Op_Del14                       constraints     No             - FLATBLOCKDU    -               
+ Op_Del13                       constraints     No             - VSDU           -               
+ Op_Del12                       constraints     No             - VSDU           -               
+ Op_Del11                       constraints     No             - VSDU           -               
+ Op_Del10                       constraints     No             - VSDU           -               
+ Op_Del09                       constraints     No             - FLATBLOCKDU    -               
+ Op_Del07a                      constraints     No             - FLATBLOCKDU    -               
+ Op_Del07                       constraints     No             - FLATBLOCKDU    -               
+ Op_Del05                       constraints     No             - BLOCKDU_CD     -               
+ Op_Del04                       constraints     No             - VSDU           -               
+ Op_Del03b                      constraints     No             - FLATBLOCKDU    -               
+ Op_Del02                       constraints     No             - FLATBLOCKDU    -               
+ Op_Del01c                      constraints     No             - FLATBLOCKDU    -               
+ Op_Del01a                      constraints     No             - FLATBLOCKDU    -               
+ Inp_Trans09                    constraints     No             - VSDU           -               
+ Inp_Trans08                    constraints     No             - VSDU           -               
+ Inp_Trans07                    constraints     No             - BLOCKDU_CD     -               
+ Inp_Trans06                    constraints     No             - BLOCKDU_CD     -               
+ Inp_Trans05                    constraints     No             - FLATBLOCKDU    -               
+ Inp_Trans04                    constraints     No             - VSDU           -               
+ Inp_Trans03a                   constraints     No             - VSDU           -               
+ Inp_Trans03                    constraints     No             - VSDU           -               
+ Inp_Trans02                    constraints     No             - VSDU           -               
+ Inp_Trans01                    constraints     No             - FLATBLOCKDU    -               
+ Inp_Del15                      constraints     No             - FLATBLOCKDU    -               
+ Inp_Del14                      constraints     No             - FLATBLOCKDU    -               
+ Inp_Del13                      constraints     No             - VSDU           -               
+ Inp_Del12                      constraints     No             - VSDU           -               
+ Inp_Del11                      constraints     No             - VSDU           -               
+ Inp_Del10                      constraints     No             - VSDU           -               
+ Inp_Del09                      constraints     No             - FLATBLOCKDU    -               
+ Inp_Del07a                     constraints     No             - FLATBLOCKDU    -               
+ Inp_Del07                      constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology63              constraints     No             - FLATBLOCKDU    -               
+ SDC_Methodology62              constraints     No             - FLATBLOCKDU    -               
+ Inp_Del05                      constraints     No             - BLOCKDU_CD     -               
+ Inp_Del04                      constraints     No             - VSDU           -               
+ Inp_Del03b                     constraints     No             - FLATBLOCKDU    -               
+ Inp_Del02                      constraints     No             - FLATBLOCKDU    -               
+ Inp_Del01c                     constraints     No             - FLATBLOCKDU    -               
+ Inp_Del01a                     constraints     No             - FLATBLOCKDU    -               
+ Clk_Consis05                   constraints     No             - BLOCKDU_CD     -               
+ High_Fan16                     constraints     No             - FLATDU2_WL     -               
+ High_Fan15                     constraints     No             - FLATBLOCKDU    -               
+ High_Fan14                     constraints     No             - FLATBLOCKDU    -               
+ High_Fan12                     constraints     No             - BLOCKDU_CD     -               
+ High_Fan11                     constraints     No             - BLOCKDU_CD     -               
+ High_Fan10                     constraints     No             - FLATBLOCKDU    -               
+ High_Fan09                     constraints     No             - BLOCKDU_CD     -               
+ High_Fan08                     constraints     No             - BLOCKDU_CD     -               
+ High_Fan07                     constraints     No             - FLATBLOCKDU    -               
+ High_Fan06                     constraints     No             - FLATBLOCKDU    -               
+ High_Fan05                     constraints     No             - BLOCKDU_CD     -               
+ High_Fan04                     constraints     No             - BLOCKDU_CD     -               
+ High_Fan03b                    constraints     No             - FLATBLOCKDU    -               
+ High_Fan03a                    constraints     No             - FLATBLOCKDU    -               
+ High_Fan02                     constraints     No             - FLATBLOCKDU    -               
+ High_Fan01a                    constraints     No             - BLOCKDU_CD     -               
+ High_Fan01                     constraints     No             - BLOCKDU_CD     -               
+ Dont_Touch05                   constraints     No             - BLOCKDU_CD     -               
+ Dont_Touch04                   constraints     No             - FLATBLOCKDU    -               
+ Dont_Touch03                   constraints     No             - FLATBLOCKDU    -               
+ Dont_Touch02                   constraints     No             - FLATBLOCKDU    -               
+ Clk_Trans17                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Trans16                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Trans15                    constraints     No             - VSDU           -               
+ Clk_Trans13                    constraints     No             - VSDU           -               
+ Clk_Trans12                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Trans11                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Trans09                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Trans08                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Trans07                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Trans06                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Trans05                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Trans04                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Trans03                    constraints     No             - VSDU           -               
+ Clk_Trans02a                   constraints     No             - VSDU           -               
+ Clk_Trans02                    constraints     No             - BLOCKDU_CD     -               
+ Clk_Uncert11                   constraints     No             - VSDU           -               
+ Clk_Uncert10                   constraints     No             - VSDU           -               
+ Clk_Uncert09                   constraints     No             - VSDU           -               
+ Clk_Uncert08                   constraints     No             - FLATBLOCKDU    -               
+ Clk_Uncert07                   constraints     No             - FLATBLOCKDU    -               
+ Clk_Uncert05                   constraints     No             - BLOCKDU_CD     -               
+ Clk_Uncert04                   constraints     No             - VSDU           -               
+ Clk_Uncert02c                  constraints     No             - FLATBLOCKDU    -               
+ Clk_Uncert02b                  constraints     No             - FLATBLOCKDU    -               
+ Clk_Uncert02a                  constraints     No             - FLATBLOCKDU    -               
+ SCG05                          constraints     No             - FLATBLOCKDU    -               
+ SCG04                          constraints     No             - FLATBLOCKDU    -               
+ SCG03                          constraints     No             - FLATBLOCKDU    -               
+ SCG02                          constraints     No             - FLATBLOCKDU    -               
+ SCG01                          constraints     No             - FLATBLOCKDU    -               
+ Clk_Lat12                      constraints     No             - VSDU           -               
+ Clk_Lat10                      constraints     No             - VSDU           -               
+ Clk_Lat09                      constraints     No             - BLOCKDU_CD     -               
+ Clk_Lat07                      constraints     No             - BLOCKDU_CD     -               
+ Clk_Lat06                      constraints     No             - BLOCKDU_CD     -               
+ Clk_Lat05                      constraints     No             - VSDU           -               
+ Clk_Lat04b                     constraints     No             - VSDU           -               
+ Clk_Lat04a                     constraints     No             - VSDU           -               
+ Clk_Lat03                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Lat02                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Lat01                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen36                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen35                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen34                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen33                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen32                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen31                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen30                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen29                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen27                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen26                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen25                      constraints     No             - VSDU           -               
+ Clk_Gen24                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen23a                     constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen21                      constraints     No             - BLOCKDU_CD     -               
+ Clk_Gen20                      constraints     No             - VSDU           -               
+ Clk_Gen19                      constraints     No             - VSDU           -               
+ Clk_Gen18                      constraints     No             - BLOCKDU_CD     -               
+ Clk_Gen17                      constraints     No             - BLOCKDU_CD     -               
+ Clk_Gen15                      constraints     No             - VSDU           -               
+ Clk_Gen14                      constraints     No             - FLATBLOCKDU    -               
+ Clk_Gen13                      constraints     No             - BLOCKDU_CD     -               
+ Clk_Gen10                      constraints     No             - VSDU           -               
+ Clk_Gen07                      constraints     No             - FLATBLOCKDU    -               
+ IO_Consis04                    constraints     No             - VSDU           -               
+ MCP_B2BConsis01                constraints     No             - VSDU           -               
+ Block06                        constraints     No             - FLATBLOCKDU    -               
+ Block05                        constraints     No             - FLATBLOCKDU    -               
+ Block13                        constraints     No             - FLATBLOCKDU    -               
+ Block12                        constraints     No             - FLATBLOCKDU    -               
+ Block11                        constraints     No             - FLATBLOCKDU    -               
+ Block02                        constraints     No             - FLATDU2_WL     -               
+ Const_Struct10                 constraints     No             - VSDU           -               
+ Const_Struct09                 constraints     No             - BLOCKDU_CD     -               
+ Const_Struct08                 constraints     No             - VSDU           -               
+ Const_Struct07                 constraints     No             - VSDU           -               
+ Const_Struct04b                constraints     No             - FLATBLOCKDU    -               
+ Const_Struct03                 constraints     No             - VSDU           -               
+ Const_Struct02                 constraints     No             - BLOCKDU_CD     -               
+ Const_Struct01                 constraints     No             - BLOCKDU_CD     -               
+ Domain_SGDC_Consis             constraints     No             - FLATBLOCKDU    -               
+ DomainError                    constraints     No             - FLATBLOCKDU    -               
+ DomainInfo                     constraints     No             - FLATBLOCKDU    -               
+ Cons_SDC_Report                constraints     No             - FLATBLOCKDU    -               
+ Consis_Auxi                    constraints     Yes            0 SETUP          -               
+ XBuf_Auxi01                    constraints     Yes            0 SETUP          -               
+ Show_Clock_Propagation         constraints     Yes            0 FLATBLOCKDU    -               
+ Show_Case_Analysis             constraints     Yes            0 FLATBLOCKDU    -               
+ SDC_Methodology67              constraints     Yes            0 FLATBLOCKDU    -               
+ SDC_Methodology66              constraints     Yes            0 FLATBLOCKDU    -               
+ SDC_Methodology07              constraints     Yes            0 BLOCKDU_CD     -               
+ PRDGenAuxi                     constraints     Yes            0 VSDU           -               
+ Combo_Paths03                  constraints     Yes            0 FLATBLOCKDU    -               
+ Combo_Paths02                  constraints     Yes            0 BLOCKDU_CD     -               
+ Combo_Paths01                  constraints     Yes            0 FLATBLOCKDU    -               
+ Load02a                        constraints     Yes            0 FLATBLOCKDU    -               
+ Op_Del08                       constraints     Yes            0 VSDU           -               
+ Op_Del03a                      constraints     Yes            0 FLATBLOCKDU    -               
+ Op_Del01b                      constraints     Yes            0 FLATBLOCKDU    -               
+ Inp_Trans01a                   constraints     Yes            0 FLATBLOCKDU    -               
+ Inp_Del08                      constraints     Yes            0 VSDU           -               
+ Inp_Del03a                     constraints     Yes            0 FLATBLOCKDU    -               
+ Inp_Del01b                     constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Uncert06                   constraints     Yes            0 VSDU           -               
+ Clk_Uncert03                   constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Uncert01                   constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Lat08                      constraints     Yes            0 VSDU           -               
+ Gen33_Data                     constraints     Yes            0 SETUP          -               
+ Clk_Gen23                      constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Gen22                      constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Gen09                      constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Gen08                      constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Gen06                      constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Gen05                      constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Gen03                      constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Gen02                      constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Gen01b                     constraints     Yes            0 FLATBLOCKDU    -               
+ Clk_Gen01a                     constraints     Yes            0 FLATBLOCKDU    -               
+ Const_Struct05                 constraints     Yes            0 BLOCKDU_CD     -               
+ Const_Struct04a                constraints     Yes            0 FLATBLOCKDU    -               
+ Delay_Split                    constraints     Yes            0 VSTOPDU        -               
+ Delay_Auxi                     constraints     Yes            0 SETUP          -               
+ DomainAnalysis                 constraints     Yes            0 FLATBLOCKDU    -               
+ Block10                        constraints     Yes            0 FLATBLOCKDU    -               
+ GenSDCCrossingData             constraints     Yes            0 FLATBLOCKDU    -               
+ GenSDCData                     constraints     Yes            0 FLATBLOCKDU    -               
+ Block10_Data                   constraints     Yes            0 SETUP          -               
+ Constraints_MasterRule         constraints     Yes            0 FLATBLOCKDU    -               
+ ConsReportAuxi01               constraints     Yes            0 SETUP          -               
+ ParamSanityCheck01b            constraints     Yes            0 VSTOPDU        -               
+ InternalRule01a                constraints     Yes            0 VSTOPDU        -               
+ ParamSanityCheck01a            constraints     Yes            0 SETUP          -               
+ DomainSanityCheck              constraints     Yes            0 VSDU           -               
+ Nom_Le_Call                    constraints     Yes            0 VSDU           -               
+ SDCPARSE                       constraints     Yes            0 VSDU           -               
+ Const_Sanity_Rule              constraints     Yes            0 SETUP          -               
+ SGDC_abstract_port03           SpyGlass        Yes            2 SETUP          -               
+ ElabSummary                    SpyGlass        Yes            1 SETUP          -               
+ DetectTopDesignUnits           SpyGlass        Yes            1 SETUP          -               
+-------------------------------------------------------------------------------------
+Note: VSDU type of rules (as seen in the above table) are not run on
+      unsynthesized modules reported by 'ErrorAnalyzeBBox/InfoAnalyzeBBox' messages
+      (Please see messages starting with keyword 'UnsynthesizedDU')
+
+##status : SpyGlass Rule Checking Complete.
+
+---------------------------------------------------------------------------------------------
+Results Summary:
+---------------------------------------------------------------------------------------------
+   Goal Run           :      constraints/sdc_check
+   Command-line read  :      0 error,      0 warning,      0 information message 
+   Design Read        :      0 error,      0 warning,      2 information messages
+      Found 1 top module:
+         SYS_TOP   (file: SYS_TOP/RTL/SYS_TOP.v)
+
+   Blackbox Resolution:      0 error,      0 warning,      0 information message 
+   SGDC Checks        :      0 error,      0 warning,      2 information messages
+   -------------------------------------------------------------------------------------
+   Total              :      0 error,      0 warning,      4 information messages
+
+  Total Number of Generated Messages     :         4 (0 error, 0 warning, 4 Infos)
+  Number of Reported Messages            :         4 (0 error, 0 warning, 4 Infos)
+
+---------------------------------------------------------------------------------------------
+
+
+
+SpyGlass Rule Checking Complete.
+
+Generating moresimple report from './spyglass-1/constraints/sdc_check/spyglass.vdb' to './spyglass-1/constraints/sdc_check/spyglass_reports/moresimple.rpt' ....
+
+Generating runsummary report from './spyglass-1/constraints/sdc_check/spyglass.vdb' ....
+
+Generating no_msg_reporting_rules report from './spyglass-1/constraints/sdc_check/spyglass.vdb' to './spyglass-1/constraints/sdc_check/spyglass_reports/no_msg_reporting_rules.rpt' ....
+
+Generating tc_unparsed_command report from './spyglass-1/constraints/sdc_check/spyglass.vdb' to './spyglass-1/constraints/sdc_check/spyglass_reports/tc_unparsed_command.rpt' ....
+##FILEDEBUG[spyOpenFile]: Opening file './spyglass-1/constraints/sdc_check/spyglass_reports/constraints/tc_unparsed_command' in "r" mode...
+##FILEDEBUG[spyCloseFile]: File './spyglass-1/constraints/sdc_check/spyglass_reports/constraints/tc_unparsed_command' closed.
+
+Policy specific data (reports) are present in the directory './spyglass-1/constraints/sdc_check/spyglass_reports'.
+
+SpyGlass critical reports for the current run are present in directory './spyglass-1/consolidated_reports/constraints_sdc_check/'.
+
+SpyGlass Exit Code 0 (Rule-checking completed without errors or warnings)
+SpyGlass total run-time is 0:0:17 (17 secs)
+SpyGlass run completed at 02:55:34 AM on Oct 04 2026

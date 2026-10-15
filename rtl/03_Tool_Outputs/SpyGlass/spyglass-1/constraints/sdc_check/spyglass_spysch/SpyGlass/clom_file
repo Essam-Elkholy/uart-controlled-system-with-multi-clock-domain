@@ -1,0 +1,144 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
+--goal_info     constraints/sdc_check@ CmdLine -                              -
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 39
+-batch          <ON>              CmdLine -                              -
+-dbdir          ./spyglass-1/.SG_SaveRestoreDB CmdLine -                              -
+-enable_save_restore <ON>              CmdLine -                              -
+-enable_save_restore_builtin true              CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 29
+-lib            WORK=>./spyglass-1/WORK CmdLine -                              -
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-mixed          <ON>              CmdLine -                              -
+-nl             <ON>              CmdLine -                              -
+-overloadrules  Const_Struct05+severity=Warning CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 52
+                Clk_Gen01a+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 54
+                Clk_Gen02+severity=Info CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 57
+                Clk_Gen03+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 59
+                Clk_Gen09+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 64
+                Clk_Gen23+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 68
+                Inp_Del01b+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 79
+                Inp_Del03a+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 81
+                Inp_Del08+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 83
+                Op_Del01b+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 85
+                Op_Del03a+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 87
+                Op_Del08+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 89
+                Load02a+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 91
+                Inp_Trans01a+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 93
+                Combo_Paths01+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 98
+                Combo_Paths03+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 101
+-policy         constraints       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 36
+-projectwdir    ./spyglass-1      CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-rules          Const_Struct04a   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 50
+                Const_Struct05    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 51
+                Clk_Gen01a        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 53
+                Clk_Gen01b        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 55
+                Clk_Gen02         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 56
+                Clk_Gen03         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 58
+                Clk_Gen05         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 60
+                Clk_Gen06         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 61
+                Clk_Gen08         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 62
+                Clk_Gen09         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 63
+                Clk_Gen22         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 65
+                Clk_Gen23         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 66
+                SDC_Methodology66 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 70
+                SDC_Methodology67 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 71
+                Clk_Lat08         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 72
+                Clk_Uncert01      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 73
+                Clk_Uncert03      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 74
+                Clk_Uncert06      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 75
+                Inp_Del01b        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 78
+                Inp_Del03a        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 80
+                Inp_Del08         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 82
+                Op_Del01b         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 84
+                Op_Del03a         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 86
+                Op_Del08          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 88
+                Load02a           CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 90
+                Inp_Trans01a      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 92
+                SDC_Methodology07 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 94
+                Combo_Paths01     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 97
+                Combo_Paths02     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 99
+                Combo_Paths03     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 100
+                Show_Case_Analysis CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 102
+                Show_Clock_Propagation CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 103
+-sgdc           system.sgdc       CmdLine -                              -
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-template       constraints/sdc_check CmdLine -                              -
+-templatedir    /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
+-wdir           ./spyglass-1/constraints/sdc_check CmdLine -                              -
+<design_files>  ALU/RTL/ALU.v     APICall -                              -
+                ALU/RTL/ALU_ARITHMETIC.v APICall -                              -
+                ALU/RTL/ALU_COMPARE.v APICall -                              -
+                ALU/RTL/ALU_LOGIC.v APICall -                              -
+                ALU/RTL/ALU_OUTPUT_REG.v APICall -                              -
+                ALU/RTL/ALU_RESULT_MUX.v APICall -                              -
+                ALU/RTL/ALU_SHIFT.v APICall -                              -
+                ASYNC_FIFO/RTL/ASYNC_FIFO.v APICall -                              -
+                ASYNC_FIFO/RTL/FIFO_MEM.v APICall -                              -
+                ASYNC_FIFO/RTL/FIFO_RD.v APICall -                              -
+                ASYNC_FIFO/RTL/FIFO_WR.v APICall -                              -
+                CLK_GATE/RTL/CLK_GATE.v APICall -                              -
+                Clock_Divider/RTL/CLKDIV_MUX.v APICall -                              -
+                Clock_Divider/RTL/CLK_DIV.v APICall -                              -
+                Clock_Divider/RTL/CLK_DIV_COUNTER.v APICall -                              -
+                Clock_Divider/RTL/CLK_DIV_HALF_COUNT.v APICall -                              -
+                Clock_Divider/RTL/CLK_DIV_OUTPUT_MUX.v APICall -                              -
+                Common/RTL/DF_SYNC.v APICall -                              -
+                Common/RTL/RISING_EDGE_DETECTOR.v APICall -                              -
+                DATA_SYNC/RTL/BUS_CAPTURE.v APICall -                              -
+                DATA_SYNC/RTL/DATA_SYNC.v APICall -                              -
+                PULSE_GEN/RTL/PULSE_GEN.v APICall -                              -
+                RST_SYNC/RTL/RST_SYNC.v APICall -                              -
+                RegFile/RTL/REGFILE_READ.v APICall -                              -
+                RegFile/RTL/REGFILE_STORAGE.v APICall -                              -
+                RegFile/RTL/RegFile.v APICall -                              -
+                SYS_CTRL/RTL/SYS_CTRL.v APICall -                              -
+                SYS_TOP/RTL/SYS_TOP.v APICall -                              -
+                UART/UART_RX/RTL/RX_CONFIG_REG.v APICall -                              -
+                UART/UART_RX/RTL/RX_DATA_SAMPLING.v APICall -                              -
+                UART/UART_RX/RTL/RX_DESERIALIZER.v APICall -                              -
+                UART/UART_RX/RTL/RX_EDGE_BIT_COUNTER.v APICall -                              -
+                UART/UART_RX/RTL/RX_FSM.v APICall -                              -
+                UART/UART_RX/RTL/RX_INPUT_SYNC.v APICall -                              -
+                UART/UART_RX/RTL/RX_OUTPUT_REG.v APICall -                              -
+                UART/UART_RX/RTL/RX_PARITY_CHECK.v APICall -                              -
+                UART/UART_RX/RTL/RX_START_CHECK.v APICall -                              -
+                UART/UART_RX/RTL/RX_STOP_CHECK.v APICall -                              -
+                UART/UART_RX/RTL/UART_RX.v APICall -                              -
+                UART/UART_TOP/RTL/UART_TOP.v APICall -                              -
+                UART/UART_TX/RTL/TX_DATA_REG.v APICall -                              -
+                UART/UART_TX/RTL/TX_FSM.v APICall -                              -
+                UART/UART_TX/RTL/TX_MUX.v APICall -                              -
+                UART/UART_TX/RTL/TX_PARITY_CALC.v APICall -                              -
+                UART/UART_TX/RTL/TX_SERIALIZER.v APICall -                              -
+                UART/UART_TX/RTL/UART_TX.v APICall -                              -
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+-ignore_io_if_fp CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 43
+VALUE -- yes
+(KNOWN_PARAM)
+-tc_ignore_te   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_check.spq 42
+VALUE -- no
+(KNOWN_PARAM)
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/spyglass
+constraints     SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/constraints
+
+

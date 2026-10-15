@@ -1,0 +1,1806 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+########################### Define Top Module ############################
+puts "#############################################"
+#############################################
+puts "#             Define Top Module             #"
+#             Define Top Module             #
+puts "#############################################"
+#############################################
+set top_module SYS_TOP
+SYS_TOP
+set SCRIPT_DIR [file normalize [file dirname [info script]]]
+/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/01_Synthesis_Scripts_and_Constraints
+set ROOT [file dirname $SCRIPT_DIR]
+/home/ICer/Assign/Final_System_Backend_Essam_Elkholy
+cd $SCRIPT_DIR
+################## Design Compiler Library Files #setup ######################
+puts "#############################################"
+#############################################
+puts "#    Design Compiler Library Files Setup    #"
+#    Design Compiler Library Files Setup    #
+puts "#############################################"
+#############################################
+set LIB_DIR /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+set SS_NAME scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+set TT_NAME scmetro_tsmc_cl013g_rvt_tt_1p2v_25c
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c
+set FF_NAME scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+set SSLIB [file join $LIB_DIR ${SS_NAME}.db]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB [file join $LIB_DIR ${TT_NAME}.db]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB [file join $LIB_DIR ${FF_NAME}.db]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+foreach library [list $SSLIB $TTLIB $FFLIB] {
+    if {![file isfile $library]} {
+        puts stderr "Missing library: $library"
+        exit 1
+    }
+}
+lappend search_path $LIB_DIR
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+set target_library [list $SSLIB]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set link_library [list * $SSLIB $TTLIB $FFLIB]
+* /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+set_min_library $SSLIB -min_version $FFLIB
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+##################### Define Working Library Directory ######################
+puts "#############################################"
+#############################################
+puts "#      Define Working Library Directory     #"
+#      Define Working Library Directory     #
+puts "#############################################"
+#############################################
+set OUT [file join $ROOT 02_Synthesis_Netlist_and_Reports]
+/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/02_Synthesis_Netlist_and_Reports
+file mkdir $OUT
+define_design_lib WORK -path ./work
+1
+############################# Formality Setup File ##########################
+puts "#############################################"
+#############################################
+puts "#            Formality Setup File           #"
+#            Formality Setup File           #
+puts "#############################################"
+#############################################
+set_svf $OUT/$top_module.svf
+1
+######################## Reading RTL Files #################################
+puts "#############################################"
+#############################################
+puts "#             Reading RTL Files             #"
+#             Reading RTL Files             #
+puts "#############################################"
+#############################################
+set file_format verilog
+verilog
+set fh [open system.lst r]
+file11
+set designs {}
+while {[gets $fh line] >= 0} {
+    set line [string trim $line]
+    if {$line ne ""} {lappend designs [file join $ROOT $line]}
+}
+close $fh
+if {![analyze -format $file_format -library WORK $designs]} {
+    puts stderr "RTL analysis failed"
+    exit 1
+}
+Running PRESTO HDLC
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_ARITHMETIC.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_COMPARE.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_LOGIC.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_OUTPUT_REG.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_RESULT_MUX.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_SHIFT.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/ASYNC_FIFO.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/FIFO_MEM.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/FIFO_RD.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/FIFO_WR.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/07_System_Top_After_DFT_Preparation/CLK_GATE_ICG.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLK_DIV_COUNTER.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLK_DIV_HALF_COUNT.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLK_DIV_OUTPUT_MUX.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLK_DIV.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLKDIV_MUX.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Common/RTL/DF_SYNC.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Common/RTL/RISING_EDGE_DETECTOR.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/DATA_SYNC/RTL/BUS_CAPTURE.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/DATA_SYNC/RTL/DATA_SYNC.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/PULSE_GEN/RTL/PULSE_GEN.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/RegFile/RTL/REGFILE_READ.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/RegFile/RTL/REGFILE_STORAGE.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/RegFile/RTL/RegFile.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/RST_SYNC/RTL/RST_SYNC.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/SYS_CTRL/RTL/SYS_CTRL.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_CONFIG_REG.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_DATA_SAMPLING.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_DESERIALIZER.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_EDGE_BIT_COUNTER.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_FSM.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_INPUT_SYNC.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_OUTPUT_REG.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_PARITY_CHECK.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_START_CHECK.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_STOP_CHECK.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/UART_RX.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TOP/RTL/UART_TOP.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_DATA_REG.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_FSM.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_MUX.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_PARITY_CALC.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_SERIALIZER.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/UART_TX.v
+Compiling source file /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/SYS_TOP/RTL/SYS_TOP.v
+Presto compilation completed successfully.
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+###################### Defining toplevel ###################################
+puts "#############################################"
+#############################################
+puts "#             Defining toplevel             #"
+#             Defining toplevel             #
+puts "#############################################"
+#############################################
+elaborate $top_module -library WORK
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'SYS_TOP'.
+Information: Building the design 'RST_SYNC'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'SYS_CTRL' instantiated from design 'SYS_TOP' with
+	the parameters "DATA_WIDTH=8,ADDR_WIDTH=5,ALU_WIDTH=16". (HDL-193)
+
+Statistics for case statements in always block at line 90 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/SYS_CTRL/RTL/SYS_CTRL.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            94            |    auto/auto     |
+|           101            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 293 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/SYS_CTRL/RTL/SYS_CTRL.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           315            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16 line 247 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/SYS_CTRL/RTL/SYS_CTRL.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    addr_reg_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     fun_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     alu_res_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rd_reg_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RegFile' instantiated from design 'SYS_TOP' with
+	the parameters "WIDTH=8,ADDR_WIDTH=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'CLK_GATE'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALU' instantiated from design 'SYS_TOP' with
+	the parameters "OPER_WIDTH=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'CLK_DIV'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'CLKDIV_MUX'. (HDL-193)
+
+Statistics for case statements in always block at line 5 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLKDIV_MUX.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            6             |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'UART_TOP'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'PULSE_GEN'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ASYNC_FIFO' instantiated from design 'SYS_TOP' with
+	the parameters "DATA_WIDTH=8,ADDR_WIDTH=3". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'DATA_SYNC' instantiated from design 'SYS_TOP' with
+	the parameters "BUS_WIDTH=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'DF_SYNC' instantiated from design 'RST_SYNC' with
+	the parameters "WIDTH=1,NUM_STAGES=2". (HDL-193)
+
+Inferred memory devices in process
+	in routine DF_SYNC_WIDTH1_NUM_STAGES2 line 13 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Common/RTL/DF_SYNC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sync_ff_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'REGFILE_STORAGE' instantiated from design 'RegFile_WIDTH8_ADDR_WIDTH5' with
+	the parameters "WIDTH=8,DEPTH=22,ADDR_WIDTH=5". (HDL-193)
+
+Inferred memory devices in process
+	in routine REGFILE_STORAGE_WIDTH8_DEPTH22_ADDR_WIDTH5 line 15 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/RegFile/RTL/REGFILE_STORAGE.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Reg_File_reg     | Flip-flop |  173  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Reg_File_reg     | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'REGFILE_READ' instantiated from design 'RegFile_WIDTH8_ADDR_WIDTH5' with
+	the parameters "WIDTH=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine REGFILE_READ_WIDTH8 line 7 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/RegFile/RTL/REGFILE_READ.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  RdData_Valid_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     RdData_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'ALU_ARITHMETIC' instantiated from design 'ALU_OPER_WIDTH8' with
+	the parameters "WIDTH=16". (HDL-193)
+
+Statistics for case statements in always block at line 6 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_ARITHMETIC.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            8             |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'ALU_LOGIC' instantiated from design 'ALU_OPER_WIDTH8' with
+	the parameters "WIDTH=16". (HDL-193)
+
+Statistics for case statements in always block at line 6 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_LOGIC.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            8             |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'ALU_COMPARE' instantiated from design 'ALU_OPER_WIDTH8' with
+	the parameters "WIDTH=16". (HDL-193)
+Warning:  /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_COMPARE.v:9: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_COMPARE.v:10: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_COMPARE.v:11: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 6 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_COMPARE.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            8             |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'ALU_SHIFT' instantiated from design 'ALU_OPER_WIDTH8' with
+	the parameters "WIDTH=16". (HDL-193)
+
+Statistics for case statements in always block at line 9 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_SHIFT.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            12            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'ALU_RESULT_MUX' instantiated from design 'ALU_OPER_WIDTH8' with
+	the parameters "WIDTH=16". (HDL-193)
+
+Statistics for case statements in always block at line 7 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_RESULT_MUX.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            10            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'ALU_OUTPUT_REG' instantiated from design 'ALU_OPER_WIDTH8' with
+	the parameters "WIDTH=16". (HDL-193)
+
+Inferred memory devices in process
+	in routine ALU_OUTPUT_REG_WIDTH16 line 7 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_OUTPUT_REG.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ALU_OUT_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    OUT_VALID_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'CLK_DIV_HALF_COUNT'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'CLK_DIV_COUNTER'. (HDL-193)
+
+Inferred memory devices in process
+	in routine CLK_DIV_COUNTER line 8 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLK_DIV_COUNTER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ratio_reg_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     DIV_CLK_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'CLK_DIV_OUTPUT_MUX'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'UART_TX'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'UART_RX'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'DF_SYNC' instantiated from design 'PULSE_GEN' with
+	the parameters "WIDTH=1,NUM_STAGES=1". (HDL-193)
+
+Inferred memory devices in process
+	in routine DF_SYNC_WIDTH1_NUM_STAGES1 line 13 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Common/RTL/DF_SYNC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sync_ff_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RISING_EDGE_DETECTOR'. (HDL-193)
+
+Inferred memory devices in process
+	in routine RISING_EDGE_DETECTOR line 7 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Common/RTL/RISING_EDGE_DETECTOR.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     level_d_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'DF_SYNC' instantiated from design 'ASYNC_FIFO_DATA_WIDTH8_ADDR_WIDTH3' with
+	the parameters "WIDTH=4". (HDL-193)
+
+Inferred memory devices in process
+	in routine DF_SYNC_WIDTH4 line 13 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Common/RTL/DF_SYNC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sync_ff_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FIFO_WR' instantiated from design 'ASYNC_FIFO_DATA_WIDTH8_ADDR_WIDTH3' with
+	the parameters "ADDR_WIDTH=3". (HDL-193)
+
+Inferred memory devices in process
+	in routine FIFO_WR_ADDR_WIDTH3 line 19 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/FIFO_WR.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    GRAY_PTR_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      FULL_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     bin_ptr_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FIFO_RD' instantiated from design 'ASYNC_FIFO_DATA_WIDTH8_ADDR_WIDTH3' with
+	the parameters "ADDR_WIDTH=3". (HDL-193)
+
+Inferred memory devices in process
+	in routine FIFO_RD_ADDR_WIDTH3 line 17 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/FIFO_RD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    GRAY_PTR_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      EMPTY_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     bin_ptr_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FIFO_MEM' instantiated from design 'ASYNC_FIFO_DATA_WIDTH8_ADDR_WIDTH3' with
+	the parameters "DATA_WIDTH=8,ADDR_WIDTH=3". (HDL-193)
+
+Inferred memory devices in process
+	in routine FIFO_MEM_DATA_WIDTH8_ADDR_WIDTH3 line 13 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/FIFO_MEM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+=========================================================================
+|          block name/line            | Inputs | Outputs | # sel inputs |
+=========================================================================
+| FIFO_MEM_DATA_WIDTH8_ADDR_WIDTH3/18 |   8    |    8    |      3       |
+=========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'BUS_CAPTURE' instantiated from design 'DATA_SYNC_BUS_WIDTH8' with
+	the parameters "BUS_WIDTH=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine BUS_CAPTURE_BUS_WIDTH8 line 7 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/DATA_SYNC/RTL/BUS_CAPTURE.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      VALID_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    DATA_OUT_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'TX_DATA_REG'. (HDL-193)
+
+Inferred memory devices in process
+	in routine TX_DATA_REG line 6 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_DATA_REG.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    DATA_OUT_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'TX_FSM'. (HDL-193)
+
+Statistics for case statements in always block at line 46 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_FSM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            49            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 89 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_FSM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            94            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine TX_FSM line 31 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_FSM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   par_en_reg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'TX_SERIALIZER'. (HDL-193)
+
+Inferred memory devices in process
+	in routine TX_SERIALIZER line 20 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_SERIALIZER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ser_data_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    ser_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    data_reg_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+| TX_SERIALIZER/59 |   8    |    1    |      3       |
+======================================================
+Presto compilation completed successfully.
+Information: Building the design 'TX_PARITY_CALC'. (HDL-193)
+
+Inferred memory devices in process
+	in routine TX_PARITY_CALC line 10 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_PARITY_CALC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     par_bit_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'TX_MUX'. (HDL-193)
+Warning:  /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_MUX.v:17: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 16 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_MUX.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            17            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'RX_INPUT_SYNC'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RX_CONFIG_REG'. (HDL-193)
+
+Inferred memory devices in process
+	in routine RX_CONFIG_REG line 8 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_CONFIG_REG.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  PRESCALE_REG_reg   | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  PRESCALE_REG_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   PAR_EN_REG_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   PAR_TYP_REG_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RX_FSM'. (HDL-193)
+
+Statistics for case statements in always block at line 16 in file
+	'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_FSM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            18            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine RX_FSM line 11 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_FSM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RX_EDGE_BIT_COUNTER'. (HDL-193)
+
+Inferred memory devices in process
+	in routine RX_EDGE_BIT_COUNTER line 10 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_EDGE_BIT_COUNTER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   EDGE_COUNT_reg    | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    BIT_COUNT_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RX_DATA_SAMPLING'. (HDL-193)
+
+Inferred memory devices in process
+	in routine RX_DATA_SAMPLING line 15 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_DATA_SAMPLING.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     samples_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RX_DESERIALIZER'. (HDL-193)
+
+Inferred memory devices in process
+	in routine RX_DESERIALIZER line 6 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_DESERIALIZER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    DATA_OUT_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RX_START_CHECK'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RX_PARITY_CHECK'. (HDL-193)
+
+Inferred memory devices in process
+	in routine RX_PARITY_CHECK line 6 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_PARITY_CHECK.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     PAR_ERR_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RX_STOP_CHECK'. (HDL-193)
+
+Inferred memory devices in process
+	in routine RX_STOP_CHECK line 5 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_STOP_CHECK.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     STP_ERR_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RX_OUTPUT_REG'. (HDL-193)
+
+Inferred memory devices in process
+	in routine RX_OUTPUT_REG line 7 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_OUTPUT_REG.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     P_DATA_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    DATA_VLD_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'DF_SYNC' instantiated from design 'RX_INPUT_SYNC' with
+	the parameters "WIDTH=1,NUM_STAGES=2,RESET_VALUE=1'h1". (HDL-193)
+
+Inferred memory devices in process
+	in routine DF_SYNC_1_2_1 line 13 in file
+		'/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Common/RTL/DF_SYNC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sync_ff_reg     | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+current_design $top_module
+Current design is 'SYS_TOP'.
+{SYS_TOP}
+#################### Liniking All The Design Parts #########################
+puts "#############################################"
+#############################################
+puts "#       Liniking All The Design Parts       #"
+#       Liniking All The Design Parts       #
+puts "#############################################"
+#############################################
+if {![link]} {
+    puts stderr "RTL link failed"
+    exit 1
+}
+
+  Linking design 'SYS_TOP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (49 designs)              /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/01_Synthesis_Scripts_and_Constraints/SYS_TOP.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+# Check design consistency
+puts "#############################################"
+#############################################
+puts "#          Check design consistency         #"
+#          Check design consistency         #
+puts "#############################################"
+#############################################
+check_design
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP1
+Date:        Sun Oct 11 01:56:01 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     47
+    Unconnected ports (LINT-28)                                     2
+    Feedthrough (LINT-29)                                           8
+    Shorted outputs (LINT-31)                                      17
+    Constant outputs (LINT-52)                                     20
+
+Cells                                                              76
+    Cells do not drive (LINT-1)                                    15
+    Connected to power or ground (LINT-32)                         57
+    Nets connected to multiple pins on same cell (LINT-33)          4
+--------------------------------------------------------------------------------
+
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', cell 'C776' does not drive any nets. (LINT-1)
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', cell 'B_30' does not drive any nets. (LINT-1)
+Warning: In design 'REGFILE_STORAGE_WIDTH8_DEPTH22_ADDR_WIDTH5', cell 'B_24' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_ARITHMETIC_WIDTH16', cell 'C116' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_ARITHMETIC_WIDTH16', cell 'C117' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_ARITHMETIC_WIDTH16', cell 'C118' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_ARITHMETIC_WIDTH16', cell 'C122' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_COMPARE_WIDTH16', cell 'C76' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_COMPARE_WIDTH16', cell 'C78' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_COMPARE_WIDTH16', cell 'C80' does not drive any nets. (LINT-1)
+Warning: In design 'CLK_DIV_COUNTER', cell 'C91' does not drive any nets. (LINT-1)
+Warning: In design 'TX_SERIALIZER', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'RX_EDGE_BIT_COUNTER', cell 'C84' does not drive any nets. (LINT-1)
+Warning: In design 'RX_EDGE_BIT_COUNTER', cell 'C87' does not drive any nets. (LINT-1)
+Warning: In design 'RX_DATA_SAMPLING', cell 'C64' does not drive any nets. (LINT-1)
+Warning: In design 'CLK_DIV_OUTPUT_MUX', port 'RATIO[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'RX_DATA_SAMPLING', port 'Prescale[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', input port 'RX_P_DATA[7]' is connected directly to output port 'WrData[7]'. (LINT-29)
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', input port 'RX_P_DATA[6]' is connected directly to output port 'WrData[6]'. (LINT-29)
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', input port 'RX_P_DATA[5]' is connected directly to output port 'WrData[5]'. (LINT-29)
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', input port 'RX_P_DATA[4]' is connected directly to output port 'WrData[4]'. (LINT-29)
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', input port 'RX_P_DATA[3]' is connected directly to output port 'WrData[3]'. (LINT-29)
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', input port 'RX_P_DATA[2]' is connected directly to output port 'WrData[2]'. (LINT-29)
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', input port 'RX_P_DATA[1]' is connected directly to output port 'WrData[1]'. (LINT-29)
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', input port 'RX_P_DATA[0]' is connected directly to output port 'WrData[0]'. (LINT-29)
+Warning: In design 'CLKDIV_MUX', output port 'DIV_RATIO_RX[7]' is connected directly to output port 'DIV_RATIO_RX[3]'. (LINT-31)
+Warning: In design 'CLKDIV_MUX', output port 'DIV_RATIO_RX[7]' is connected directly to output port 'DIV_RATIO_RX[4]'. (LINT-31)
+Warning: In design 'CLKDIV_MUX', output port 'DIV_RATIO_RX[7]' is connected directly to output port 'DIV_RATIO_RX[5]'. (LINT-31)
+Warning: In design 'CLKDIV_MUX', output port 'DIV_RATIO_RX[7]' is connected directly to output port 'DIV_RATIO_RX[6]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[2]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[3]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[4]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[5]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[6]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[7]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[8]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[9]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[10]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[11]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[12]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[13]'. (LINT-31)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to output port 'RESULT[14]'. (LINT-31)
+Warning: In design 'RST_SYNC', a pin on submodule 'U_SYNC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DIN[0]' is connected to logic 1. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[15]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[14]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[13]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[12]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[11]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[10]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[9]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_ARITH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[15]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[14]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[13]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[12]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[11]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[10]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[9]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_LOGIC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[15]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[14]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[13]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[12]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[11]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[10]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[9]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_COMPARE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_SHIFT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[15]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_SHIFT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[14]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_SHIFT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[13]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_SHIFT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[12]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_SHIFT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[11]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_SHIFT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[10]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_SHIFT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[9]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', a pin on submodule 'U_SHIFT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'ALU_OPER_WIDTH8', the same net is connected to more than one pin on submodule 'U_ARITH'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[15]', 'A[14]'', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]'.
+Warning: In design 'ALU_OPER_WIDTH8', the same net is connected to more than one pin on submodule 'U_LOGIC'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[15]', 'A[14]'', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]'.
+Warning: In design 'ALU_OPER_WIDTH8', the same net is connected to more than one pin on submodule 'U_COMPARE'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[15]', 'A[14]'', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]'.
+Warning: In design 'ALU_OPER_WIDTH8', the same net is connected to more than one pin on submodule 'U_SHIFT'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'A[15]', 'A[14]'', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]'.
+Warning: In design 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16', output port 'clk_div_en' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'CLKDIV_MUX', output port 'DIV_RATIO_RX[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'CLKDIV_MUX', output port 'DIV_RATIO_RX[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'CLKDIV_MUX', output port 'DIV_RATIO_RX[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'CLKDIV_MUX', output port 'DIV_RATIO_RX[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'CLKDIV_MUX', output port 'DIV_RATIO_RX[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[15]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[14]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[13]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[12]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[11]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[10]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[9]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[8]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ALU_COMPARE_WIDTH16', output port 'RESULT[2]' is connected directly to 'logic 0'. (LINT-52)
+1
+set_dont_touch [get_cells -hierarchical -filter {ref_name == TLATNCAX12M}] true
+1
+#################### Define Design Constraints #########################
+puts "#############################################"
+#############################################
+puts "#         Define Design Constraints         #"
+#         Define Design Constraints         #
+puts "#############################################"
+#############################################
+source ./cons.tcl
+#############################################
+#          Section 0 : DC Variables         #
+#############################################
+#############################################
+#        Section 1 : Clock Definition       #
+#############################################
+#############################################
+#        Master and generated clocks        #
+#############################################
+#############################################
+#      Section 2 : Clocks Relationship      #
+#############################################
+#################################################
+#  Section 3 : set input/output delay on ports  #
+#################################################
+#####################################################################
+#  Asynchronous reset/control ports are excluded from input timing  #
+#####################################################################
+#############################################
+#         Section 4 : Driving cells         #
+#############################################
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+#############################################
+#          Section 5 : Output load          #
+#############################################
+#############################################
+#      Section 6 : Operating Condition      #
+#############################################
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+1
+###################### Mapping and optimization ########################
+puts "#############################################"
+#############################################
+puts "#          Mapping and optimization         #"
+#          Mapping and optimization         #
+puts "#############################################"
+#############################################
+puts "#############################################"
+#############################################
+puts "#            ALU Optimization               #"
+#            ALU Optimization               #
+puts "#############################################"
+#############################################
+ungroup [get_cells U_ALU] -flatten
+Information: Updating graph... (UID-83)
+Warning: Design 'SYS_TOP' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+set_fix_hold [all_clocks]
+1
+compile -map_effort high
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 36 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'BUS_CAPTURE_BUS_WIDTH8'
+  Processing 'RISING_EDGE_DETECTOR_0'
+  Processing 'DF_SYNC_WIDTH1_NUM_STAGES2_0'
+  Processing 'DATA_SYNC_BUS_WIDTH8'
+  Processing 'FIFO_MEM_DATA_WIDTH8_ADDR_WIDTH3'
+  Processing 'FIFO_RD_ADDR_WIDTH3'
+  Processing 'FIFO_WR_ADDR_WIDTH3'
+  Processing 'DF_SYNC_WIDTH4_0'
+  Processing 'ASYNC_FIFO_DATA_WIDTH8_ADDR_WIDTH3'
+  Processing 'DF_SYNC_WIDTH1_NUM_STAGES1'
+  Processing 'PULSE_GEN'
+  Processing 'RX_OUTPUT_REG'
+  Processing 'RX_STOP_CHECK'
+  Processing 'RX_PARITY_CHECK'
+  Processing 'RX_START_CHECK'
+  Processing 'RX_DESERIALIZER'
+  Processing 'RX_DATA_SAMPLING'
+  Processing 'RX_EDGE_BIT_COUNTER'
+  Processing 'RX_FSM'
+  Processing 'RX_CONFIG_REG'
+  Processing 'DF_SYNC_1_2_1'
+  Processing 'RX_INPUT_SYNC'
+  Processing 'UART_RX'
+  Processing 'TX_MUX'
+  Processing 'TX_PARITY_CALC'
+  Processing 'TX_SERIALIZER'
+  Processing 'TX_FSM'
+  Processing 'TX_DATA_REG'
+  Processing 'UART_TX'
+  Processing 'UART_TOP'
+  Processing 'CLK_DIV_OUTPUT_MUX_0'
+  Processing 'CLK_DIV_COUNTER_0'
+  Processing 'CLK_DIV_HALF_COUNT_0'
+  Processing 'CLK_DIV_0'
+  Processing 'CLKDIV_MUX'
+  Processing 'CLK_GATE'
+  Processing 'REGFILE_READ_WIDTH8'
+  Processing 'REGFILE_STORAGE_WIDTH8_DEPTH22_ADDR_WIDTH5'
+  Processing 'RegFile_WIDTH8_ADDR_WIDTH5'
+  Processing 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16'
+  Processing 'RST_SYNC_0'
+  Processing 'SYS_TOP'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'SYS_TOP_DW_div_uns_0'
+  Processing 'SYS_TOP_DW01_sub_0'
+  Processing 'SYS_TOP_DW01_add_0'
+  Processing 'SYS_TOP_DW01_cmp6_0'
+  Processing 'RX_DATA_SAMPLING_DW01_cmp6_0'
+  Processing 'RX_DATA_SAMPLING_DW01_cmp6_1'
+  Processing 'RX_DATA_SAMPLING_DW01_dec_0'
+  Processing 'RX_DATA_SAMPLING_DW01_cmp6_2'
+  Processing 'RX_DATA_SAMPLING_DW01_sub_0'
+  Processing 'RX_DATA_SAMPLING_DW01_cmp6_3'
+  Processing 'RX_DATA_SAMPLING_DW01_inc_0'
+  Processing 'RX_EDGE_BIT_COUNTER_DW01_inc_0'
+  Processing 'RX_EDGE_BIT_COUNTER_DW01_cmp6_0'
+  Processing 'RX_EDGE_BIT_COUNTER_DW01_dec_0'
+  Processing 'CLK_DIV_COUNTER_1_DW01_inc_0'
+  Processing 'CLK_DIV_COUNTER_1_DW01_cmp2_0'
+  Processing 'CLK_DIV_COUNTER_1_DW01_dec_0'
+  Processing 'CLK_DIV_COUNTER_1_DW01_cmp6_0'
+  Processing 'CLK_DIV_HALF_COUNT_1_DW01_add_0'
+  Processing 'CLK_DIV_COUNTER_0_DW01_inc_0'
+  Processing 'CLK_DIV_COUNTER_0_DW01_cmp2_0'
+  Processing 'CLK_DIV_COUNTER_0_DW01_dec_0'
+  Processing 'CLK_DIV_COUNTER_0_DW01_cmp6_0'
+  Processing 'CLK_DIV_HALF_COUNT_0_DW01_add_0'
+  Processing 'RegFile_WIDTH8_ADDR_WIDTH5_DW01_cmp2_0'
+  Processing 'REGFILE_STORAGE_WIDTH8_DEPTH22_ADDR_WIDTH5_DW01_cmp2_0'
+  Processing 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16_DW01_cmp2_0'
+  Processing 'SYS_TOP_DW02_mult_0'
+  Processing 'SYS_TOP_DW01_add_1'
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:04   63485.3     10.34      24.8      14.1                                0.00  
+    0:00:04   63485.3     10.31      24.8      14.1                                0.00  
+    0:00:04   63485.3     10.31      24.8      14.1                                0.00  
+    0:00:04   63470.0     10.31      24.7      14.1                                0.00  
+    0:00:04   63470.0     10.31      24.7      14.1                                0.00  
+    0:00:05   33305.3     15.37      42.9       6.6                                0.00  
+    0:00:05   32991.1     13.68      34.9       6.5                                0.00  
+    0:00:05   32875.8     13.27      33.2       6.5                                0.00  
+    0:00:05   32854.6     13.08      32.3       6.5                                0.00  
+    0:00:05   32858.2     13.07      32.2       6.5                                0.00  
+    0:00:05   32858.2     13.07      32.2       6.5                                0.00  
+    0:00:05   32858.2     13.07      32.2       6.5                                0.00  
+    0:00:05   32858.2     13.07      32.2       6.5                                0.00  
+    0:00:06   32858.2     13.07      32.2       6.5                                0.00  
+    0:00:06   32858.2     13.07      32.2       6.5                                0.00  
+    0:00:06   32858.2     13.07      32.2       6.5                                0.00  
+    0:00:06   32839.3     13.07      32.2       6.5                                0.00  
+    0:00:06   32839.3     13.07      32.2       6.5                                0.00  
+    0:00:06   32860.5     13.04      32.1       2.1                                0.00  
+    0:00:06   32860.5     13.04      32.1       0.0                                0.00  
+    0:00:06   32860.5     13.04      32.1       0.0                                0.00  
+    0:00:06   32860.5     13.04      32.1       0.0                                0.00  
+    0:00:06   32860.5     13.04      32.1       0.0                                0.00  
+    0:00:06   33113.5     11.30      25.9       0.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:06   33604.2     10.11      22.0       1.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:06   33645.4     10.07      22.0       1.1                                0.00  
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:06   33645.4     10.07      22.0       1.1                                0.00  
+    0:00:06   33668.9      9.49      20.5       0.8 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:06   33747.8      8.99      19.6       1.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:06   33719.5      8.64      19.2       2.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:06   33831.3      8.22      18.3       3.1 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:06   33847.8      8.07      17.8       3.1 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:07   33812.5      7.65      16.6       2.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:07   33870.1      7.51      16.1       2.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:07   33891.3      7.42      15.7       2.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:07   33898.4      7.38      15.6       2.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:07   33904.3      7.32      15.3       2.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:07   33924.3      7.28      15.1       2.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:07   33980.7      7.25      15.0       2.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:07   34103.1      7.06      14.4       3.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:08   33971.3      6.75      13.6       2.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:08   34005.5      6.16      11.9       2.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:08   34123.1      5.98      11.3       2.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:08   34073.7      5.93      11.2       2.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:08   34070.2      5.91      11.2       2.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:08   34084.3      5.68      10.5       2.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:08   34090.2      5.51      10.0       2.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:08   34018.4      5.15       9.0       2.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:09   33929.0      4.80       8.0       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:09   33893.7      4.73       7.8       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:09   33918.4      4.64       7.5       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:09   33929.0      4.61       7.5       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:09   33998.4      4.53       7.3       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:09   34020.8      4.52       7.2       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:09   34029.0      4.51       7.2       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:09   34023.1      4.47       7.1       2.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:09   34131.4      4.36       6.8       2.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:10   34117.2      4.28       6.5       2.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:10   34147.8      4.20       6.4       2.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:10   34153.7      4.20       6.4       2.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:10   34134.9      4.13       6.2       2.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:10   34096.1      4.01       6.0       2.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:10   34113.7      3.98       5.9       2.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:10   34045.5      3.93       6.0       2.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:10   34101.9      3.89       5.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:10   34085.5      3.89       5.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:11   34123.1      3.80       5.7       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:11   34125.5      3.76       5.6       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:11   34059.6      3.67       5.5       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:11   33994.9      3.65       5.4       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:11   33993.7      3.62       5.4       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:11   34010.2      3.61       5.3       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:11   34014.9      3.56       5.2       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:12   34020.8      3.55       5.4       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:12   34018.4      3.50       5.3       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:12   34033.7      3.49       5.2       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:12   34051.3      3.42       5.1       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:12   34059.6      3.41       5.1       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:12   34070.2      3.37       5.0       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:12   34072.5      3.36       5.0       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:13   34058.4      3.32       4.9       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:13   34079.6      3.15       4.6       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:13   34079.6      3.13       4.5       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:13   34066.6      3.10       4.5       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:13   34130.2      3.09       4.5       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:13   34142.0      3.08       4.4       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:13   34131.4      3.07       4.4       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:13   34154.9      3.00       4.3       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:13   34152.5      3.00       4.3       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:13   34162.0      2.99       4.3       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:14   34166.7      2.98       4.2       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:14   34167.8      2.96       4.2       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:14   34174.9      2.94       4.2       1.6 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:14   34251.4      2.92       4.1       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:14   34251.4      2.91       4.1       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:14   34277.3      2.91       4.1       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:14   34274.9      2.90       4.1       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:14   34278.4      2.90       4.1       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:14   34310.2      2.86       4.0       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:14   34325.5      2.83       3.9       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:15   34325.5      2.83       3.9       2.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:15   34267.9      2.77       3.8       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:15   34262.0      2.67       3.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:15   34257.3      2.66       3.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:15   34254.9      2.66       3.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:15   34285.5      2.64       3.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:15   34284.3      2.64       3.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:15   34286.7      2.64       3.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:15   34297.3      2.64       3.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:15   34293.7      2.63       3.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:16   34314.9      2.61       3.6       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:16   34326.7      2.54       3.5       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:16   34331.4      2.52       3.5       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:16   34324.3      2.49       3.4       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:16   34334.9      2.49       3.4       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:16   34376.1      2.47       3.4       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:17   34366.7      2.46       3.3       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:17   34280.8      2.43       3.3       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:17   34259.6      2.43       3.3       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:17   34269.0      2.42       3.3       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:17   34273.7      2.33       3.2       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:17   34287.9      2.32       3.2       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:17   34267.9      2.30       3.1       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34246.7      2.27       3.1       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34247.9      2.27       3.1       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34239.6      2.27       3.1       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34251.4      2.22       3.0       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34262.0      2.20       2.9       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34218.4      2.19       2.9       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34236.1      2.17       2.9       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34237.3      2.17       2.9       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34237.3      2.16       2.9       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34239.6      2.16       2.9       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:18   34240.8      2.16       2.9       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:19   34240.8      2.15       2.9       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:19   34246.7      2.13       2.8       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:19   34245.5      2.13       2.8       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:19   34245.5      2.13       2.8       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:19   34230.2      2.12       2.8       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:19   34256.1      2.09       2.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:19   34283.2      2.08       2.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:19   34285.5      2.08       2.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:19   34290.2      2.08       2.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:19   34291.4      2.07       2.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:20   34303.2      2.06       2.7       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:20   34312.6      2.05       2.6       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:20   34318.5      2.04       2.6       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:20   34309.0      2.02       2.6       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:20   34330.2      2.02       2.6       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:20   34337.3      2.00       2.5       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34337.3      1.99       2.5       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34338.5      1.99       2.5       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34338.5      1.99       2.5       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34339.6      1.98       2.5       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34339.6      1.98       2.5       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34339.6      1.98       2.5       2.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34338.5      1.96       2.5       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34352.6      1.95       2.5       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34377.3      1.93       2.4       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34384.4      1.93       2.4       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34416.1      1.91       2.4       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:21   34460.8      1.90       2.3       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34520.8      1.88       2.3       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34518.5      1.87       2.3       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34540.9      1.86       2.3       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34547.9      1.83       2.2       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34552.6      1.82       2.2       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34556.1      1.80       2.1       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34577.3      1.79       2.1       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34615.0      1.78       2.1       1.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34643.2      1.76       2.1       0.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34643.2      1.75       2.1       0.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34647.9      1.74       2.0       0.4 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34699.7      1.73       2.0       1.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34684.4      1.72       2.0       1.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34712.7      1.69       1.9       1.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34725.6      1.68       1.9       1.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34745.6      1.67       1.9       1.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34733.8      1.65       1.9       1.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34726.8      1.64       1.8       1.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34816.2      1.60       1.8       1.9 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34817.4      1.58       1.7       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34857.4      1.56       1.7       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34915.0      1.43       1.4       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34932.7      1.40       1.4       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34992.7      1.39       1.4       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   35000.9      1.38       1.4       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:22   34968.0      1.26       1.3       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   34985.6      1.25       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   34990.4      1.23       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   34986.8      1.23       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   34986.8      1.22       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   34998.6      1.21       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35000.9      1.20       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35008.0      1.19       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35013.9      1.19       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35029.2      1.18       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35029.2      1.17       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35036.2      1.17       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35040.9      1.17       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35055.1      1.17       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35050.4      1.16       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35057.4      1.16       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35079.8      1.15       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35076.3      1.15       1.2       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:23   35077.4      1.15       1.1       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:24   35073.9      1.13       1.1       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:24   35070.4      1.13       1.1       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:25   35213.9      1.04       1.0       1.5                                0.00  
+    0:00:25   35242.2      1.02       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:25   35250.4      1.01       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:25   35268.1      0.99       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:25   35268.1      0.99       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:25   35269.2      0.99       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:25   35269.2      0.99       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35262.2      0.99       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35263.3      0.98       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35263.3      0.98       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35242.2      0.98       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35249.2      0.98       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35245.7      0.97       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35252.8      0.97       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35258.6      0.96       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35269.2      0.95       1.0       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35271.6      0.94       0.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35275.1      0.94       0.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35258.6      0.94       0.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35261.0      0.93       0.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35253.9      0.93       0.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35259.8      0.93       0.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35272.8      0.92       0.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35273.9      0.92       0.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:26   35279.8      0.92       0.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:27   35279.8      0.92       0.9       1.5 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:28   35515.2      0.74       0.7       2.7                                0.00  
+    0:00:28   35488.1      0.68       0.7       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:28   35485.7      0.68       0.7       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35488.1      0.67       0.7       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35484.6      0.67       0.7       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35488.1      0.67       0.7       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35485.7      0.66       0.7       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35483.4      0.66       0.7       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35483.4      0.66       0.7       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35495.2      0.64       0.6       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35490.4      0.63       0.6       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35505.7      0.63       0.6       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35528.1      0.63       0.6       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35530.5      0.62       0.6       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35534.0      0.62       0.6       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35532.8      0.61       0.6       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:29   35534.0      0.61       0.6       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:30   35537.5      0.61       0.6       2.7 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:31   35967.0      0.44       0.4       3.2                                0.00  
+    0:00:31   35975.2      0.43       0.4       3.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:31   35989.4      0.40       0.4       3.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:31   35987.0      0.39       0.4       3.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:31   35989.4      0.38       0.4       3.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:31   36022.3      0.38       0.4       3.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:31   36014.1      0.37       0.4       3.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   35944.7      0.33       0.3       3.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   35951.7      0.33       0.3       3.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   35951.7      0.33       0.3       3.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   35951.7      0.33       0.3       3.2 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   35991.7      0.32       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   35991.7      0.32       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   35994.1      0.31       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   35988.2      0.31       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   35970.5      0.31       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   36000.0      0.27       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:32   36003.5      0.27       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:33   36003.5      0.27       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:33   36007.0      0.27       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:33   36001.1      0.27       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:33   36001.1      0.27       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:33   35997.6      0.27       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:33   36011.7      0.26       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:33   36011.7      0.26       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:33   36010.6      0.26       0.3       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:33   36021.1      0.24       0.2       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:33   36030.6      0.23       0.2       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:34   36037.6      0.23       0.2       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:34   36049.4      0.23       0.2       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:34   36049.4      0.23       0.2       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:34   36044.7      0.23       0.2       3.3 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:35   36487.1      0.00       0.0       3.5                                0.00  
+    0:00:35   36487.1      0.00       0.0       3.5                                0.00  
+    0:00:35   36465.9      0.00       0.0       3.5                                0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:35   36465.9      0.00       0.0       3.5                                0.00  
+    0:00:35   36407.1      0.00       0.0       0.0                                0.00  
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:35   36407.1      0.00       0.0       0.0                                0.00  
+    0:00:35   36407.1      0.00       0.0       0.0                                0.00  
+    0:00:35   35257.5      0.85       0.9       0.0                                0.00  
+    0:00:35   34706.8      1.25       1.4       0.0                                0.00  
+    0:00:35   34595.0      1.24       1.4       0.0                                0.00  
+    0:00:35   34576.2      1.24       1.4       0.0                                0.00  
+    0:00:35   34576.2      1.24       1.4       0.0                                0.00  
+    0:00:35   34576.2      1.24       1.4       0.0                                0.00  
+    0:00:35   34669.1      0.86       0.9       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:36   34716.2      0.76       0.8       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:36   34689.1      0.62       0.6       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:36   34683.2      0.59       0.6       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:36   34637.3      0.51       0.5       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:36   34639.7      0.47       0.5       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:36   34627.9      0.46       0.5       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:37   34636.2      0.46       0.5       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:37   34633.8      0.45       0.4       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:37   34635.0      0.44       0.4       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:38   34619.7      0.35       0.4       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:38   34643.2      0.35       0.3       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:38   34644.4      0.33       0.3       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:38   34642.0      0.23       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:38   34642.0      0.23       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:38   34637.3      0.22       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:38   34625.6      0.21       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:38   34636.2      0.21       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:38   34635.0      0.21       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34675.0      0.19       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34651.5      0.18       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34635.0      0.16       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34631.5      0.15       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34627.9      0.14       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34631.5      0.13       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34645.6      0.12       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34655.0      0.12       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34662.1      0.12       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34659.7      0.11       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34659.7      0.11       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:39   34657.3      0.10       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:40   34710.3      0.09       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:40   34722.1      0.08       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:40   34722.1      0.08       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:40   34731.5      0.08       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:40   34739.7      0.08       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:40   34750.3      0.07       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:41   34758.5      0.07       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:41   34755.0      0.07       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:41   34755.0      0.06       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:41   34762.1      0.05       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:41   34759.7      0.05       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:41   34760.9      0.04       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:41   34760.9      0.04       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:41   34758.5      0.04       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:42   34765.6      0.04       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:42   34740.9      0.04       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:42   34738.5      0.04       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:42   34735.0      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:42   34735.0      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:42   34742.1      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:42   34753.8      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:43   34753.8      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:43   34749.1      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:43   34764.4      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:43   34772.7      0.02       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:43   34776.2      0.02       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:44   34779.7      0.02       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:44   34819.7      0.00       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:44   34819.7      0.00       0.0       0.0                                0.00  
+    0:00:44   34107.8      1.15       1.3       0.0                                0.00  
+    0:00:44   33817.2      1.09       1.1       0.0                                0.00  
+    0:00:44   33671.3      1.04       1.0       0.0                                0.00  
+    0:00:44   33671.3      1.04       1.0       0.0                                0.00  
+    0:00:44   33671.3      1.04       1.0       0.0                                0.00  
+    0:00:44   33671.3      1.04       1.0       0.0                                0.00  
+    0:00:44   33671.3      1.04       1.0       0.0                                0.00  
+    0:00:44   33671.3      1.04       1.0       0.0                                0.00  
+    0:00:44   33733.6      0.74       0.7       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:44   33724.2      0.67       0.7       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:44   33747.8      0.55       0.6       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:44   33784.2      0.48       0.5       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:45   33794.8      0.44       0.4       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:45   33826.6      0.30       0.3       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:45   33856.0      0.20       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:45   33873.7      0.19       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:45   33879.5      0.18       0.2       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:45   33872.5      0.10       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:45   33874.8      0.09       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:46   33877.2      0.09       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:46   33883.1      0.09       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33821.9      0.07       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33824.2      0.07       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33834.8      0.06       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33823.1      0.06       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33818.4      0.05       0.1       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33821.9      0.05       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33821.9      0.05       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33825.4      0.04       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33819.5      0.04       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33819.5      0.04       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33817.2      0.04       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:47   33814.8      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:48   33813.7      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:48   33818.4      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:48   33818.4      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:48   33821.9      0.03       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:48   33853.7      0.01       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:48   33845.4      0.01       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:48   33849.0      0.00       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:48   33856.0      0.00       0.0       0.0 U_ALU/U_OUTPUT/ALU_OUT_reg[0]/D      0.00  
+    0:00:48   33825.4      0.00       0.0       0.0                                0.00  
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+change_names -rules verilog -hierarchy
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
+# Check the mapped design
+puts "#############################################"
+#############################################
+puts "#          Check the mapped design          #"
+#          Check the mapped design          #
+puts "#############################################"
+#############################################
+if {![link]} {
+    puts stderr "Mapped design link failed"
+    exit 1
+}
+
+  Linking design 'SYS_TOP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (22 designs)              /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/01_Synthesis_Scripts_and_Constraints/SYS_TOP.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library)
+                              /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  * (33 designs)              /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/01_Synthesis_Scripts_and_Constraints/SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16.db, etc
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library)
+                              /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library)
+                              /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+check_design
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP1
+Date:        Sun Oct 11 01:56:52 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     69
+    Unconnected ports (LINT-28)                                    69
+
+Cells                                                              44
+    Connected to power or ground (LINT-32)                         42
+    Nets connected to multiple pins on same cell (LINT-33)          2
+
+Nets                                                               37
+    Unloaded nets (LINT-2)                                         37
+--------------------------------------------------------------------------------
+
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_37' driven by pin 'U_ALU_U_ARITH_div_12/remainder[0]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_36' driven by pin 'U_ALU_U_ARITH_div_12/remainder[1]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_35' driven by pin 'U_ALU_U_ARITH_div_12/remainder[2]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_34' driven by pin 'U_ALU_U_ARITH_div_12/remainder[3]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_33' driven by pin 'U_ALU_U_ARITH_div_12/remainder[4]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_32' driven by pin 'U_ALU_U_ARITH_div_12/remainder[5]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_31' driven by pin 'U_ALU_U_ARITH_div_12/remainder[6]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_30' driven by pin 'U_ALU_U_ARITH_div_12/remainder[7]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_29' driven by pin 'U_ALU_U_ARITH_div_12/remainder[8]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_28' driven by pin 'U_ALU_U_ARITH_div_12/remainder[9]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_27' driven by pin 'U_ALU_U_ARITH_div_12/remainder[10]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_26' driven by pin 'U_ALU_U_ARITH_div_12/remainder[11]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_25' driven by pin 'U_ALU_U_ARITH_div_12/remainder[12]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_24' driven by pin 'U_ALU_U_ARITH_div_12/remainder[13]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_23' driven by pin 'U_ALU_U_ARITH_div_12/remainder[14]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_22' driven by pin 'U_ALU_U_ARITH_div_12/remainder[15]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_21' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[16]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_20' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[17]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_19' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[18]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_18' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[19]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_17' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[20]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_16' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[21]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_15' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[22]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_14' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[23]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_13' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[24]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_12' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[25]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_11' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[26]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_10' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[27]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_9' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[28]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_8' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[29]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_7' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[30]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_6' driven by pin 'U_ALU_U_ARITH_mult_11/PRODUCT[31]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_5' driven by pin 'U_RX_DIV_MUX/DIV_RATIO_RX[3]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_4' driven by pin 'U_RX_DIV_MUX/DIV_RATIO_RX[4]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_3' driven by pin 'U_RX_DIV_MUX/DIV_RATIO_RX[5]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_2' driven by pin 'U_RX_DIV_MUX/DIV_RATIO_RX[6]' has no loads. (LINT-2)
+Warning: In design 'SYS_TOP', net 'SYNOPSYS_UNCONNECTED_1' driven by pin 'U_RX_DIV_MUX/DIV_RATIO_RX[7]' has no loads. (LINT-2)
+Warning: In design 'CLK_DIV_OUTPUT_MUX_0', port 'RATIO[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'RX_DATA_SAMPLING', port 'Prescale[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'CLK_DIV_OUTPUT_MUX_1', port 'RATIO[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'A[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'A[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'A[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'A[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'A[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'A[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'B[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW02_mult_0', port 'PRODUCT[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'a[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'a[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'a[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'a[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'a[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'a[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'a[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'a[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'b[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'b[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'b[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'b[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'b[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'b[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'b[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'b[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'remainder[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP_DW_div_uns_1', port 'divide_by_0' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', a pin on submodule 'U_TX_CLK_DIV' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_clk_en' is connected to logic 1. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_RX_CLK_DIV' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_clk_en' is connected to logic 1. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_RX_CLK_DIV' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_div_ratio[7]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_RX_CLK_DIV' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_div_ratio[6]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_RX_CLK_DIV' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_div_ratio[5]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_RX_CLK_DIV' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_div_ratio[4]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_RX_CLK_DIV' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_div_ratio[3]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[15]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[14]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[13]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[12]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[11]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[10]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[9]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_mult_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TC' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[15]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[14]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[13]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[12]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[11]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[10]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[9]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'a[8]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[15]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[14]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[13]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[12]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[11]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[10]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[9]' is connected to logic 0. 
+Warning: In design 'SYS_TOP', a pin on submodule 'U_ALU_U_ARITH_div_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[8]' is connected to logic 0. 
+Warning: In design 'RST_SYNC_0', a pin on submodule 'U_SYNC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DIN[0]' is connected to logic 1. 
+Warning: In design 'RST_SYNC_1', a pin on submodule 'U_SYNC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DIN[0]' is connected to logic 1. 
+Warning: In design 'SYS_TOP', the same net is connected to more than one pin on submodule 'U_ALU_U_ARITH_mult_11'. (LINT-33)
+   Net 'n366' is connected to pins 'A[15]', 'A[14]'', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]'.
+Warning: In design 'SYS_TOP', the same net is connected to more than one pin on submodule 'U_ALU_U_ARITH_div_12'. (LINT-33)
+   Net 'n368' is connected to pins 'a[15]', 'a[14]'', 'a[13]', 'a[12]', 'a[11]', 'a[10]', 'a[9]', 'a[8]', 'b[15]', 'b[14]', 'b[13]', 'b[12]', 'b[11]', 'b[10]', 'b[9]', 'b[8]'.
+1
+if {[sizeof_collection [get_cells -hierarchical -filter {ref_name =~ GTECH*}]]} {
+    puts stderr "Unmapped GTECH cells remain"
+    exit 1
+}
+if {[sizeof_collection [get_cells -hierarchical -filter {ref_name =~ TLATNX* || ref_name =~ TLATX*}]]} {
+    puts stderr "Unexpected standalone latch remains"
+    exit 1
+}
+# Write out files
+puts "#############################################"
+#############################################
+puts "#              Write out files              #"
+#              Write out files              #
+puts "#############################################"
+#############################################
+write_file -format verilog -hierarchy -output $OUT/$top_module.v
+Writing verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/02_Synthesis_Netlist_and_Reports/SYS_TOP.v'.
+1
+write_file -format ddc -hierarchy -output $OUT/$top_module.ddc
+Writing ddc file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/02_Synthesis_Netlist_and_Reports/SYS_TOP.ddc'.
+1
+write_sdc -nosplit $OUT/$top_module.sdc
+1
+write_sdf $OUT/$top_module.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/02_Synthesis_Netlist_and_Reports/SYS_TOP.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+set_svf -off
+1
+####################### reporting ##########################################
+puts "#############################################"
+#############################################
+puts "#                 reporting                 #"
+#                 reporting                 #
+puts "#############################################"
+#############################################
+report_area -hierarchy > $OUT/area.rpt
+report_power -hierarchy > $OUT/power.rpt
+report_timing -delay_type max -max_paths 100 -nworst 10 > $OUT/setup.rpt
+report_timing -delay_type min -max_paths 100 -nworst 10 > $OUT/hold.rpt
+report_constraint -all_violators -nosplit > $OUT/constraints.rpt
+report_clock -attributes > $OUT/clocks.rpt
+check_design > $OUT/check_design.rpt
+check_timing > $OUT/check_timing.rpt
+report_reference -hierarchy > $OUT/references.rpt
+exit
+
+Memory usage for main task 310 Mbytes.
+Memory usage for this session 310 Mbytes.
+CPU usage for this session 50 seconds ( 0.01 hours ).
+
+Thank you...

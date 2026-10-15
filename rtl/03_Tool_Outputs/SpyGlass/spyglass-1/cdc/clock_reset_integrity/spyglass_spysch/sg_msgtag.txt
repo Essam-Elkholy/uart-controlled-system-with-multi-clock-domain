@@ -1,0 +1,54 @@
+-1 "Clock_Reset_info01" 3
+"TEMPLATE"
+["cdc/clock_reset_integrity"]
+"RULE_ORDER"
+[11]
+"RULEGROUP"
+["clock-reset/INFORMATION"]
+-1 "Clock_glitch04" 3
+"TEMPLATE"
+["cdc/clock_reset_integrity"]
+"RULE_ORDER"
+[14]
+"RULEGROUP"
+["clock-reset/VERIFY"]
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Info_Case_Analysis" 5
+"TEMPLATE"
+["cdc/clock_reset_integrity"]
+"RULE_ORDER"
+[20]
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+"SPG_RULETAG_SCH_INFO_RULE"
+"Show Info Case Analysis Data"
+-1 "Propagate_Clocks" 3
+"TEMPLATE"
+["cdc/clock_reset_integrity"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["clock-reset/INFORMATION"]
+-1 "Propagate_Resets" 3
+"TEMPLATE"
+["cdc/clock_reset_integrity"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["clock-reset/INFORMATION"]
+-1 "SGDC_abstract_port03" 2
+"RULEGROUP"
+["SGDC Checks"]
+"BUILTIN"
+"1"

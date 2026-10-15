@@ -1,0 +1,198 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+########################### Define Top Module ############################
+puts "#############################################"
+#############################################
+puts "#         Functional Clock Check            #"
+#         Functional Clock Check            #
+puts "#############################################"
+#############################################
+set top_module SYS_TOP
+SYS_TOP
+set SCRIPT_DIR [file normalize [file dirname [info script]]]
+/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/05_DFT_Netlist_and_Reports
+cd $SCRIPT_DIR
+set OUT [file join $SCRIPT_DIR clock_check]
+/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/05_DFT_Netlist_and_Reports/clock_check
+file mkdir $OUT
+########################### Technology Libraries #########################
+puts "#############################################"
+#############################################
+puts "#            Technology Libraries           #"
+#            Technology Libraries           #
+puts "#############################################"
+#############################################
+set LIB_DIR /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+set SS_NAME scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+set TT_NAME scmetro_tsmc_cl013g_rvt_tt_1p2v_25c
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c
+set FF_NAME scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+set SSLIB [file join $LIB_DIR ${SS_NAME}.db]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB [file join $LIB_DIR ${TT_NAME}.db]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB [file join $LIB_DIR ${FF_NAME}.db]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+foreach library [list $SSLIB $TTLIB $FFLIB] {
+    if {![file isfile $library]} {
+        puts stderr "Missing library: $library"
+        exit 1
+    }
+}
+lappend search_path $LIB_DIR
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+set target_library [list $SSLIB]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set link_library [list * $SSLIB $TTLIB $FFLIB]
+* /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+set_min_library $SSLIB -min_version $FFLIB
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+########################### Read DFT Design ##############################
+puts "#############################################"
+#############################################
+puts "#             Read DFT Design               #"
+#             Read DFT Design               #
+puts "#############################################"
+#############################################
+if {![read_file -format ddc [file join $SCRIPT_DIR SYS_TOP.ddc]]} {
+    puts stderr "Unable to read DFT DDC"
+    exit 1
+}
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Reading ddc file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/05_DFT_Netlist_and_Reports/SYS_TOP.ddc'.
+Loaded 55 designs.
+Current design is 'SYS_TOP'.
+Error: can't use non-numeric string as operand of "!"
+	Use error_info for more info. (CMD-013)
+current_design $top_module
+Current design is 'SYS_TOP'.
+{SYS_TOP}
+if {![link]} {
+    puts stderr "DFT DDC link failed"
+    exit 1
+}
+
+  Linking design 'SYS_TOP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (55 designs)              /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/05_DFT_Netlist_and_Reports/SYS_TOP.ddc, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+########################### Functional Constraints #######################
+puts "#############################################"
+#############################################
+puts "#          Functional Constraints           #"
+#          Functional Constraints           #
+puts "#############################################"
+#############################################
+remove_clock [all_clocks]
+1
+set_case_analysis 0 [get_ports test_mode]
+1
+set_case_analysis 0 [get_ports SE]
+1
+source ./cons.tcl
+#############################################
+#          Section 0 : DC Variables         #
+#############################################
+#############################################
+#        Section 1 : Clock Definition       #
+#############################################
+#############################################
+#        Master and generated clocks        #
+#############################################
+#############################################
+#            Dedicated scan clock           #
+#############################################
+#############################################
+#      Section 2 : Clocks Relationship      #
+#############################################
+#################################################
+#  Section 3 : set input/output delay on ports  #
+#################################################
+#####################################################################
+#  Asynchronous reset/control ports are excluded from input timing  #
+#####################################################################
+#############################################
+#         Section 4 : Driving cells         #
+#############################################
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+#############################################
+#          Section 5 : Output load          #
+#############################################
+#############################################
+#      Section 6 : Operating Condition      #
+#############################################
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+1
+# The scan output interface is not timed as a functional output interface.
+set_false_path -to [get_ports SO*]
+1
+update_timing
+Information: Updating design information... (UID-85)
+1
+########################### Clock Check Reports ##########################
+puts "#############################################"
+#############################################
+puts "#           Clock Check Reports             #"
+#           Clock Check Reports             #
+puts "#############################################"
+#############################################
+check_timing > $OUT/check_timing.rpt
+report_clock -attributes > $OUT/clocks.rpt
+report_case_analysis > $OUT/case_analysis.rpt
+report_disable_timing > $OUT/disabled_timing.rpt
+report_net -connections [get_nets {REF_CLK_M UART_CLK_M}] > $OUT/clock_mux_connections.rpt
+report_timing -delay_type max -max_paths 100 > $OUT/setup.rpt
+report_timing -delay_type min -max_paths 100 > $OUT/hold.rpt
+report_constraint -all_violators -nosplit > $OUT/constraints.rpt
+exit
+
+Memory usage for main task 265 Mbytes.
+Memory usage for this session 265 Mbytes.
+CPU usage for this session 5 seconds ( 0.00 hours ).
+
+Thank you...

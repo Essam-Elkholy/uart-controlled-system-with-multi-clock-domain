@@ -1,0 +1,23 @@
+waive -du {  {CLK_GATE}  }  -msg {Latch inferred for signal 'enable_latch' in module 'CLK_GATE'}  -rule {  {InferLatch}  }  -exact -comment {Created by ICer on 04-Oct-2026 00:55:24} 
+waive -rule {  {STARC05-1.4.3.4}  }  -exact -comment {Created by ICer on 04-Oct-2026 01:09:42  -DIV_CLK is intentionally used as a generated clock output.} 
+waive -du {  {CLK_GATE}  }  -msg {Latch inferred for signal 'enable_latch' in module 'CLK_GATE'}  -rule {  {InferLatch}  }  -exact -comment {Created by ICer on 04-Oct-2026 00:55:24} 
+waive -rule {  {STARC05-1.4.3.4}  }  -exact -comment {Created by ICer on 04-Oct-2026 01:09:42  -DIV_CLK is intentionally used as a generated clock output.} 
+waive -rule {  {ReportIgnoredOverlappingRules}  }  -comment {Created by ICer on 04-Oct-2026 02:50:21}  -exact 
+waive -du {  {CLK_GATE}  }  -msg {Latch inferred for signal 'enable_latch' in module 'CLK_GATE'}  -rule {  {InferLatch}  }  -exact -comment {Created by ICer on 04-Oct-2026 00:55:24} 
+waive -rule {  {STARC05-1.4.3.4}  }  -exact -comment {Created by ICer on 04-Oct-2026 01:09:42  -DIV_CLK is intentionally used as a generated clock output.} 
+waive -du {  {CLK_GATE}  }  -msg {Latch inferred for signal 'enable_latch' in module 'CLK_GATE'}  -rule {  {InferLatch}  }  -exact -comment {Created by ICer on 04-Oct-2026 00:55:24} 
+waive -rule {  {STARC05-1.4.3.4}  }  -exact -comment {Created by ICer on 04-Oct-2026 01:09:42  -DIV_CLK is intentionally used as a generated clock output.} 
+waive -rule {  {ReportIgnoredOverlappingRules}  }  -exact -comment {Created by ICer on 04-Oct-2026 02:50:21} 
+waive -rule {  {Clock_glitch04}  }  -comment {Created by ICer on 04-Oct-2026 03:01:09}  -exact 
+waive -du {  {CLK_GATE}  }  -msg {Latch inferred for signal 'enable_latch' in module 'CLK_GATE'}  -rule {  {InferLatch}  }  -exact -comment {Created by ICer on 04-Oct-2026 00:55:24} 
+waive -rule {  {STARC05-1.4.3.4}  }  -exact -comment {Created by ICer on 04-Oct-2026 01:09:42  -DIV_CLK is intentionally used as a generated clock output.} 
+waive -du {  {CLK_GATE}  }  -msg {Latch inferred for signal 'enable_latch' in module 'CLK_GATE'}  -rule {  {InferLatch}  }  -exact -comment {Created by ICer on 04-Oct-2026 00:55:24} 
+waive -rule {  {STARC05-1.4.3.4}  }  -exact -comment {Created by ICer on 04-Oct-2026 01:09:42  -DIV_CLK is intentionally used as a generated clock output.} 
+waive -rule {  {ReportIgnoredOverlappingRules}  }  -exact -comment {Created by ICer on 04-Oct-2026 02:50:21} 
+waive -du {  {CLK_GATE}  }  -msg {Latch inferred for signal 'enable_latch' in module 'CLK_GATE'}  -rule {  {InferLatch}  }  -exact -comment {Created by ICer on 04-Oct-2026 00:55:24} 
+waive -rule {  {STARC05-1.4.3.4}  }  -exact -comment {Created by ICer on 04-Oct-2026 01:09:42  -DIV_CLK is intentionally used as a generated clock output.} 
+waive -du {  {CLK_GATE}  }  -msg {Latch inferred for signal 'enable_latch' in module 'CLK_GATE'}  -rule {  {InferLatch}  }  -exact -comment {Created by ICer on 04-Oct-2026 00:55:24} 
+waive -rule {  {STARC05-1.4.3.4}  }  -exact -comment {Created by ICer on 04-Oct-2026 01:09:42  -DIV_CLK is intentionally used as a generated clock output.} 
+waive -rule {  {ReportIgnoredOverlappingRules}  }  -exact -comment {Created by ICer on 04-Oct-2026 02:50:21} 
+waive -rule {  {Clock_glitch04}  }  -exact -comment {Created by ICer on 04-Oct-2026 03:01:09} 
+waive -rule {  {Ac_conv04}  }  -comment {Created by ICer on 04-Oct-2026 03:01:55}  -exact 

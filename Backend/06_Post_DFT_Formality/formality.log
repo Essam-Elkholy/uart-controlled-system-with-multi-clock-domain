@@ -1,0 +1,54 @@
+Info:  Net r:/WORK/SYS_TOP/SO[2] is undriven.
+Info:  Net r:/WORK/SYS_TOP/SO[1] is undriven.
+Info:  Net r:/WORK/SYS_TOP/SO[0] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[31] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[30] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[29] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[28] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[27] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[26] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[25] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[24] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[23] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[22] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[21] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[20] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[19] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[18] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[17] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW02_mult_0/PRODUCT[16] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[15] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[14] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[13] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[12] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[11] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[10] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[9] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[8] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[7] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[6] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[5] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[4] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[3] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[2] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[1] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/remainder[0] is undriven.
+Info:  Net i:/WORK/SYS_TOP_DW_div_uns_1/divide_by_0 is undriven.
+Info:  SVF Operation 96 (Line: 460) - ungroup.  Status: accepted
+Info:  SVF Operation 97 (Line: 464) - ungroup.  Status: accepted
+Info:  SVF Operation 98 (Line: 468) - ungroup.  Status: accepted
+Info:  SVF Operation 99 (Line: 472) - ungroup.  Status: accepted
+Info:  SVF Operation 100 (Line: 476) - ungroup.  Status: accepted
+Info:  SVF Operation 101 (Line: 480) - ungroup.  Status: accepted
+Info:  guide_uniquify 133 (Line: 831)  Cannot find object "U_RX_CLK_DIV/U_OUTPUT/U1" in design 'SYS_TOP'.
+Info:  SVF Operation 133 (Line: 831) - uniquify.  Status: rejected
+Info:  guide_uniquify 133 (Line: 831)  Cannot find object "U_TX_CLK_DIV/U_OUTPUT/U1" in design 'SYS_TOP'.
+Info:  guide_uniquify 141 (Line: 878)  Cannot find object "dp_cluster_0/U_ALU/U_ARITH/mult_11" in design 'SYS_TOP'.
+Info:  Pre-verification of r:/WORK/SYS_TOP/U_ALU/U_ARITH/div_12 SUCCEEDED.
+Info:  Pre-verification of r:/WORK/SYS_TOP/U_ALU/U_ARITH/mult_11 SUCCEEDED.
+Info:  guide_change_names 202 (Line: 1271)  Cannot find reference design 'SYS_TOP_DW02_mult_0'.
+Info:  SVF Operation 202 (Line: 1271) - change_names.  Status: rejected
+
+Info:  guide_change_names 203 (Line: 1445)  Cannot find reference design 'SYS_TOP_DW_div_uns_1'.
+Info:  SVF Operation 203 (Line: 1445) - change_names.  Status: rejected
+

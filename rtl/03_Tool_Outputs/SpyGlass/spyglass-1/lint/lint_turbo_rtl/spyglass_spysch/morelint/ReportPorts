@@ -1,0 +1,8 @@
+SCHEMA@@PName@@Dir@@Msb@@Lsb@@Desc@@DU@@DU_BBOX
+VALUE@@REF_CLK@@INPUT@@0@@0@@-@@SYS_TOP@@No
+VALUE@@UART_CLK@@INPUT@@0@@0@@-@@SYS_TOP@@No
+VALUE@@RST@@INPUT@@0@@0@@active-low asynchronous reset@@SYS_TOP@@No
+VALUE@@RX_IN@@INPUT@@0@@0@@-@@SYS_TOP@@No
+VALUE@@TX_OUT@@OUTPUT@@0@@0@@-@@SYS_TOP@@No
+VALUE@@PAR_ERR@@OUTPUT@@0@@0@@-@@SYS_TOP@@No
+VALUE@@STP_ERR@@OUTPUT@@0@@0@@-@@SYS_TOP@@No

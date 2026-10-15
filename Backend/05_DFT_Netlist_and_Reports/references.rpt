@@ -1,0 +1,1519 @@
+ 
+****************************************
+Report : reference
+Design : SYS_TOP
+Version: O-2018.06-SP1
+Date   : Sun Oct 11 03:00:44 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 30.594200       4    122.376801  r
+AND2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       4     23.534000  
+AND3X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+AO21XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200      22    155.324405  
+AO22X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600      14    131.790400  
+AO22XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       2     18.827200  
+AOI2B1X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+AOI22X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       3     21.180601  
+AOI22XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       5     35.301001  
+AOI31X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       2     14.120400  
+AOI31X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       2     14.120400  
+AOI211X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       2     14.120400  
+AOI211X2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       3     21.180601  
+AOI211XLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+AOI221XLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900      10     82.369003  
+AOI222X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       1     10.590300  
+AOI222XLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       2     21.180599  
+ASYNC_FIFO_DATA_WIDTH8_ADDR_WIDTH3_test_1
+                               4216.116197       1   4216.116197  h, n
+BUFX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       8     37.654400  
+CLKDIV_MUX                       55.304901       1     55.304901  h
+CLKINVX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+CLKNAND2X2M        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       2      9.413600  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+CLK_DIV_test_0                 1248.478735       1   1248.478735  h, n
+CLK_DIV_test_1                 1230.828205       1   1230.828205  h, n
+CLK_GATE                         40.007801       1     40.007801  b, h
+DATA_SYNC_BUS_WIDTH8_test_1     480.093616       1    480.093616  h, n
+DLY1X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       2     18.827200  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100      57    201.215706  
+INVXLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100      26     91.782603  
+MX2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000      10    117.670002  
+MX2X8M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 16.473801       1     16.473801  
+MXI2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       1     10.590300  
+NAND2BX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND2BX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       7     41.184501  
+NAND2BXLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       5     23.534000  
+NAND3BX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       5     35.301001  
+NAND3BXLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       3     21.180601  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND4X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       4     28.240801  
+NOR2BXLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       4     23.534000  
+NOR2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       3     14.120400  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       4     18.827200  
+OA21X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       7     57.658302  
+OA21XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OA22X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       3     28.240800  
+OAI2B1X2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OAI2B11X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       1      9.413600  
+OAI2B11XLM         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       2     18.827200  
+OAI2BB1X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI2BB1X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       4     28.240801  
+OAI2BB1XLM         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI21BX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       2     14.120400  
+OAI21X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OAI21X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       5     29.417500  
+OAI21XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OAI32X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OAI32XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       2     16.473801  
+OAI211X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI221X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       1      9.413600  
+OAI221XLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       3     28.240800  
+OAI222XLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       3     31.770899  
+OR2X1M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       5     29.417500  
+OR2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500      16     94.136002  
+PULSE_GEN_test_1                 71.778703       1     71.778703  h, n
+RST_SYNC_test_0                  65.895203       1     65.895203  h, n
+RST_SYNC_test_1                  65.895203       1     65.895203  h, n
+RegFile_WIDTH8_ADDR_WIDTH5_test_1
+                               9285.339502       1   9285.339502  h, n
+SDFFRHQX8M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 42.361198       1     42.361198  n
+SDFFRQX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       3     98.842804  n
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601      13    428.318817  n
+SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16_test_1
+                               2183.955268       1   2183.955268  h, n
+SYS_TOP_DW02_mult_0            2368.697119       1   2368.697119  h
+SYS_TOP_DW_div_uns_1           8598.146951       1   8598.146951  h
+UART_TOP_test_1                4451.456215       1   4451.456215  h, n
+XNOR2X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+XNOR2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       3     35.301001  
+XNOR2XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       3     35.301001  
+XOR2XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+-----------------------------------------------------------------------------
+Total 81 references                                 36940.143373
+
+****************************************
+Design: ASYNC_FIFO_DATA_WIDTH8_ADDR_WIDTH3_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DF_SYNC_WIDTH4_test_0           263.580811       1    263.580811  h, n
+DF_SYNC_WIDTH4_test_1           263.580811       1    263.580811  h, n
+FIFO_MEM_DATA_WIDTH8_ADDR_WIDTH3_test_1
+                               2765.245047       1   2765.245047  h, n
+FIFO_RD_ADDR_WIDTH3_test_1      454.206214       1    454.206214  h, n
+FIFO_WR_ADDR_WIDTH3_test_1      455.382915       1    455.382915  h, n
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       4     14.120400  
+-----------------------------------------------------------------------------
+Total 6 references                                   4216.116197
+
+****************************************
+Design: DF_SYNC_WIDTH4_test_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       8    263.580811  n
+-----------------------------------------------------------------------------
+Total 1 references                                    263.580811
+
+****************************************
+Design: DF_SYNC_WIDTH4_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       8    263.580811  n
+-----------------------------------------------------------------------------
+Total 1 references                                    263.580811
+
+****************************************
+Design: FIFO_MEM_DATA_WIDTH8_ADDR_WIDTH3_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+AO22X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600      16    150.617599  
+AOI221XLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900      16    131.790405  
+BUFX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       2      9.413600  
+DLY1X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       3     28.240800  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100      13     45.891301  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       8     47.068001  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       4     18.827200  
+OAI2BB2X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900      64    527.161621  
+OAI22X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       8     56.481602  
+SDFFQX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 27.064100      64   1732.102417  n
+-----------------------------------------------------------------------------
+Total 12 references                                  2765.245047
+
+****************************************
+Design: FIFO_RD_ADDR_WIDTH3_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       9    105.903002  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR4X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       8    263.580811  n
+SDFFSQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 31.770901       1     31.770901  n
+XNOR2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       2     23.534000  
+-----------------------------------------------------------------------------
+Total 9 references                                    454.206214
+
+****************************************
+Design: FIFO_WR_ADDR_WIDTH3_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       7     82.369001  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR4X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       9    296.528412  n
+XNOR2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       4     47.068001  
+-----------------------------------------------------------------------------
+Total 8 references                                    455.382915
+
+****************************************
+Design: CLKDIV_MUX 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       5     17.650501  
+NOR3BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       2     14.120400  
+NOR3X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OAI21X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+-----------------------------------------------------------------------------
+Total 5 references                                     55.304901
+
+****************************************
+Design: CLK_DIV_test_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+CLK_DIV_COUNTER_test_0         1082.564032       1   1082.564032  h, n
+CLK_DIV_HALF_COUNT_1            129.437002       1    129.437002  h
+CLK_DIV_OUTPUT_MUX_1             31.770901       1     31.770901  h
+-----------------------------------------------------------------------------
+Total 4 references                                   1248.478735
+
+****************************************
+Design: CLK_DIV_COUNTER_test_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO21XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+AOI2BB1X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+AOI221XLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       4     32.947601  
+AOI222X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       1     10.590300  
+CLKINVX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+CLKNAND2X2M        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       7     82.369001  
+CLK_DIV_COUNTER_1_DW01_inc_0    107.079701       1    107.079701  h
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100      13     45.891301  
+NAND2BX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND3BX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+NAND4X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+NOR2BX1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       8     47.068001  
+NOR2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       4     18.827200  
+NOR4X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OA21X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OAI2B2X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       2     18.827200  
+OAI2BB1X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       3     21.180601  
+OAI2BB2X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OAI21X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OAI32X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OR2X1M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+OR2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OR4X1M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       2     16.473801  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601      17    560.109222  n
+XNOR2X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+-----------------------------------------------------------------------------
+Total 27 references                                  1082.564032
+
+****************************************
+Design: CLK_DIV_COUNTER_1_DW01_inc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 15.297100       6     91.782600  r
+CLKINVX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+-----------------------------------------------------------------------------
+Total 3 references                                    107.079701
+
+****************************************
+Design: CLK_DIV_HALF_COUNT_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       7     41.184501  
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       7     82.369001  
+-----------------------------------------------------------------------------
+Total 3 references                                    129.437002
+
+****************************************
+Design: CLK_DIV_OUTPUT_MUX_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+MX2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+NOR3X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR4X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI2BB1X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+-----------------------------------------------------------------------------
+Total 4 references                                     31.770901
+
+****************************************
+Design: CLK_DIV_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+CLK_DIV_COUNTER_test_1         1064.913502       1   1064.913502  h, n
+CLK_DIV_HALF_COUNT_0            129.437002       1    129.437002  h
+CLK_DIV_OUTPUT_MUX_0             31.770901       1     31.770901  h
+-----------------------------------------------------------------------------
+Total 4 references                                   1230.828205
+
+****************************************
+Design: CLK_DIV_COUNTER_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO21XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+AOI2BB1X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+AOI221XLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       4     32.947601  
+AOI222X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       1     10.590300  
+CLKINVX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+CLKNAND2X2M        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       7     82.369001  
+CLK_DIV_COUNTER_0_DW01_inc_0    107.079701       1    107.079701  h
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       5     17.650501  
+NAND2BX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND3BX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+NAND4X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+NOR2BX1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       8     47.068001  
+NOR2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       4     18.827200  
+NOR4X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OA21X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OAI2B2X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       2     18.827200  
+OAI2BB1X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       3     21.180601  
+OAI2BB2X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OAI21X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OAI32X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OR2X1M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+OR2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OR4X1M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       2     16.473801  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       8    263.580811  n
+SDFFRX1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 34.124298       9    307.118683  n
+XNOR2X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+-----------------------------------------------------------------------------
+Total 28 references                                  1064.913502
+
+****************************************
+Design: CLK_DIV_COUNTER_0_DW01_inc_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 15.297100       6     91.782600  r
+CLKINVX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+-----------------------------------------------------------------------------
+Total 3 references                                    107.079701
+
+****************************************
+Design: CLK_DIV_HALF_COUNT_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       7     41.184501  
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       7     82.369001  
+-----------------------------------------------------------------------------
+Total 3 references                                    129.437002
+
+****************************************
+Design: CLK_DIV_OUTPUT_MUX_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+MX2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+NOR3X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR4X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI2BB1X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+-----------------------------------------------------------------------------
+Total 4 references                                     31.770901
+
+****************************************
+Design: CLK_GATE 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+TLATNCAX12M        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 40.007801       1     40.007801  b
+-----------------------------------------------------------------------------
+Total 1 references                                     40.007801
+
+****************************************
+Design: DATA_SYNC_BUS_WIDTH8_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUS_CAPTURE_BUS_WIDTH8_test_1   375.367312       1    375.367312  h, n
+DF_SYNC_WIDTH1_NUM_STAGES2_test_0
+                                 65.895203       1     65.895203  h, n
+RISING_EDGE_DETECTOR_test_0      38.831101       1     38.831101  h, n
+-----------------------------------------------------------------------------
+Total 3 references                                    480.093616
+
+****************************************
+Design: BUS_CAPTURE_BUS_WIDTH8_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO22X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       8     75.308800  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       9    296.528412  n
+-----------------------------------------------------------------------------
+Total 3 references                                    375.367312
+
+****************************************
+Design: DF_SYNC_WIDTH1_NUM_STAGES2_test_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       2     65.895203  n
+-----------------------------------------------------------------------------
+Total 1 references                                     65.895203
+
+****************************************
+Design: RISING_EDGE_DETECTOR_test_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       1     32.947601  n
+-----------------------------------------------------------------------------
+Total 2 references                                     38.831101
+
+****************************************
+Design: PULSE_GEN_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DF_SYNC_WIDTH1_NUM_STAGES1_test_1
+                                 32.947601       1     32.947601  h, n
+RISING_EDGE_DETECTOR_test_1      38.831101       1     38.831101  h, n
+-----------------------------------------------------------------------------
+Total 2 references                                     71.778703
+
+****************************************
+Design: DF_SYNC_WIDTH1_NUM_STAGES1_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       1     32.947601  n
+-----------------------------------------------------------------------------
+Total 1 references                                     32.947601
+
+****************************************
+Design: RISING_EDGE_DETECTOR_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       1     32.947601  n
+-----------------------------------------------------------------------------
+Total 2 references                                     38.831101
+
+****************************************
+Design: RST_SYNC_test_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DF_SYNC_WIDTH1_NUM_STAGES2_test_1
+                                 65.895203       1     65.895203  h, n
+-----------------------------------------------------------------------------
+Total 1 references                                     65.895203
+
+****************************************
+Design: DF_SYNC_WIDTH1_NUM_STAGES2_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       2     65.895203  n
+-----------------------------------------------------------------------------
+Total 1 references                                     65.895203
+
+****************************************
+Design: RST_SYNC_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DF_SYNC_WIDTH1_NUM_STAGES2_test_2
+                                 65.895203       1     65.895203  h, n
+-----------------------------------------------------------------------------
+Total 1 references                                     65.895203
+
+****************************************
+Design: DF_SYNC_WIDTH1_NUM_STAGES2_test_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       2     65.895203  n
+-----------------------------------------------------------------------------
+Total 1 references                                     65.895203
+
+****************************************
+Design: RegFile_WIDTH8_ADDR_WIDTH5_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND3X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+AOI21X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       3     10.590300  
+NAND2BX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+REGFILE_READ_WIDTH8_test_1      375.367312       1    375.367312  h, n
+REGFILE_STORAGE_WIDTH8_DEPTH22_ADDR_WIDTH5_test_1
+                               8874.671189       1   8874.671189  h, n
+-----------------------------------------------------------------------------
+Total 7 references                                   9285.339502
+
+****************************************
+Design: REGFILE_READ_WIDTH8_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO22X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       8     75.308800  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       9    296.528412  n
+-----------------------------------------------------------------------------
+Total 3 references                                    375.367312
+
+****************************************
+Design: REGFILE_STORAGE_WIDTH8_DEPTH22_ADDR_WIDTH5_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       9     52.951501  
+AND3X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+AO21XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       8     56.481602  
+AOI21X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+AOI211X2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       8     56.481602  
+BUFX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800      36    169.444799  
+DLY1X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       6     56.481600  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100      36    127.083604  
+INVX4M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+INVXLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       3     10.590300  
+MX2XLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000      10    117.670002  
+NAND2BX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800      28    131.790400  
+NAND2XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       4     18.827200  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       4     23.534000  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       7     41.184501  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       5     23.534000  
+NOR3BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+NOR4X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       8     56.481602  
+OA21X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       8     65.895203  
+OAI2B11XLM         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       8     75.308800  
+OAI2BB2X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900      13    107.079704  
+OAI2BB2XLM         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OAI22X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200     168   1186.113636  
+OAI222X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300      40    423.611984  
+OR2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+SDFFRHQX4M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 40.007801       7    280.054607  n
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601      16    527.161621  n
+SDFFRX1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 34.124298     148   5050.396118  n
+SDFFRX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 35.300999       1     35.300999  n
+SDFFRX4M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 37.654400       1     37.654400  n
+SDFFSX1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       3     98.842804  n
+-----------------------------------------------------------------------------
+Total 32 references                                  8874.671189
+
+****************************************
+Design: SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+AND3X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       3     21.180601  
+AND4X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       4     32.947601  
+AO22X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       1      9.413600  
+AOI21X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+AOI21X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+AOI31X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       2     14.120400  
+AOI32X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+AOI211X2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       2     14.120400  
+BUFX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800      17     80.015600  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100      48    169.444805  
+INVXLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       2      7.060200  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       2      9.413600  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       4     23.534000  
+NAND4BX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+NAND4X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       2     14.120400  
+NOR2BX1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       3     14.120400  
+NOR3X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       8     47.068001  
+NOR4BX1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+NOR4X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI2BB2X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900      28    230.633209  
+OAI21X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+OAI22X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       9     63.541802  
+OAI31X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI211X2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       2     14.120400  
+OAI221X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       2     18.827200  
+OAI222X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       9     95.312696  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601      37   1219.061249  n
+-----------------------------------------------------------------------------
+Total 30 references                                  2183.955268
+
+****************************************
+Design: SYS_TOP_DW02_mult_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFX2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 30.594200      42   1284.956406  r
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500      31    182.388503  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000      25    294.175005  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100      20     70.602002  
+INVXLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       8     28.240801  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       4     18.827200  
+NOR2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800      64    301.235199  
+XNOR2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000      16    188.272003  
+-----------------------------------------------------------------------------
+Total 8 references                                   2368.697119
+
+****************************************
+Design: SYS_TOP_DW_div_uns_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDFHX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 52.951500       1     52.951500  r
+ADDFHX4M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 63.541801       8    508.334412  r
+AND2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       4     23.534000  
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       8     47.068001  
+AND2X4M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       6     56.481600  
+AND2X8M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 12.943700       2     25.887400  
+AND3X4M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+AND3XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       8     56.481602  
+BUFX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       3     14.120400  
+BUFX6M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+CLKAND2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+CLKAND2X6M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       1      9.413600  
+CLKAND2X8M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 12.943700       1     12.943700  
+CLKBUFX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+CLKBUFX4M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+CLKBUFX32M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 23.534000       1     23.534000  
+CLKINVX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       7     24.710701  
+CLKINVX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       9     31.770901  
+CLKINVX4M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       2      9.413600  
+CLKINVX6M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+CLKINVX8M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       4     28.240801  
+CLKINVX16M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       9    105.903002  
+CLKINVX20M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 12.943700       1     12.943700  
+CLKINVX32M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 20.003901       1     20.003901  
+CLKINVX40M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 24.710699       2     49.421398  
+CLKMX2X2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+CLKMX2X3M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 12.943700       1     12.943700  
+CLKMX2X4M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 12.943700       3     38.831100  
+CLKMX2X6M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 15.297100       4     61.188400  
+CLKMX2X8M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 16.473801       1     16.473801  
+CLKNAND2X2M        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800      16     75.308800  
+CLKNAND2X4M        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200      13     91.782603  
+CLKNAND2X16M       scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 23.534000       2     47.068001  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       5     58.835001  
+DLY1X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       1      9.413600  
+INVX1M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100      18     63.541802  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100      97    342.419710  
+INVX3M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       7     32.947600  
+INVX4M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800      14     65.895200  
+INVX5M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+INVX6M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+INVX8M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+INVXLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100     112    395.371212  
+MX2X1M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       9    105.903002  
+MX2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       6     70.602001  
+MX2X3M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 12.943700       7     90.605899  
+MX2X4M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 14.120400       1     14.120400  
+MX2XLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000      21    247.107004  
+MXI2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       3     31.770899  
+MXI2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       6     70.602001  
+MXI2X3M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 16.473801       1     16.473801  
+MXI2X4M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 17.650499       5     88.252497  
+MXI2X6M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 24.710699       7    172.974894  
+MXI2XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300      34    360.070187  
+NAND2BX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       5     29.417500  
+NAND2BX4M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       9     84.722400  
+NAND2BX8M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 16.473801       4     65.895203  
+NAND2BXLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND2X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800      29    136.497200  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800      77    362.423599  
+NAND2X3M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200      43    303.588609  
+NAND2X4M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200      53    374.190611  
+NAND2X6M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       7     74.132097  
+NAND2XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800      46    216.512799  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+NAND3X3M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       7     74.132097  
+NAND3X4M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300      68    720.140373  
+NAND3XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       7     41.184501  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+NOR2BX4M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       2     18.827200  
+NOR2BX8M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 16.473801       1     16.473801  
+NOR2BXLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       4     23.534000  
+NOR2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       8     37.654400  
+NOR2X3M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+NOR2X4M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       4     28.240801  
+NOR2X6M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       1     10.590300  
+NOR2XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+OAI2B1X4M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 12.943700       1     12.943700  
+OAI21X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OR2X1M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       7     41.184501  
+OR2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       6     35.301001  
+OR2X6M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       3     35.301001  
+XNOR2X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       3     35.301001  
+XNOR2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000      13    152.971003  
+XNOR2X4M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 16.473801       3     49.421402  
+XNOR2X8M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 30.594200       1     30.594200  
+XNOR2XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000      20    235.340004  
+XNOR3XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 23.534000       1     23.534000  
+XOR2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       8     94.136002  
+XOR2XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000     107   1259.069021  
+XOR3XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 21.180599       7    148.264194  
+-----------------------------------------------------------------------------
+Total 92 references                                  8598.146951
+
+****************************************
+Design: UART_TOP_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       2      7.060200  
+UART_RX_test_1                 3024.119077       1   3024.119077  h, n
+UART_TX_test_1                 1420.276938       1   1420.276938  h, n
+-----------------------------------------------------------------------------
+Total 3 references                                   4451.456215
+
+****************************************
+Design: UART_RX_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       2      7.060200  
+INVX4M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+INVXLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       2      7.060200  
+NOR4BX1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OAI32X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+RX_CONFIG_REG_test_1            341.243010       1    341.243010  h, n
+RX_DATA_SAMPLING_test_1         660.128711       1    660.128711  h, n
+RX_DESERIALIZER_test_1          415.375115       1    415.375115  h, n
+RX_EDGE_BIT_COUNTER_test_1      643.654917       1    643.654917  h, n
+RX_FSM_test_1                   249.460407       1    249.460407  h, n
+RX_INPUT_SYNC_test_1             63.541801       1     63.541801  h, n
+RX_OUTPUT_REG_test_1            394.194512       1    394.194512  h, n
+RX_PARITY_CHECK_test_1          147.087500       1    147.087500  h, n
+RX_START_CHECK                    5.883500       1      5.883500  h
+RX_STOP_CHECK_test_1             56.481602       1     56.481602  h, n
+XNOR2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+-----------------------------------------------------------------------------
+Total 16 references                                  3024.119077
+
+****************************************
+Design: RX_CONFIG_REG_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO22X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       8     75.308800  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       7    230.633209  n
+SDFFSQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 31.770901       1     31.770901  n
+-----------------------------------------------------------------------------
+Total 4 references                                    341.243010
+
+****************************************
+Design: RX_DATA_SAMPLING_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 15.297100       4     61.188400  r
+CLKINVX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+CLKNAND2X2M        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       4     18.827200  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000      11    129.437002  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+MXI2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       3     31.770899  
+NAND2BX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND3X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       4     23.534000  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+NOR3X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR4X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       4     28.240801  
+OAI2BB1X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       3     21.180601  
+OAI21X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+OR2X1M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       3     17.650500  
+OR2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       3     98.842804  n
+XNOR2X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000      16    188.272003  
+-----------------------------------------------------------------------------
+Total 17 references                                   660.128711
+
+****************************************
+Design: RX_DESERIALIZER_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+AOI31X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       8     56.481602  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       2      7.060200  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+OAI2BB2X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       8     65.895203  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       8    263.580811  n
+-----------------------------------------------------------------------------
+Total 7 references                                    415.375115
+
+****************************************
+Design: RX_EDGE_BIT_COUNTER_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ADDHX1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 15.297100       4     61.188400  r
+AO21XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+AOI21XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+AOI32X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+CLKINVX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+CLKNAND2X2M        scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       5     58.835001  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       5     17.650501  
+INVXLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       2      7.060200  
+NAND2BX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND3X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND4XLM           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+NOR2BX1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       4     23.534000  
+NOR2X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       2      9.413600  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       3     14.120400  
+NOR4X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI2B2X1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       2     18.827200  
+OAI2BB1X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI21X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OAI22X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI32X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+OR2X2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       9    296.528412  n
+XNOR2X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       2     23.534000  
+XNOR2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+-----------------------------------------------------------------------------
+Total 26 references                                   643.654917
+
+****************************************
+Design: RX_FSM_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND4XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+AOI32X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       2     16.473801  
+AOI33X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       1     10.590300  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       7     24.710701  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       2      9.413600  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       3     17.650500  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       4     18.827200  
+NOR3BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+NOR3X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OAI21X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OAI211X2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI211XLM          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       3     98.842804  n
+-----------------------------------------------------------------------------
+Total 14 references                                   249.460407
+
+****************************************
+Design: RX_INPUT_SYNC_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DF_SYNC_1_2_1_test_1             63.541801       1     63.541801  h, n
+-----------------------------------------------------------------------------
+Total 1 references                                     63.541801
+
+****************************************
+Design: DF_SYNC_1_2_1_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SDFFSQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 31.770901       2     63.541801  n
+-----------------------------------------------------------------------------
+Total 1 references                                     63.541801
+
+****************************************
+Design: RX_OUTPUT_REG_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO22X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       8     75.308800  
+BUFX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+INVXLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       2      7.060200  
+NAND3BX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       9    296.528412  n
+-----------------------------------------------------------------------------
+Total 6 references                                    394.194512
+
+****************************************
+Design: RX_PARITY_CHECK_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       1     32.947601  n
+XNOR2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       2     23.534000  
+XOR3XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 21.180599       3     63.541798  
+-----------------------------------------------------------------------------
+Total 7 references                                    147.087500
+
+****************************************
+Design: RX_START_CHECK 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+-----------------------------------------------------------------------------
+Total 1 references                                      5.883500
+
+****************************************
+Design: RX_STOP_CHECK_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI2BB2XLM         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+INVXLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       2      7.060200  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       1     32.947601  n
+-----------------------------------------------------------------------------
+Total 5 references                                     56.481602
+
+****************************************
+Design: UART_TX_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       2      7.060200  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+TX_DATA_REG_test_1              342.419710       1    342.419710  h, n
+TX_FSM_test_1                   240.046807       1    240.046807  h, n
+TX_MUX                           25.887400       1     25.887400  h
+TX_PARITY_CALC_test_1           131.790400       1    131.790400  h, n
+TX_SERIALIZER_test_1            667.188921       1    667.188921  h, n
+-----------------------------------------------------------------------------
+Total 7 references                                   1420.276938
+
+****************************************
+Design: TX_DATA_REG_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO22X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       8     75.308800  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       8    263.580811  n
+-----------------------------------------------------------------------------
+Total 3 references                                    342.419710
+
+****************************************
+Design: TX_FSM_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO2B2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+AOI21X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       6     21.180601  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       3     14.120400  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NAND4BX1M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+OAI31X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI33X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       1     10.590300  
+OAI211X2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       4    131.790405  n
+XNOR2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+-----------------------------------------------------------------------------
+Total 12 references                                   240.046807
+
+****************************************
+Design: TX_MUX 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR2BX2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OAI21X4M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 10.590300       1     10.590300  
+-----------------------------------------------------------------------------
+Total 4 references                                     25.887400
+
+****************************************
+Design: TX_PARITY_CALC_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+CLKXOR2X2M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       1      3.530100  
+OAI2BB2X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601       1     32.947601  n
+XNOR2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 11.767000       1     11.767000  
+XOR3XLM            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 21.180599       3     63.541798  
+-----------------------------------------------------------------------------
+Total 6 references                                    131.790400
+
+****************************************
+Design: TX_SERIALIZER_test_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO22X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       7     65.895200  
+AOI21X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+AOI22X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       4     28.240801  
+AOI32X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+BUFX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       2      9.413600  
+INVX2M             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       7     24.710701  
+INVXLM             scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  3.530100       2      7.060200  
+NAND2X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       1      4.706800  
+NAND3X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+NOR2X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  4.706800       3     14.120400  
+NOR3X2M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       1      5.883500  
+OA22X1M            scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  9.413600       1      9.413600  
+OAI2BB2X1M         scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       2     16.473801  
+OAI21X2M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  5.883500       2     11.767000  
+OAI22X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  7.060200       1      7.060200  
+OAI32X1M           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                  8.236900       1      8.236900  
+SDFFRQX2M          scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+                                 32.947601      13    428.318817  n
+-----------------------------------------------------------------------------
+Total 17 references                                   667.188921
+1

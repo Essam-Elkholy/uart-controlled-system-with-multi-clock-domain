@@ -1,0 +1,510 @@
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+Begin Modeling violations...
+
+Information: Cell U_CLK_GATE/U_ICG (TLATNCAX12M) will not be scanned due to the set_scan_element command. (TEST-202)
+
+Modeling violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 0
+
+-----------------------------------------------------------------
+
+
+Test Design rule checking did not find violations
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  1 out of 460 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      *   1 cell is a clock gating cell
+         U_CLK_GATE/U_ICG
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 459 cells are valid scan cells
+         U_ALU_U_OUTPUT_ALU_OUT_reg_15_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_9_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_14_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_13_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_12_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_11_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_10_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_1_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_8_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_7_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_6_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_5_
+         U_ALU_U_OUTPUT_OUT_VALID_reg
+         U_ALU_U_OUTPUT_ALU_OUT_reg_2_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_4_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_3_
+         U_ALU_U_OUTPUT_ALU_OUT_reg_0_
+         U_SYS_CTRL/alu_res_reg_15_
+         U_SYS_CTRL/alu_res_reg_14_
+         U_SYS_CTRL/alu_res_reg_13_
+         U_SYS_CTRL/alu_res_reg_12_
+         U_SYS_CTRL/alu_res_reg_11_
+         U_SYS_CTRL/alu_res_reg_10_
+         U_SYS_CTRL/alu_res_reg_9_
+         U_SYS_CTRL/alu_res_reg_8_
+         U_SYS_CTRL/alu_res_reg_7_
+         U_SYS_CTRL/alu_res_reg_6_
+         U_SYS_CTRL/alu_res_reg_5_
+         U_SYS_CTRL/alu_res_reg_4_
+         U_SYS_CTRL/alu_res_reg_3_
+         U_SYS_CTRL/alu_res_reg_2_
+         U_SYS_CTRL/alu_res_reg_1_
+         U_SYS_CTRL/alu_res_reg_0_
+         U_SYS_CTRL/rd_reg_reg_7_
+         U_SYS_CTRL/rd_reg_reg_6_
+         U_SYS_CTRL/rd_reg_reg_5_
+         U_SYS_CTRL/rd_reg_reg_4_
+         U_SYS_CTRL/rd_reg_reg_3_
+         U_SYS_CTRL/rd_reg_reg_2_
+         U_SYS_CTRL/rd_reg_reg_1_
+         U_SYS_CTRL/rd_reg_reg_0_
+         U_SYS_CTRL/fun_reg_reg_1_
+         U_SYS_CTRL/fun_reg_reg_0_
+         U_SYS_CTRL/fun_reg_reg_2_
+         U_SYS_CTRL/fun_reg_reg_3_
+         U_SYS_CTRL/addr_reg_reg_4_
+         U_SYS_CTRL/addr_reg_reg_2_
+         U_SYS_CTRL/addr_reg_reg_0_
+         U_SYS_CTRL/addr_reg_reg_3_
+         U_SYS_CTRL/addr_reg_reg_1_
+         U_SYS_CTRL/state_reg_3_
+         U_SYS_CTRL/state_reg_2_
+         U_SYS_CTRL/state_reg_0_
+         U_SYS_CTRL/state_reg_1_
+         U_RST_SYNC_1/U_SYNC/sync_ff_reg_1__0_
+         U_RST_SYNC_1/U_SYNC/sync_ff_reg_0__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_8__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_8__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_8__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_8__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_8__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_8__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_8__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_8__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_3__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_2__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_2__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_3__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_3__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_3__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_3__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_3__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_3__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_3__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_4__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_4__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_4__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_4__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_4__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_4__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_4__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_4__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_2__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_2__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_2__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_2__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_2__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_2__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_5__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_5__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_5__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_5__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_5__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_5__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_5__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_5__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_6__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_6__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_6__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_6__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_6__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_6__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_6__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_6__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_14__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_14__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_14__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_14__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_14__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_17__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_17__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_17__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_17__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_17__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_17__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_17__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_17__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_20__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_20__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_20__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_20__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_20__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_20__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_20__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_7__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_7__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_7__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_7__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_7__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_7__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_7__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_7__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_15__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_15__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_15__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_15__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_15__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_18__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_18__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_18__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_18__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_18__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_18__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_18__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_18__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_21__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_21__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_21__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_21__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_21__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_21__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_21__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_21__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_13__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_13__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_13__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_13__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_13__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_13__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_13__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_16__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_16__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_16__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_16__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_16__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_16__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_16__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_16__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_19__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_19__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_19__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_19__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_19__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_19__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_19__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_19__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_10__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_10__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_10__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_10__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_10__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_10__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_10__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_10__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_12__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_12__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_12__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_12__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_12__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_12__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_12__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_12__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_9__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_9__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_9__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_9__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_9__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_9__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_9__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_9__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_11__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_11__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_11__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_11__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_11__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_11__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_11__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_11__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_14__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_14__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_14__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_15__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_15__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_15__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_13__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_0__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_0__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_0__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_0__3_
+         U_REGFILE/U_STORAGE/Reg_File_reg_0__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_0__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_0__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_0__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_20__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_1__7_
+         U_REGFILE/U_STORAGE/Reg_File_reg_1__6_
+         U_REGFILE/U_STORAGE/Reg_File_reg_1__4_
+         U_REGFILE/U_STORAGE/Reg_File_reg_1__5_
+         U_REGFILE/U_STORAGE/Reg_File_reg_1__2_
+         U_REGFILE/U_STORAGE/Reg_File_reg_1__0_
+         U_REGFILE/U_STORAGE/Reg_File_reg_1__1_
+         U_REGFILE/U_STORAGE/Reg_File_reg_1__3_
+         U_REGFILE/U_READ/RdData_reg_7_
+         U_REGFILE/U_READ/RdData_reg_6_
+         U_REGFILE/U_READ/RdData_reg_5_
+         U_REGFILE/U_READ/RdData_reg_4_
+         U_REGFILE/U_READ/RdData_reg_3_
+         U_REGFILE/U_READ/RdData_reg_2_
+         U_REGFILE/U_READ/RdData_reg_1_
+         U_REGFILE/U_READ/RdData_reg_0_
+         U_REGFILE/U_READ/RdData_Valid_reg
+         U_TX_CLK_DIV/U_COUNTER/ratio_reg_reg_7_
+         U_TX_CLK_DIV/U_COUNTER/ratio_reg_reg_6_
+         U_TX_CLK_DIV/U_COUNTER/ratio_reg_reg_5_
+         U_TX_CLK_DIV/U_COUNTER/ratio_reg_reg_4_
+         U_TX_CLK_DIV/U_COUNTER/ratio_reg_reg_3_
+         U_TX_CLK_DIV/U_COUNTER/ratio_reg_reg_2_
+         U_TX_CLK_DIV/U_COUNTER/ratio_reg_reg_0_
+         U_TX_CLK_DIV/U_COUNTER/ratio_reg_reg_1_
+         U_TX_CLK_DIV/U_COUNTER/count_reg_7_
+         U_TX_CLK_DIV/U_COUNTER/count_reg_6_
+         U_TX_CLK_DIV/U_COUNTER/count_reg_5_
+         U_TX_CLK_DIV/U_COUNTER/count_reg_4_
+         U_TX_CLK_DIV/U_COUNTER/count_reg_3_
+         U_TX_CLK_DIV/U_COUNTER/count_reg_2_
+         U_TX_CLK_DIV/U_COUNTER/count_reg_1_
+         U_TX_CLK_DIV/U_COUNTER/count_reg_0_
+         U_TX_CLK_DIV/U_COUNTER/DIV_CLK_reg
+         U_RX_CLK_DIV/U_COUNTER/ratio_reg_reg_7_
+         U_RX_CLK_DIV/U_COUNTER/ratio_reg_reg_6_
+         U_RX_CLK_DIV/U_COUNTER/ratio_reg_reg_5_
+         U_RX_CLK_DIV/U_COUNTER/ratio_reg_reg_4_
+         U_RX_CLK_DIV/U_COUNTER/ratio_reg_reg_3_
+         U_RX_CLK_DIV/U_COUNTER/ratio_reg_reg_2_
+         U_RX_CLK_DIV/U_COUNTER/ratio_reg_reg_0_
+         U_RX_CLK_DIV/U_COUNTER/ratio_reg_reg_1_
+         U_RX_CLK_DIV/U_COUNTER/count_reg_7_
+         U_RX_CLK_DIV/U_COUNTER/count_reg_6_
+         U_RX_CLK_DIV/U_COUNTER/count_reg_5_
+         U_RX_CLK_DIV/U_COUNTER/count_reg_0_
+         U_RX_CLK_DIV/U_COUNTER/count_reg_1_
+         U_RX_CLK_DIV/U_COUNTER/count_reg_3_
+         U_RX_CLK_DIV/U_COUNTER/count_reg_4_
+         U_RX_CLK_DIV/U_COUNTER/count_reg_2_
+         U_RX_CLK_DIV/U_COUNTER/DIV_CLK_reg
+         U_PULSE_GEN/U_LEVEL_REG/sync_ff_reg_0__0_
+         U_PULSE_GEN/U_EDGE/level_d_reg
+         U_ASYNC_FIFO/U_R2W_SYNC/sync_ff_reg_1__3_
+         U_ASYNC_FIFO/U_R2W_SYNC/sync_ff_reg_1__2_
+         U_ASYNC_FIFO/U_R2W_SYNC/sync_ff_reg_1__1_
+         U_ASYNC_FIFO/U_R2W_SYNC/sync_ff_reg_1__0_
+         U_ASYNC_FIFO/U_R2W_SYNC/sync_ff_reg_0__3_
+         U_ASYNC_FIFO/U_R2W_SYNC/sync_ff_reg_0__2_
+         U_ASYNC_FIFO/U_R2W_SYNC/sync_ff_reg_0__1_
+         U_ASYNC_FIFO/U_R2W_SYNC/sync_ff_reg_0__0_
+         U_ASYNC_FIFO/U_W2R_SYNC/sync_ff_reg_1__3_
+         U_ASYNC_FIFO/U_W2R_SYNC/sync_ff_reg_1__2_
+         U_ASYNC_FIFO/U_W2R_SYNC/sync_ff_reg_1__1_
+         U_ASYNC_FIFO/U_W2R_SYNC/sync_ff_reg_1__0_
+         U_ASYNC_FIFO/U_W2R_SYNC/sync_ff_reg_0__3_
+         U_ASYNC_FIFO/U_W2R_SYNC/sync_ff_reg_0__2_
+         U_ASYNC_FIFO/U_W2R_SYNC/sync_ff_reg_0__1_
+         U_ASYNC_FIFO/U_W2R_SYNC/sync_ff_reg_0__0_
+         U_ASYNC_FIFO/U_WRITE/bin_ptr_reg_3_
+         U_ASYNC_FIFO/U_WRITE/bin_ptr_reg_2_
+         U_ASYNC_FIFO/U_WRITE/FULL_reg
+         U_ASYNC_FIFO/U_WRITE/bin_ptr_reg_0_
+         U_ASYNC_FIFO/U_WRITE/bin_ptr_reg_1_
+         U_ASYNC_FIFO/U_WRITE/GRAY_PTR_reg_0_
+         U_ASYNC_FIFO/U_WRITE/GRAY_PTR_reg_3_
+         U_ASYNC_FIFO/U_WRITE/GRAY_PTR_reg_2_
+         U_ASYNC_FIFO/U_WRITE/GRAY_PTR_reg_1_
+         U_ASYNC_FIFO/U_READ/bin_ptr_reg_3_
+         U_ASYNC_FIFO/U_READ/EMPTY_reg
+         U_ASYNC_FIFO/U_READ/bin_ptr_reg_0_
+         U_ASYNC_FIFO/U_READ/bin_ptr_reg_2_
+         U_ASYNC_FIFO/U_READ/bin_ptr_reg_1_
+         U_ASYNC_FIFO/U_READ/GRAY_PTR_reg_0_
+         U_ASYNC_FIFO/U_READ/GRAY_PTR_reg_3_
+         U_ASYNC_FIFO/U_READ/GRAY_PTR_reg_2_
+         U_ASYNC_FIFO/U_READ/GRAY_PTR_reg_1_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_0__7_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_0__6_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_0__5_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_0__4_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_0__3_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_0__2_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_0__1_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_0__0_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_1__7_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_1__6_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_1__5_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_1__4_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_1__3_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_1__2_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_1__1_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_1__0_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_4__7_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_4__6_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_4__5_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_4__4_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_4__3_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_4__2_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_4__1_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_4__0_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_5__7_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_5__6_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_5__5_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_5__4_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_5__3_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_5__2_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_5__1_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_5__0_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_6__7_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_6__6_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_6__5_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_6__4_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_6__3_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_6__2_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_6__1_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_6__0_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_7__7_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_7__6_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_7__5_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_7__4_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_7__3_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_7__2_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_7__1_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_7__0_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_2__7_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_2__6_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_2__5_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_2__4_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_2__3_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_2__2_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_2__1_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_2__0_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_3__7_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_3__6_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_3__5_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_3__4_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_3__3_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_3__2_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_3__1_
+         U_ASYNC_FIFO/U_MEMORY/mem_reg_3__0_
+         U_DATA_SYNC/U_CAPTURE/DATA_OUT_reg_7_
+         U_DATA_SYNC/U_CAPTURE/DATA_OUT_reg_6_
+         U_DATA_SYNC/U_CAPTURE/DATA_OUT_reg_5_
+         U_DATA_SYNC/U_CAPTURE/DATA_OUT_reg_0_
+         U_DATA_SYNC/U_CAPTURE/DATA_OUT_reg_4_
+         U_DATA_SYNC/U_CAPTURE/VALID_reg
+         U_DATA_SYNC/U_CAPTURE/DATA_OUT_reg_3_
+         U_DATA_SYNC/U_CAPTURE/DATA_OUT_reg_1_
+         U_DATA_SYNC/U_CAPTURE/DATA_OUT_reg_2_
+         U_UART/U_TX/U_DATA_REG/DATA_OUT_reg_7_
+         U_UART/U_TX/U_DATA_REG/DATA_OUT_reg_6_
+         U_UART/U_TX/U_DATA_REG/DATA_OUT_reg_5_
+         U_UART/U_TX/U_DATA_REG/DATA_OUT_reg_4_
+         U_UART/U_TX/U_DATA_REG/DATA_OUT_reg_3_
+         U_UART/U_TX/U_DATA_REG/DATA_OUT_reg_2_
+         U_UART/U_TX/U_DATA_REG/DATA_OUT_reg_1_
+         U_UART/U_TX/U_DATA_REG/DATA_OUT_reg_0_
+         U_UART/U_TX/U_FSM/par_en_reg_reg
+         U_UART/U_TX/U_FSM/current_state_reg_1_
+         U_UART/U_TX/U_FSM/current_state_reg_2_
+         U_UART/U_TX/U_FSM/current_state_reg_0_
+         U_UART/U_TX/U_SERIALIZER/ser_done_reg
+         U_UART/U_TX/U_SERIALIZER/data_reg_reg_0_
+         U_UART/U_TX/U_SERIALIZER/data_reg_reg_5_
+         U_UART/U_TX/U_SERIALIZER/data_reg_reg_3_
+         U_UART/U_TX/U_SERIALIZER/data_reg_reg_1_
+         U_UART/U_TX/U_SERIALIZER/data_reg_reg_6_
+         U_UART/U_TX/U_SERIALIZER/data_reg_reg_4_
+         U_UART/U_TX/U_SERIALIZER/data_reg_reg_2_
+         U_UART/U_TX/U_SERIALIZER/data_reg_reg_7_
+         U_UART/U_TX/U_SERIALIZER/count_reg_0_
+         U_UART/U_TX/U_SERIALIZER/count_reg_2_
+         U_UART/U_TX/U_SERIALIZER/count_reg_1_
+         U_UART/U_TX/U_SERIALIZER/ser_data_reg
+         U_UART/U_TX/U_PARITY/par_bit_reg
+         U_UART/U_RX/U_CONFIG/PAR_TYP_REG_reg
+         U_UART/U_RX/U_CONFIG/PAR_EN_REG_reg
+         U_UART/U_RX/U_CONFIG/PRESCALE_REG_reg_5_
+         U_UART/U_RX/U_CONFIG/PRESCALE_REG_reg_0_
+         U_UART/U_RX/U_CONFIG/PRESCALE_REG_reg_1_
+         U_UART/U_RX/U_CONFIG/PRESCALE_REG_reg_4_
+         U_UART/U_RX/U_CONFIG/PRESCALE_REG_reg_3_
+         U_UART/U_RX/U_CONFIG/PRESCALE_REG_reg_2_
+         U_UART/U_RX/U_FSM/current_state_reg_2_
+         U_UART/U_RX/U_FSM/current_state_reg_0_
+         U_UART/U_RX/U_FSM/current_state_reg_1_
+         U_UART/U_RX/U_COUNTER/BIT_COUNT_reg_2_
+         U_UART/U_RX/U_COUNTER/BIT_COUNT_reg_1_
+         U_UART/U_RX/U_COUNTER/BIT_COUNT_reg_0_
+         U_UART/U_RX/U_COUNTER/EDGE_COUNT_reg_5_
+         U_UART/U_RX/U_COUNTER/EDGE_COUNT_reg_4_
+         U_UART/U_RX/U_COUNTER/EDGE_COUNT_reg_3_
+         U_UART/U_RX/U_COUNTER/EDGE_COUNT_reg_2_
+         U_UART/U_RX/U_COUNTER/EDGE_COUNT_reg_1_
+         U_UART/U_RX/U_COUNTER/EDGE_COUNT_reg_0_
+         U_UART/U_RX/U_SAMPLING/samples_reg_2_
+         U_UART/U_RX/U_SAMPLING/samples_reg_0_
+         U_UART/U_RX/U_SAMPLING/samples_reg_1_
+         U_UART/U_RX/U_DESERIALIZER/DATA_OUT_reg_5_
+         U_UART/U_RX/U_DESERIALIZER/DATA_OUT_reg_1_
+         U_UART/U_RX/U_DESERIALIZER/DATA_OUT_reg_4_
+         U_UART/U_RX/U_DESERIALIZER/DATA_OUT_reg_0_
+         U_UART/U_RX/U_DESERIALIZER/DATA_OUT_reg_7_
+         U_UART/U_RX/U_DESERIALIZER/DATA_OUT_reg_3_
+         U_UART/U_RX/U_DESERIALIZER/DATA_OUT_reg_6_
+         U_UART/U_RX/U_DESERIALIZER/DATA_OUT_reg_2_
+         U_UART/U_RX/U_PARITY/PAR_ERR_reg
+         U_UART/U_RX/U_STOP/STP_ERR_reg
+         U_UART/U_RX/U_OUTPUT/P_DATA_reg_7_
+         U_UART/U_RX/U_OUTPUT/P_DATA_reg_6_
+         U_UART/U_RX/U_OUTPUT/P_DATA_reg_5_
+         U_UART/U_RX/U_OUTPUT/P_DATA_reg_4_
+         U_UART/U_RX/U_OUTPUT/P_DATA_reg_3_
+         U_UART/U_RX/U_OUTPUT/P_DATA_reg_2_
+         U_UART/U_RX/U_OUTPUT/P_DATA_reg_1_
+         U_UART/U_RX/U_OUTPUT/P_DATA_reg_0_
+         U_UART/U_RX/U_OUTPUT/DATA_VLD_reg
+         U_UART/U_RX/U_INPUT_SYNC/U_SYNC/sync_ff_reg_1__0_
+         U_UART/U_RX/U_INPUT_SYNC/U_SYNC/sync_ff_reg_0__0_
+         U_DATA_SYNC/U_EDGE/level_d_reg
+         U_DATA_SYNC/U_ENABLE_SYNC/sync_ff_reg_1__0_
+         U_DATA_SYNC/U_ENABLE_SYNC/sync_ff_reg_0__0_
+         U_RST_SYNC_2/U_SYNC/sync_ff_reg_1__0_
+         U_RST_SYNC_2/U_SYNC/sync_ff_reg_0__0_
+
+....Inferring feed-through connections....
+Information: Test design rule checking completed. (TEST-123)
+1

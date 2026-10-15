@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<goal_summary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="file://Dashboard/goal_xml.xsd">
+<!-- This file schema is internal to Atrenta DashBoard and subject to change in future without notice --> 
+<goal name="cdc/clock_reset_integrity"/>
+<top name="SYS_TOP"/>
+<dir name="/mnt/hgfs/Shared_Folder/RTL_System_Project/spyglass-1/consolidated_reports/cdc_clock_reset_integrity/"/>
+<log name="/mnt/hgfs/Shared_Folder/RTL_System_Project/spyglass-1/cdc/clock_reset_integrity/spyglass.log" link="data_files/SYS_TOP_cdc-clock_reset_integrity_spyglass.log"/>
+  <std_reports> 
+  </std_reports> 
+<tech_reports> 
+   <technology name="(Not Available)"> 
+   </technology> 
+</tech_reports> 
+<statistics fatal="0" error="0" warning="2" info="11" waived_error="0" waived_warning="0" waived_info="0" /> 
+<tech_summary> 
+</tech_summary> 
+</goal_summary> 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<goal_summary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="file://Dashboard/goal_xml.xsd">
+<!-- This file schema is internal to Atrenta DashBoard and subject to change in future without notice --> 
+<goal name="cdc/cdc_verify_struct"/>
+<top name="SYS_TOP"/>
+<dir name="/mnt/hgfs/Shared_Folder/RTL_System_Project/spyglass-1/consolidated_reports/cdc_cdc_verify_struct/"/>
+<log name="/mnt/hgfs/Shared_Folder/RTL_System_Project/spyglass-1/cdc/cdc_verify_struct/spyglass.log" link="data_files/SYS_TOP_cdc-cdc_verify_struct_spyglass.log"/>
+  <std_reports> 
+  </std_reports> 
+<tech_reports> 
+   <technology name="CDC( Advance CDC  Structrual Verification )"> 
+   </technology> 
+</tech_reports> 
+<statistics fatal="0" error="0" warning="2" info="43" waived_error="0" waived_warning="0" waived_info="0" /> 
+<tech_summary> 
+   <technology name="CDC( Advance CDC )"> 
+   </technology> 
+</tech_summary> 
+</goal_summary> 

@@ -1,0 +1,158 @@
+read_file -type sourcelist source_files.f
+read_file -type sgdc system.sgdc
+
+
+
+current_goal Design_Read -alltop
+
+
+set_option designread_enable_synthesis yes
+compile_design -force
+
+
+
+current_goal lint/lint_rtl -alltop
+run_goal
+current_goal lint/lint_turbo_rtl -alltop
+run_goal
+current_goal lint/lint_functional_rtl -alltop
+run_goal
+current_goal lint/lint_rtl -alltop
+
+
+
+
+
+
+
+gui_select_message -rule InferLatch -msg {Latch inferred for signal 'enable_latch' in module 'CLK_GATE'}
+read_file -type awl /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+set_option default_waiver_file /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+capture ./spyglass-1/lint/lint_rtl/spyglass_reports/moresimple.rpt {write_report moresimple}
+current_goal lint/lint_turbo_rtl -alltop
+
+
+read_file -type awl /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+save_waiver
+
+
+
+set_goal_option default_waiver_file /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+
+
+
+save_waiver
+
+
+
+set_goal_option default_waiver_file /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+set_goal_option default_waiver_file /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule ReportIgnoredOverlappingRules -comment {Created by ICer on 04-Oct-2026 02:50:21}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+save_waiver
+
+
+
+capture ./spyglass-1/lint/lint_turbo_rtl/spyglass_reports/moresimple.rpt {write_report moresimple}
+current_goal lint/lint_functional_rtl -alltop
+
+
+capture ./spyglass-1/lint/lint_functional_rtl/spyglass_reports/moresimple.rpt {write_report moresimple}
+
+
+current_goal lint/lint_rtl -alltop
+run_goal
+
+
+
+
+
+
+current_goal constraints/sdc_audit -alltop
+run_goal
+current_goal constraints/sdc_check -alltop
+run_goal
+current_goal constraints/sdc_audit -alltop
+
+
+
+
+
+
+capture ./spyglass-1/constraints/sdc_audit/spyglass_reports/moresimple.rpt {write_report moresimple}
+current_goal constraints/sdc_check -alltop
+
+
+capture ./spyglass-1/constraints/sdc_check/spyglass_reports/moresimple.rpt {write_report moresimple}
+
+
+current_goal cdc/cdc_setup_check -alltop
+run_goal
+current_goal cdc/clock_reset_integrity -alltop
+run_goal
+current_goal cdc/cdc_verify_struct -alltop
+run_goal
+current_goal cdc/cdc_setup_check -alltop
+
+
+
+
+
+
+
+capture ./spyglass-1/cdc/cdc_setup_check/spyglass_reports/moresimple.rpt {write_report moresimple}
+current_goal cdc/clock_reset_integrity -alltop
+
+
+capture ./spyglass-1/cdc/clock_reset_integrity/spyglass_reports/moresimple.rpt {write_report moresimple}
+
+
+
+save_waiver
+
+
+
+read_file -type awl /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+
+
+
+set_goal_option default_waiver_file /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule Clock_glitch04 -comment {Created by ICer on 04-Oct-2026 03:01:09}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+save_waiver
+
+
+
+current_goal cdc/cdc_verify_struct -alltop
+
+
+read_file -type awl /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+
+
+
+set_goal_option default_waiver_file /mnt/hgfs/Shared_Folder/RTL_System_Project/waiver.awl
+
+set _sg_current_default_waiver_file ""; set _sg_current_default_waiver_file [get_goal_option default_waiver_file]
+waive -rule Ac_conv04 -comment {Created by ICer on 04-Oct-2026 03:01:55}
+if {$_sg_current_default_waiver_file == {} || $_sg_current_default_waiver_file == {{}}} {remove_goal_option default_waiver_file } else { set_goal_option default_waiver_file $_sg_current_default_waiver_file}
+
+
+
+save_waiver
+
+
+
+save_project -force /mnt/hgfs/Shared_Folder/RTL_System_Project/Lint.prj
+save_project
+gui_exit
+gui_exit

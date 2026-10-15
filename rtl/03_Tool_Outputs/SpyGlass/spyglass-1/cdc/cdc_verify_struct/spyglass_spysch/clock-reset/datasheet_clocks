@@ -1,0 +1,5 @@
+SCHEMA@@CName@@CTag@@CMode@@CFrequency@@CDomain@@DCrossings@@RegPEdge@@LatchPEdge@@LibCellPEdge@@BBPEdge@@RegNEdge@@LatchNEdge@@LibCellNEdge@@BBNEdge@@CSource
+VALUE@@RX_ASYNC_VCLK@@RX_ASYNC_VCLK@@sys-clock@@3.6864@@RX_ASYNC_DOMAIN@@0@@0@@0@@0@@0@@0@@0@@0@@0@@SDC/SGDC
+VALUE@@RST_ASYNC_VCLK@@RST_ASYNC_VCLK@@sys-clock@@1@@RST_ASYNC_DOMAIN@@0@@0@@0@@0@@0@@0@@0@@0@@0@@SDC/SGDC
+VALUE@@SYS_TOP.REF_CLK@@SG_AUTO_TAG_1@@sys-clock@@50@@REF_CLK_DOMAIN@@0@@334@@0@@0@@0@@0@@1@@0@@0@@SDC/SGDC
+VALUE@@SYS_TOP.UART_CLK@@SG_AUTO_TAG_2@@sys-clock@@3.6864@@UART_CLK_DOMAIN@@0@@120@@0@@0@@0@@0@@0@@0@@0@@SDC/SGDC

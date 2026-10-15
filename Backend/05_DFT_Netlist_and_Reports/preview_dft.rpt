@@ -1,0 +1,25 @@
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+
+****************************************
+Preview_dft report
+For    : 'Insert_dft' command
+Design : SYS_TOP
+Version: O-2018.06-SP1
+Date   : Sun Oct 11 02:59:30 2026
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+Chain      Scan Ports (si --> so)        # of Cells   Inst/Chain               Clock (port, time, edge)
+-----      ----------------------        ----------   ----------               ------------------------
+S chain_0  SI[0] -->  SO[0]                     153   U_ALU/U_OUTPUT/ALU_OUT_reg[0]
+                            (scan_clk, 45.0, rising) 
+S chain_1  SI[1] -->  SO[1]                     153   U_REGFILE/U_STORAGE/Reg_File_reg[1][7]
+                            (scan_clk, 45.0, rising) 
+S chain_2  SI[2] -->  SO[2]                     153   U_REGFILE/U_STORAGE/Reg_File_reg[21][0]
+                            (scan_clk, 45.0, rising) 
+1

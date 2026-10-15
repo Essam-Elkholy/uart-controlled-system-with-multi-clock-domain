@@ -1,0 +1,93 @@
+
+current_design SYS_TOP
+
+
+# ============================================================
+# 1) PRIMARY CLOCKS
+# ============================================================
+
+# REF_CLK = 50 MHz
+clock -name "SYS_TOP.REF_CLK" \
+      -domain REF_CLK_DOMAIN \
+      -period 20 \
+      -edge {0 10}
+
+# UART_CLK = 3.6864 MHz
+clock -name "SYS_TOP.UART_CLK" \
+      -domain UART_CLK_DOMAIN \
+      -period 271.267 \
+      -edge {0 135.6335}
+
+
+# ============================================================
+# 2) RESET
+# ============================================================
+
+# Active-low asynchronous reset
+reset -name "SYS_TOP.RST" -value 0
+
+
+# ============================================================
+# 3) EXTERNAL ASYNCHRONOUS UART INPUT
+# ============================================================
+
+clock -tag RX_ASYNC_VCLK \
+      -domain RX_ASYNC_DOMAIN \
+      -period 271.267 \
+      -edge {0 135.6335}
+
+abstract_port -ports RX_IN \
+              -scope cdc \
+              -clock RX_ASYNC_VCLK
+
+
+# ============================================================
+# 4) EXTERNAL ASYNCHRONOUS RESET SOURCE
+# ============================================================
+
+clock -tag RST_ASYNC_VCLK \
+      -domain RST_ASYNC_DOMAIN \
+      -period 1000 \
+      -edge {0 500}
+
+abstract_port -ports RST \
+              -scope cdc \
+              -clock RST_ASYNC_VCLK
+
+
+# ============================================================
+# 5) QUASI-STATIC CONFIGURATION REGISTERS
+# ============================================================
+
+# REG2: UART configuration / RX prescale
+quasi_static -name "SYS_TOP.U_REGFILE.U_STORAGE.Reg_File[2][7:0]"
+
+# REG3: TX clock-divider ratio
+quasi_static -name "SYS_TOP.U_REGFILE.U_STORAGE.Reg_File[3][7:0]"
+
+
+# ============================================================
+# 6) ASYNC FIFO GRAY POINTERS
+# ============================================================
+
+gray_signals -name "SYS_TOP.U_ASYNC_FIFO.U_READ.GRAY_PTR[3:0]"
+
+gray_signals -name "SYS_TOP.U_ASYNC_FIFO.U_WRITE.GRAY_PTR[3:0]"
+
+
+# ============================================================
+# 7) INTENTIONAL CDC CONVERGENCE
+# ============================================================
+
+# Async FIFO synchronized Gray pointer -> EMPTY logic
+cdc_filter_coherency -conv_gates \
+"SYS_TOP.U_ASYNC_FIFO.U_READ.empty_next"
+
+# Async FIFO synchronized Gray pointer -> FULL logic
+cdc_filter_coherency -conv_gates \
+"SYS_TOP.U_ASYNC_FIFO.U_WRITE.full_next"
+
+# Intentional synchronized control convergence in SYS_CTRL
+cdc_filter_coherency -conv_gates \
+"SYS_TOP.RdEn"
+

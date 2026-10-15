@@ -1,0 +1,102 @@
+13 "Setup_port01" 1
+"SETUP_PORT_SS_SCH"
+1
+14 "Setup_port01" 1
+"SETUP_PORT_SDC_TAG"
+2
+15 "Setup_port01" 1
+"SETUP_PORT_SS_SCH"
+3
+16 "Setup_port01" 1
+"SETUP_PORT_SDC_TAG"
+4
+17 "Setup_port01" 1
+"SETUP_PORT_SS_SCH"
+5
+18 "Setup_port01" 1
+"SETUP_PORT_SDC_TAG"
+6
+19 "Setup_port01" 1
+"SETUP_PORT_SS_SCH"
+7
+20 "Setup_port01" 1
+"SETUP_PORT_SDC_TAG"
+8
+21 "Setup_port01" 1
+"Open_Sp_Sheet"
+["./spyglass-1/cdc/cdc_setup_check/spyglass_reports/clock-reset/Setup_port01/SYS_TOP.csv"]
+-1 "Clock_info02" 3
+"TEMPLATE"
+["cdc/cdc_setup_check"]
+"RULE_ORDER"
+[17]
+"RULEGROUP"
+["clock-reset/FIND"]
+-1 "Clock_info03b" 3
+"TEMPLATE"
+["cdc/cdc_setup_check"]
+"RULE_ORDER"
+[12]
+"RULEGROUP"
+["clock-reset/INFORMATION/Clock_info03"]
+-1 "Clock_info15" 3
+"TEMPLATE"
+["cdc/cdc_setup_check"]
+"RULE_ORDER"
+[19]
+"RULEGROUP"
+["clock-reset/INFORMATION"]
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Info_Case_Analysis" 5
+"TEMPLATE"
+["cdc/cdc_setup_check"]
+"RULE_ORDER"
+[21]
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+"SPG_RULETAG_SCH_INFO_RULE"
+"Show Info Case Analysis Data"
+-1 "Propagate_Clocks" 3
+"TEMPLATE"
+["cdc/cdc_setup_check"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["clock-reset/INFORMATION"]
+-1 "Propagate_Resets" 3
+"TEMPLATE"
+["cdc/cdc_setup_check"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["clock-reset/INFORMATION"]
+-1 "Reset_info02" 3
+"TEMPLATE"
+["cdc/cdc_setup_check"]
+"RULE_ORDER"
+[18]
+"RULEGROUP"
+["clock-reset/FIND"]
+-1 "SGDC_abstract_port03" 2
+"RULEGROUP"
+["SGDC Checks"]
+"BUILTIN"
+"1"
+-1 "Setup_port01" 3
+"TEMPLATE"
+["cdc/cdc_setup_check"]
+"RULE_ORDER"
+[14]
+"RULEGROUP"
+["clock-reset/SETUP"]

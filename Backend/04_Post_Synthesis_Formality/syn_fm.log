@@ -1,0 +1,433 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC_EDA (RHEL64)
+Current time: Sun Oct 11 02:08:09 2026
+
+Loading db file '/home/synopsys/Formality2016/libraries/syn/gtech.db'
+########################### Define Top Module ############################
+puts "#############################################"
+#############################################
+puts "#             Define Top Module             #"
+#             Define Top Module             #
+puts "#############################################"
+#############################################
+set top_module SYS_TOP
+SYS_TOP
+set SCRIPT_DIR [file normalize [file dirname [info script]]]
+/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/04_Post_Synthesis_Formality
+set ROOT [file dirname $SCRIPT_DIR]
+/home/ICer/Assign/Final_System_Backend_Essam_Elkholy
+cd $SCRIPT_DIR
+######################### Formality Setup File ###########################
+puts "#############################################"
+#############################################
+puts "#            Formality Setup File           #"
+#            Formality Setup File           #
+puts "#############################################"
+#############################################
+set synopsys_auto_setup true
+true
+# Technology libraries
+puts "#############################################"
+#############################################
+puts "#            Technology libraries           #"
+#            Technology libraries           #
+puts "#############################################"
+#############################################
+set LIB_DIR /home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+set SSLIB [file join $LIB_DIR scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB [file join $LIB_DIR scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB [file join $LIB_DIR scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db]
+/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+foreach library [list $SSLIB $TTLIB $FFLIB] {
+    if {![file isfile $library]} {error "Missing library: $library"}
+}
+set OUT $SCRIPT_DIR
+/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/04_Post_Synthesis_Formality
+file mkdir $OUT
+set_svf [file join $ROOT 02_Synthesis_Netlist_and_Reports $top_module.svf]
+SVF set to '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/02_Synthesis_Netlist_and_Reports/SYS_TOP.svf'.
+1
+######################### Reference Container ############################
+puts "#############################################"
+#############################################
+puts "#            Reference Container            #"
+#            Reference Container            #
+puts "#############################################"
+#############################################
+read_db -container r [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Current container set to 'r'
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+set fh [open [file join $ROOT 04_Post_Synthesis_Formality/system.lst] r]
+file12
+while {[gets $fh line] >= 0} {
+    set line [string trim $line]
+    if {$line ne ""} {read_verilog -container r [file join $ROOT $line]}
+}
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_ARITHMETIC.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_COMPARE.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_LOGIC.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_OUTPUT_REG.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_RESULT_MUX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU_SHIFT.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ALU/RTL/ALU.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/ASYNC_FIFO.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/FIFO_MEM.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/FIFO_RD.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/ASYNC_FIFO/RTL/FIFO_WR.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/CLK_GATE/RTL/CLK_GATE.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLK_DIV_COUNTER.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLK_DIV_HALF_COUNT.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLK_DIV_OUTPUT_MUX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLK_DIV.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Clock_Divider/RTL/CLKDIV_MUX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Common/RTL/DF_SYNC.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/Common/RTL/RISING_EDGE_DETECTOR.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/DATA_SYNC/RTL/BUS_CAPTURE.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/DATA_SYNC/RTL/DATA_SYNC.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/PULSE_GEN/RTL/PULSE_GEN.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/RegFile/RTL/REGFILE_READ.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/RegFile/RTL/REGFILE_STORAGE.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/RegFile/RTL/RegFile.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/RST_SYNC/RTL/RST_SYNC.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/SYS_CTRL/RTL/SYS_CTRL.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_CONFIG_REG.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_DATA_SAMPLING.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_DESERIALIZER.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_EDGE_BIT_COUNTER.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_FSM.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_INPUT_SYNC.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_OUTPUT_REG.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_PARITY_CHECK.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_START_CHECK.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/RX_STOP_CHECK.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_RX/RTL/UART_RX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TOP/RTL/UART_TOP.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_DATA_REG.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_FSM.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_MUX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_PARITY_CALC.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/TX_SERIALIZER.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/UART/UART_TX/RTL/UART_TX.v'
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/00_RTL_Source/SYS_TOP/RTL/SYS_TOP.v'
+close $fh
+set_top r:/WORK/$top_module
+Setting top design to 'r:/WORK/SYS_TOP'
+Status:   Elaborating design SYS_TOP   ...  
+Status:   Elaborating design RST_SYNC   ...  
+Status:   Elaborating design DF_SYNC  WIDTH=1, NUM_STAGES=2 ...  
+Information: Created design named 'DF_SYNC_WIDTH1_NUM_STAGES2'. (FE-LINK-13)
+Status:   Elaborating design SYS_CTRL  DATA_WIDTH=8, ADDR_WIDTH=5, ALU_WIDTH=16 ...  
+Information: Created design named 'SYS_CTRL_DATA_WIDTH8_ADDR_WIDTH5_ALU_WIDTH16'. (FE-LINK-13)
+Status:   Elaborating design RegFile  WIDTH=8, ADDR_WIDTH=5 ...  
+Information: Created design named 'RegFile_WIDTH8_ADDR_WIDTH5'. (FE-LINK-13)
+Status:   Elaborating design REGFILE_STORAGE  WIDTH=8, DEPTH=22, ADDR_WIDTH=5 ...  
+Information: Created design named 'REGFILE_STORAGE_WIDTH8_DEPTH22_ADDR_WIDTH5'. (FE-LINK-13)
+Status:   Elaborating design REGFILE_READ  WIDTH=8 ...  
+Information: Created design named 'REGFILE_READ_WIDTH8'. (FE-LINK-13)
+Status:   Elaborating design CLK_GATE   ...  
+Status:   Elaborating design ALU  OPER_WIDTH=8 ...  
+Information: Created design named 'ALU_OPER_WIDTH8'. (FE-LINK-13)
+Status:   Elaborating design ALU_ARITHMETIC  WIDTH=16 ...  
+Information: Created design named 'ALU_ARITHMETIC_WIDTH16'. (FE-LINK-13)
+Status:   Elaborating design ALU_LOGIC  WIDTH=16 ...  
+Information: Created design named 'ALU_LOGIC_WIDTH16'. (FE-LINK-13)
+Status:   Elaborating design ALU_COMPARE  WIDTH=16 ...  
+Information: Created design named 'ALU_COMPARE_WIDTH16'. (FE-LINK-13)
+Status:   Elaborating design ALU_SHIFT  WIDTH=16 ...  
+Information: Created design named 'ALU_SHIFT_WIDTH16'. (FE-LINK-13)
+Status:   Elaborating design ALU_RESULT_MUX  WIDTH=16 ...  
+Information: Created design named 'ALU_RESULT_MUX_WIDTH16'. (FE-LINK-13)
+Status:   Elaborating design ALU_OUTPUT_REG  WIDTH=16 ...  
+Information: Created design named 'ALU_OUTPUT_REG_WIDTH16'. (FE-LINK-13)
+Status:   Elaborating design CLK_DIV   ...  
+Status:   Elaborating design CLK_DIV_HALF_COUNT   ...  
+Status:   Elaborating design CLK_DIV_COUNTER   ...  
+Status:   Elaborating design CLK_DIV_OUTPUT_MUX   ...  
+Status:   Elaborating design CLKDIV_MUX   ...  
+Status:   Elaborating design UART_TOP   ...  
+Status:   Elaborating design UART_TX   ...  
+Status:   Elaborating design TX_DATA_REG   ...  
+Status:   Elaborating design TX_FSM   ...  
+Status:   Elaborating design TX_SERIALIZER   ...  
+Status:   Elaborating design TX_PARITY_CALC   ...  
+Status:   Elaborating design TX_MUX   ...  
+Status:   Elaborating design UART_RX   ...  
+Status:   Elaborating design RX_INPUT_SYNC   ...  
+Status:   Elaborating design DF_SYNC  WIDTH=1, NUM_STAGES=2, RESET_VALUE=1'b1 ...  
+Information: Created design named 'DF_SYNC_1_2_1'. (FE-LINK-13)
+Status:   Elaborating design RX_CONFIG_REG   ...  
+Status:   Elaborating design RX_FSM   ...  
+Status:   Elaborating design RX_EDGE_BIT_COUNTER   ...  
+Status:   Elaborating design RX_DATA_SAMPLING   ...  
+Status:   Elaborating design RX_DESERIALIZER   ...  
+Status:   Elaborating design RX_START_CHECK   ...  
+Status:   Elaborating design RX_PARITY_CHECK   ...  
+Status:   Elaborating design RX_STOP_CHECK   ...  
+Status:   Elaborating design RX_OUTPUT_REG   ...  
+Status:   Elaborating design PULSE_GEN   ...  
+Status:   Elaborating design DF_SYNC  WIDTH=1, NUM_STAGES=1 ...  
+Information: Created design named 'DF_SYNC_WIDTH1_NUM_STAGES1'. (FE-LINK-13)
+Status:   Elaborating design RISING_EDGE_DETECTOR   ...  
+Status:   Elaborating design ASYNC_FIFO  DATA_WIDTH=8, ADDR_WIDTH=3 ...  
+Information: Created design named 'ASYNC_FIFO_DATA_WIDTH8_ADDR_WIDTH3'. (FE-LINK-13)
+Status:   Elaborating design DF_SYNC  WIDTH=4 ...  
+Information: Created design named 'DF_SYNC_WIDTH4'. (FE-LINK-13)
+Status:   Elaborating design FIFO_WR  ADDR_WIDTH=3 ...  
+Information: Created design named 'FIFO_WR_ADDR_WIDTH3'. (FE-LINK-13)
+Status:   Elaborating design FIFO_RD  ADDR_WIDTH=3 ...  
+Information: Created design named 'FIFO_RD_ADDR_WIDTH3'. (FE-LINK-13)
+Status:   Elaborating design FIFO_MEM  DATA_WIDTH=8, ADDR_WIDTH=3 ...  
+Information: Created design named 'FIFO_MEM_DATA_WIDTH8_ADDR_WIDTH3'. (FE-LINK-13)
+Status:   Elaborating design DATA_SYNC  BUS_WIDTH=8 ...  
+Information: Created design named 'DATA_SYNC_BUS_WIDTH8'. (FE-LINK-13)
+Status:   Elaborating design BUS_CAPTURE  BUS_WIDTH=8 ...  
+Information: Created design named 'BUS_CAPTURE_BUS_WIDTH8'. (FE-LINK-13)
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'r:/WORK/SYS_TOP'
+Reference design set to 'r:/WORK/SYS_TOP'
+1
+######################## Implementation Container #########################
+puts "#############################################"
+#############################################
+puts "#          Implementation Container         #"
+#          Implementation Container         #
+puts "#############################################"
+#############################################
+read_db -container i [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Current container set to 'i'
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/ICer/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+read_verilog -container i [file join $ROOT 02_Synthesis_Netlist_and_Reports $top_module.v]
+No target library specified, default is WORK
+Loading verilog file '/home/ICer/Assign/Final_System_Backend_Essam_Elkholy/02_Synthesis_Netlist_and_Reports/SYS_TOP.v'
+1
+set_top i:/WORK/$top_module
+Setting top design to 'i:/WORK/SYS_TOP'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'i:/WORK/SYS_TOP'
+Implementation design set to 'i:/WORK/SYS_TOP'
+1
+# Matching Compare Points
+puts "#############################################"
+#############################################
+puts "#          Matching Compare Points          #"
+#          Matching Compare Points          #
+puts "#############################################"
+#############################################
+match
+Reference design is 'r:/WORK/SYS_TOP'
+Implementation design is 'i:/WORK/SYS_TOP'
+Status:  Checking designs...
+    Warning: 0 (33) undriven nets found in reference (implementation) design; see formality.log for list (FM-399)
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+change_names        :         30          2          0          0         32
+environment         :          3          0          0          0          3
+instance_map        :         48          0          0          0         48
+mark                :         34          0          0          0         34
+multiplier          :          2          0          0          0          2
+transformation
+   map              :         27          0          0          0         27
+   share            :          3          0          0          0          3
+ungroup             :          7          0          0          0          7
+uniquify            :          2          2          0          0          4
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/02_Synthesis_Netlist_and_Reports/SYS_TOP.svf
+
+SVF files produced:
+  /home/ICer/Assign/Final_System_Backend_Essam_Elkholy/04_Post_Synthesis_Formality/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 457 Compare points matched by name    
+ 1 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 4 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+1
+# Verification
+puts "#############################################"
+#############################################
+puts "#                Verification               #"
+#                Verification               #
+puts "#############################################"
+#############################################
+set successful [verify]
+Reference design is 'r:/WORK/SYS_TOP'
+Implementation design is 'i:/WORK/SYS_TOP'
+    
+*********************************** Matching Results ***********************************    
+ 457 Compare points matched by name    
+ 1 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 4 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: r:/WORK/SYS_TOP
+ Implementation design: i:/WORK/SYS_TOP
+ 458 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0       3     454       1     458
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Constant reg                                                         5       0       5
+****************************************************************************************
+1
+# Reports
+puts "#############################################"
+#############################################
+puts "#                  Reports                  #"
+#                  Reports                  #
+puts "#############################################"
+#############################################
+report_passing_points > $OUT/passing_points.rpt
+report_failing_points > $OUT/failing_points.rpt
+report_aborted_points > $OUT/aborted_points.rpt
+report_unverified_points > $OUT/unverified_points.rpt
+if {!$successful} {
+    diagnose
+    error "Formality failed; inspect the log and reports"
+}
+exit
+
+Maximum memory usage for this session: 480104 KB
+CPU usage for this session: 14.46 seconds
+Current time: Sun Oct 11 02:08:22 2026
+Elapsed time: 14 seconds
+
+Thank you for using Formality (R)!

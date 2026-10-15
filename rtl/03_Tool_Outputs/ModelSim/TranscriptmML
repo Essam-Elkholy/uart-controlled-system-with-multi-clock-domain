@@ -1,0 +1,236 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Project file D:/Digital IC Diploma/Final_System_Project/SYSTEM.mpf was not found.
+# Unable to open project.
+pwd
+# C:/intelFPGA/18.1
+# Loading project SYSTEM
+pwd
+# C:/Users/essam/Downloads/Shared_Folder/RTL_System_Project
+do run.do
+# 
+# if {![file exists work]} {
+#     vlib work
+# }
+# 
+# vmap work work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying C:/Users/essam/Downloads/Shared_Folder/RTL_System_Project/SYSTEM.mpf
+# 
+# vlog -work work -f source_files.f
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:37:29 on Oct 03,2026
+# vlog -reportprogress 300 -work work -f source_files.f 
+# -- Compiling module ALU_ARITHMETIC
+# -- Compiling module ALU_COMPARE
+# -- Compiling module ALU_LOGIC
+# -- Compiling module ALU_OUTPUT_REG
+# -- Compiling module ALU_RESULT_MUX
+# -- Compiling module ALU_SHIFT
+# -- Compiling module ALU
+# -- Compiling module ASYNC_FIFO
+# -- Compiling module FIFO_MEM
+# -- Compiling module FIFO_RD
+# -- Compiling module FIFO_WR
+# -- Compiling module CLK_GATE
+# -- Compiling module CLK_DIV_COUNTER
+# -- Compiling module CLK_DIV_HALF_COUNT
+# -- Compiling module CLK_DIV_OUTPUT_MUX
+# -- Compiling module CLK_DIV
+# -- Compiling module CLKDIV_MUX
+# -- Compiling module DF_SYNC
+# -- Compiling module RISING_EDGE_DETECTOR
+# -- Compiling module BUS_CAPTURE
+# -- Compiling module DATA_SYNC
+# -- Compiling module PULSE_GEN
+# -- Compiling module REGFILE_READ
+# -- Compiling module REGFILE_STORAGE
+# -- Compiling module RegFile
+# -- Compiling module RST_SYNC
+# -- Compiling module SYS_CTRL
+# -- Compiling module RX_CONFIG_REG
+# -- Compiling module RX_DATA_SAMPLING
+# -- Compiling module RX_DESERIALIZER
+# -- Compiling module RX_EDGE_BIT_COUNTER
+# -- Compiling module RX_FSM
+# -- Compiling module RX_INPUT_SYNC
+# -- Compiling module RX_OUTPUT_REG
+# -- Compiling module RX_PARITY_CHECK
+# -- Compiling module RX_START_CHECK
+# -- Compiling module RX_STOP_CHECK
+# -- Compiling module UART_RX
+# -- Compiling module UART_TOP
+# -- Compiling module TX_DATA_REG
+# -- Compiling module TX_FSM
+# -- Compiling module TX_MUX
+# -- Compiling module TX_PARITY_CALC
+# -- Compiling module TX_SERIALIZER
+# -- Compiling module UART_TX
+# -- Compiling module SYS_TOP
+# 
+# Top level modules:
+# 	SYS_TOP
+# End time: 22:37:29 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work -f tb_source_files.f
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:37:29 on Oct 03,2026
+# vlog -reportprogress 300 -work work -f tb_source_files.f 
+# -- Compiling module ALU_tb
+# -- Compiling module ASYNC_FIFO_tb
+# -- Compiling module CLK_GATE_tb
+# -- Compiling module CLK_DIV_tb
+# -- Compiling module DATA_SYNC_tb
+# -- Compiling module PULSE_GEN_tb
+# -- Compiling module RegFile_tb
+# -- Compiling module RST_SYNC_tb
+# -- Compiling module SYS_CTRL_tb
+# -- Compiling module UART_RX_tb
+# -- Compiling module UART_TOP_tb
+# -- Compiling module UART_TX_tb
+# -- Compiling module SYS_TOP_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# 	ASYNC_FIFO_tb
+# 	CLK_GATE_tb
+# 	CLK_DIV_tb
+# 	DATA_SYNC_tb
+# 	PULSE_GEN_tb
+# 	RegFile_tb
+# 	RST_SYNC_tb
+# 	SYS_CTRL_tb
+# 	UART_RX_tb
+# 	UART_TOP_tb
+# 	UART_TX_tb
+# 	SYS_TOP_tb
+# End time: 22:37:29 on Oct 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -voptargs=+acc work.SYS_TOP_tb
+# vsim -voptargs="+acc" work.SYS_TOP_tb 
+# Start time: 22:37:29 on Oct 03,2026
+# Loading work.SYS_TOP_tb
+# Loading work.SYS_TOP
+# Loading work.RST_SYNC
+# Loading work.DF_SYNC
+# Loading work.SYS_CTRL
+# Loading work.RegFile
+# Loading work.REGFILE_STORAGE
+# Loading work.REGFILE_READ
+# Loading work.CLK_GATE
+# Loading work.ALU
+# Loading work.ALU_ARITHMETIC
+# Loading work.ALU_LOGIC
+# Loading work.ALU_COMPARE
+# Loading work.ALU_SHIFT
+# Loading work.ALU_RESULT_MUX
+# Loading work.ALU_OUTPUT_REG
+# Loading work.CLK_DIV
+# Loading work.CLK_DIV_HALF_COUNT
+# Loading work.CLK_DIV_COUNTER
+# Loading work.CLK_DIV_OUTPUT_MUX
+# Loading work.CLKDIV_MUX
+# Loading work.UART_TOP
+# Loading work.UART_TX
+# Loading work.TX_DATA_REG
+# Loading work.TX_FSM
+# Loading work.TX_SERIALIZER
+# Loading work.TX_PARITY_CALC
+# Loading work.TX_MUX
+# Loading work.UART_RX
+# Loading work.RX_INPUT_SYNC
+# Loading work.RX_CONFIG_REG
+# Loading work.RX_FSM
+# Loading work.RX_EDGE_BIT_COUNTER
+# Loading work.RX_DATA_SAMPLING
+# Loading work.RX_DESERIALIZER
+# Loading work.RX_START_CHECK
+# Loading work.RX_PARITY_CHECK
+# Loading work.RX_STOP_CHECK
+# Loading work.RX_OUTPUT_REG
+# Loading work.PULSE_GEN
+# Loading work.RISING_EDGE_DETECTOR
+# Loading work.ASYNC_FIFO
+# Loading work.FIFO_WR
+# Loading work.FIFO_RD
+# Loading work.FIFO_MEM
+# Loading work.DATA_SYNC
+# Loading work.BUS_CAPTURE
+# 
+# organized waveform (groups, radix, colors) from wave.do
+# do wave.do
+# delete wave *
+# 
+# add wave -divider {Clocks and test case}
+# add wave /SYS_TOP_tb/REF_CLK
+# add wave /SYS_TOP_tb/UART_CLK
+# add wave /SYS_TOP_tb/RST
+# add wave -radix unsigned /SYS_TOP_tb/case_id
+# add wave -radix unsigned /SYS_TOP_tb/errors
+# 
+# add wave -divider {UART command and reply}
+# add wave /SYS_TOP_tb/RX_IN
+# add wave /SYS_TOP_tb/TX_OUT
+# add wave /SYS_TOP_tb/PAR_ERR
+# add wave /SYS_TOP_tb/STP_ERR
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/RX_P_DATA_SYNC
+# add wave /SYS_TOP_tb/DUT/RX_D_VLD_SYNC
+# add wave -radix hexadecimal /SYS_TOP_tb/reply
+# 
+# add wave -divider {Register File}
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/Address
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/WrData
+# add wave /SYS_TOP_tb/DUT/WrEn
+# add wave /SYS_TOP_tb/DUT/RdEn
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/RdData
+# add wave /SYS_TOP_tb/DUT/RdData_Valid
+# add wave -radix hexadecimal /SYS_TOP_tb/observed_reg4
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/REG2
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/REG3
+# 
+# add wave -divider {ALU}
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/REG0
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/REG1
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/ALU_FUN
+# add wave /SYS_TOP_tb/DUT/ALU_EN
+# add wave /SYS_TOP_tb/DUT/CLK_EN
+# add wave /SYS_TOP_tb/DUT/ALU_CLK
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/ALU_OUT
+# add wave /SYS_TOP_tb/DUT/OUT_VALID
+# 
+# add wave -divider {Response sent to UART TX}
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/WR_DATA
+# add wave /SYS_TOP_tb/DUT/WR_INC
+# add wave -radix hexadecimal /SYS_TOP_tb/DUT/RD_DATA
+# add wave /SYS_TOP_tb/DUT/TX_BUSY
+# 
+# configure wave -namecolwidth 220
+# configure wave -valuecolwidth 80
+# configure wave -timelineunits us
+# 
+# run -all
+# 1) Configuration writes
+# 2) Register write: address 04, data A7
+# 3) Register read: address 04
+# PASS: case=3 reply=a7
+# 4) ALU with operands: 20 + 5 = 0019
+# PASS: case=4 reply=19
+# PASS: case=4 reply=00
+# 5) ALU without operands: 20 - 5 = 000F
+# PASS: case=5 reply=0f
+# PASS: case=5 reply=00
+# 6) Multiply: 255 * 255 = FE01
+# PASS: case=6 reply=01
+# PASS: case=6 reply=fe
+# 7) AND: F3 & 0F = 0003
+# PASS: case=7 reply=03
+# PASS: case=7 reply=00
+# SUMMARY: errors=0
+# ALL TESTS PASSED
+# ** Note: $stop    : SYS_TOP/SYS_TOP_tb.v(131)
+#    Time: 3455547208 ps  Iteration: 0  Instance: /SYS_TOP_tb
+# Break in Module SYS_TOP_tb at SYS_TOP/SYS_TOP_tb.v line 131
+# wave zoom full
+# 0 ps
+# 3628324568 ps
